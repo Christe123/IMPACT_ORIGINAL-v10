@@ -492,7 +492,9 @@
         "video_3E9zTQ": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/videp1.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "preload_video": "shopify://files/videos/videp1.mp4",
             "modal_heading": "<h4>Modal Heading</h4>",
             "modal_text": "<p>Modal Text</p>"
           }
