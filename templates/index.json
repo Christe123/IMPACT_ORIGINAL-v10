@@ -197,10 +197,11 @@
         "item_4TAKa6": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/AVISMASQUE1.png",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Sarah L.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p><em>\"J’ai 42 ans et je commence à remarquer un léger relâchement au niveau de la mâchoire et des joues. J’ai essayé ce masque sans grandes attentes… et honnêtement, j’ai été bluffée. La peau est retendue, comme si elle avait retrouvé du tonus. J’ai même eu des compliments après quelques jours d’utilisation.\"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -209,10 +210,11 @@
         "item_XXTYp8": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/AVISMASQUE4.png",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Julie G.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p><em>\"Très bon produit. Texture agréable, facile à poser, et surtout pas collant. Ce que je remarque surtout, c’est une vraie amélioration au niveau de la fermeté. Ce n’est pas magique, mais au fil des utilisations, on voit clairement que la peau se tonifie.\"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -221,10 +223,102 @@
         "item_UKxdpg": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/AVISMASQUE2.png",
             "column_size": "3",
-            "title": "Column title",
+            "title": "Monique T.",
             "heading_tag": "h4",
-            "content": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "content": "<p><em>\"J'ai 68 ans, et j’ai essayé beaucoup de crèmes et de soins. Ce masque m’a vraiment surprise. Ma peau paraît plus fraîche, moins relâchée. Même ma petite-fille m’a dit que j’avais meilleure mine. C’est devenu un de mes petits plaisirs de la semaine\"</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_DATGFL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE3.png",
+            "column_size": "3",
+            "title": "Élodie P.",
+            "heading_tag": "h4",
+            "content": "<p>\"Je l’ai recommandé à mes collègues, et maintenant on est plusieurs à l’utiliser au bureau ! Effet visible, peau lissée, et surtout un vrai moment de détente. Pour moi c’est un soin complet : visuel + confort + efficacité.\"</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_pRBaTW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE7.png",
+            "column_size": "3",
+            "title": "Amina K.",
+            "heading_tag": "h4",
+            "content": "<p><em>\"J’ai acheté ce masque pour ma mère, et finalement je l’ai testé aussi. On l’a toutes les deux adoré. Elle trouve que sa peau est moins relâchée, et moi je sens que ça hydrate profondément. Ça fait une vraie différence dans notre routine.\"</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_NUKJNt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE8.png",
+            "column_size": "3",
+            "title": "Claire R.",
+            "heading_tag": "h4",
+            "content": "<p><em>\"Ce masque est devenu mon indispensable avant les événements importants. Je le fais la veille au soir, et le lendemain, ma peau est plus nette, plus lumineuse, et surtout plus ferme. Pas besoin de filtre \"</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_d3wbMG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE5.png",
+            "column_size": "3",
+            "title": "Jacqueline D.",
+            "heading_tag": "h4",
+            "content": "<p><em>\"Avec l’âge, la peau perd en fermeté, surtout autour du cou et des joues. Ce masque m’a redonné une sensation de peau plus dense, plus tonique. Ce n’est pas miraculeux, mais c’est très agréable et je vois une différence. Et surtout, ça me fait du bien.\"</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_BARfAd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE6.png",
+            "column_size": "3",
+            "title": "Mélanie D.",
+            "heading_tag": "h4",
+            "content": "<p>\"Je suis très sceptique en général avec les produits anti-âge, mais là j’ai senti un effet immédiat. C’est subtil, mais réel : la peau est plus ferme, l’ovale du visage un peu plus dessiné. Et surtout, aucune réaction malgré ma peau très sensible. J’adopte.\"</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_xCExHT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE6.png",
+            "column_size": "3",
+            "title": "Mélanie D.",
+            "heading_tag": "h4",
+            "content": "<p>\"Je suis très sceptique en général avec les produits anti-âge, mais là j’ai senti un effet immédiat. C’est subtil, mais réel : la peau est plus ferme, l’ovale du visage un peu plus dessiné. Et surtout, aucune réaction malgré ma peau très sensible. J’adopte.\"</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_xCRgik": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE10.png",
+            "column_size": "3",
+            "title": "Lucie F.",
+            "heading_tag": "h4",
+            "content": "<p><em>\"Produit très agréable à utiliser. Je ne ressens pas de picotement, pas de rougeur. Ce qui est fou, c’est la sensation de peau retendue après 30 minutes. Pas artificiel, juste naturel. Et l’odeur est très discrète, ce que j’apprécie.\"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -234,7 +328,14 @@
       "block_order": [
         "item_4TAKa6",
         "item_XXTYp8",
-        "item_UKxdpg"
+        "item_UKxdpg",
+        "item_DATGFL",
+        "item_pRBaTW",
+        "item_NUKJNt",
+        "item_d3wbMG",
+        "item_BARfAd",
+        "item_xCExHT",
+        "item_xCRgik"
       ],
       "name": "Multi-column",
       "settings": {
