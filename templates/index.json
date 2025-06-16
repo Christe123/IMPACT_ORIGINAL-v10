@@ -350,6 +350,107 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "featured_product_eWEegT": {
+      "type": "featured-product",
+      "blocks": {
+        "vendor_4tVB48": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "title_fmnHLn": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "badges_iUjakt": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price_jmcCbm": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating_PimJyd": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "separator_3iMhHX": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description_yGiKgr": {
+          "type": "description",
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "variant_picker_Wq6bUg": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector_tUkaFf": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_KKdqrC": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "pickup_availability_NzLq4A": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor_4tVB48",
+        "title_fmnHLn",
+        "badges_iUjakt",
+        "price_jmcCbm",
+        "rating_PimJyd",
+        "separator_3iMhHX",
+        "description_yGiKgr",
+        "variant_picker_Wq6bUg",
+        "quantity_selector_tUkaFf",
+        "buy_buttons_KKdqrC",
+        "pickup_availability_NzLq4A"
+      ],
+      "name": "Featured product",
+      "settings": {
+        "full_width": true,
+        "product": "masque-lifting-retinol-collagene",
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": true,
+        "enable_video_looping": false,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
     }
   },
   "order": [
@@ -358,6 +459,7 @@
     "logo_list_AbAtBh",
     "rich_text_MDywVg",
     "image_with_text_overlay_rXr3BP",
-    "multi_column_Y4kcjk"
+    "multi_column_Y4kcjk",
+    "featured_product_eWEegT"
   ]
 }
