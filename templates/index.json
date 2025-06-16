@@ -96,6 +96,7 @@
         "logo_QLiJdL": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Elle.png",
             "logo_width": 120,
             "link": ""
           }
@@ -103,6 +104,7 @@
         "logo_UJbH6A": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Comopolitan.png",
             "logo_width": 120,
             "link": ""
           }
@@ -110,6 +112,7 @@
         "logo_G8GyYE": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/Vogue.png",
             "logo_width": 120,
             "link": ""
           }
@@ -117,13 +120,7 @@
         "logo_77ai4a": {
           "type": "logo",
           "settings": {
-            "logo_width": 120,
-            "link": ""
-          }
-        },
-        "logo_cW7EVY": {
-          "type": "logo",
-          "settings": {
+            "logo": "shopify://shop_images/Marie_Claire.png",
             "logo_width": 120,
             "link": ""
           }
@@ -133,17 +130,16 @@
         "logo_QLiJdL",
         "logo_UJbH6A",
         "logo_G8GyYE",
-        "logo_77ai4a",
-        "logo_cW7EVY"
+        "logo_77ai4a"
       ],
       "name": "Logo list",
       "settings": {
         "full_width": true,
         "stack_mobile": true,
-        "title": "Logo list",
+        "title": "Vu sur",
         "content": "",
         "text_alignment": "center",
-        "items_per_row": 4,
+        "items_per_row": 3,
         "background": "",
         "background_gradient": "",
         "text_color": "",
@@ -152,11 +148,55 @@
         "logo_item_background": "",
         "logo_item_border": ""
       }
+    },
+    "rich_text_MDywVg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qc6CFq": {
+          "type": "heading",
+          "settings": {
+            "text": "Pourquoi choisir ce masque ?",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_qc6CFq"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "image_with_text_overlay_rXr3BP": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/benefice.png",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
     }
   },
   "order": [
     "slideshow",
     "Dawn-text",
-    "logo_list_AbAtBh"
+    "logo_list_AbAtBh",
+    "rich_text_MDywVg",
+    "image_with_text_overlay_rXr3BP"
   ]
 }
