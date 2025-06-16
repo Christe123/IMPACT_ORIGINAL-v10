@@ -446,7 +446,7 @@
         "liquid_mGcUPR": {
           "type": "liquid",
           "settings": {
-            "liquid": ""
+            "liquid": "<div id='ss-product-videos'></div>"
           }
         }
       },
