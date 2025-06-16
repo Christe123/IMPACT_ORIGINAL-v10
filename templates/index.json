@@ -354,9 +354,11 @@
     "featured_product_eWEegT": {
       "type": "featured-product",
       "blocks": {
-        "vendor_4tVB48": {
-          "type": "vendor",
-          "settings": {}
+        "liquid_YQXePR": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <title>Trustpilot Stars</title> </head> <body> <a target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration: none; display: flex; align-items: center;\"> <span style=\"font-size: 25px; font-weight: bold; color: #000;\">4.8</span> <img src=\"https://cdn.shopify.com/s/files/1/0647/2148/6072/files/trustpilot_5_stars.svg?v=1721578152\" alt=\"Trustpilot 5 stars\" style=\"margin: 0 8px; width: 120px; height: auto;\"> <span style=\"font-size: 23px; color: #555;\">(898 avis)</span> </a> </body> </html>"
+          }
         },
         "title_fmnHLn": {
           "type": "title",
@@ -367,6 +369,12 @@
         "badges_iUjakt": {
           "type": "badges",
           "settings": {}
+        },
+        "liquid_zKyrdh": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"unique-container-Abc456\" style=\"z-index: 21;\">\n  <div class=\"unique-badge-Def789\">\n    <span>\n      <svg class=\"unique-icon-Jkl345\" viewBox=\"0 0 24 24\" xmlns=\"http://w3.org/2000/svg\">\n        <path fill=\"#004d00\" d=\"M12 2C9.24 2 7 4.24 7 7V10H5C3.9 10 3 10.9 3 12V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V12C21 10.9 20.1 10 19 10H17V7C17 4.24 14.76 2 12 2M12 4C13.66 4 15 5.34 15 7V10H9V7C9 5.34 10.34 4 12 4M12 12C13.1 12 14 12.9 14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 10.9 12 12 12Z\"></path>\n      </svg>\n      30 JOURS SATISFAIT OU REMBOURSÉ\n    </span>\n  </div>\n\n  <div class=\"unique-badge-Ghi012\">\n    <span>\n      <svg class=\"unique-icon-Jkl345\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#b22222\" stroke-width=\"2\" fill=\"none\"></circle>\n        <line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"6\" stroke=\"#b22222\" stroke-width=\"2\" class=\"unique-clock-hand-Pqr901\"></line>\n        <line x1=\"12\" y1=\"12\" x2=\"16\" y2=\"12\" stroke=\"#b22222\" stroke-width=\"2\"></line>\n      </svg>\n      STOCK LIMITÉ !\n    </span>\n  </div>\n</div>\n\n<style style=\"z-index: 22;\">\n.unique-body-Xyz123 {\n  background-color: #f9f9f9;\n  color: #333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.unique-container-Abc456 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 10px;\n}\n\n.unique-badge-Def789 {\n  display: inline-flex;\n  align-items: center;\n  background-color: #e0ffd8;\n  color: #004d00;\n  padding: 2px 4px;\n  border-radius: 3px;\n  font-size: 10px;\n  font-weight: bold;\n  text-align: center;\n  position: relative;\n}\n\n.unique-badge-Ghi012 {\n  display: inline-flex;\n  align-items: center;\n  background-color: #ffdede;\n  color: #b22222;\n  padding: 2px 4px;\n  border-radius: 3px;\n  font-size: 10px;\n  font-weight: bold;\n  text-align: center;\n  position: relative;\n}\n\n.unique-icon-Jkl345 {\n  width: 12px;\n  height: 12px;\n  margin-right: 2px;\n  vertical-align: middle;\n}\n\n.unique-badge-Def789 span, .unique-badge-Ghi012 span {\n  display: flex;\n  align-items: center;\n  white-space: nowrap;\n}\n\n@keyframes unique-rotate-Mno678 {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n.unique-clock-hand-Pqr901 {\n  transform-origin: 50% 50%;\n  animation: unique-rotate-Mno678 2s linear infinite;\n}\n</style>  "
+          }
         },
         "price_jmcCbm": {
           "type": "price",
@@ -390,6 +398,14 @@
             "collapse_content": false
           }
         },
+        "image_QidBtF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OFFRE1.jpg",
+            "alignment": "start",
+            "max_width": 500
+          }
+        },
         "variant_picker_Wq6bUg": {
           "type": "variant_picker",
           "settings": {
@@ -407,12 +423,20 @@
         "buy_buttons_KKdqrC": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": true,
+            "show_payment_button": false,
             "show_gift_card_recipient": true,
             "atc_button_background": "",
             "atc_button_text_color": "",
             "payment_button_background": "",
             "payment_button_text_color": ""
+          }
+        },
+        "image_c9Phai": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Offre2.jpg",
+            "alignment": "start",
+            "max_width": 500
           }
         },
         "pickup_availability_NzLq4A": {
@@ -421,16 +445,19 @@
         }
       },
       "block_order": [
-        "vendor_4tVB48",
+        "liquid_YQXePR",
         "title_fmnHLn",
         "badges_iUjakt",
+        "liquid_zKyrdh",
         "price_jmcCbm",
         "rating_PimJyd",
         "separator_3iMhHX",
         "description_yGiKgr",
+        "image_QidBtF",
         "variant_picker_Wq6bUg",
         "quantity_selector_tUkaFf",
         "buy_buttons_KKdqrC",
+        "image_c9Phai",
         "pickup_availability_NzLq4A"
       ],
       "name": "Featured product",
