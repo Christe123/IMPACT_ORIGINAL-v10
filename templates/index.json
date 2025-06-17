@@ -664,6 +664,53 @@
         "border_thickness": 0,
         "lazy": true
       }
+    },
+    "tabs_n6ew66": {
+      "type": "tabs",
+      "blocks": {
+        "tab_fWhhTa": {
+          "type": "tab",
+          "settings": {
+            "title": "Description",
+            "content": "<h2>Masque Rétinol & Collagène – Fermeté & Éclat Visage</h2><p>Offrez à votre peau un soin intense qui agit pendant que vous dormez. Ce masque nouvelle génération associe <strong>rétinol régénérant</strong> et <strong>collagène raffermissant</strong> pour cibler les zones relâchées du visage et redessiner l’ovale en douceur.</p><h3> Résultats dès les premières utilisations :</h3><p><br/>Plus ferme, <strong>plus tonique<br/><br/></strong>Raffermis et mieux définis<br/><br/>Lissée et <strong>éclat naturel ravivé</strong></p><h3> Une pause beauté qui fait la différence</h3><p>Pendant 30 à 40 minutes, ce masque en tissu épouse parfaitement les courbes du visage pour une diffusion optimale des actifs. Il travaille là où la peau en a le plus besoin : <strong>joues, mâchoire,  visage</strong>, tout en respectant les peaux sensibles.</p><h3> Idéal pour :</h3><p>Les peaux en perte de fermeté<br/><br/>Les premiers signes de l’âge<br/><br/>Celles et ceux qui veulent un effet “lift” visible sans injection<br/></p><p> <em>Sensation de fraîcheur immédiate, confort absolu, résultat visible… votre peau va adorer.</em></p>",
+            "page": ""
+          }
+        },
+        "tab_M47byg": {
+          "type": "tab",
+          "settings": {
+            "title": "Avantages",
+            "content": "<h2><strong>Les avantages du Masque Rétinol & Collagène<br/></strong></h2><p><strong>Double efficacité</strong><br/><br/>Associe le pouvoir du <strong>rétinol</strong> pour lisser la peau et celui du <strong>collagène</strong> pour raffermir les zones relâchées.</p><p><strong>Ovale du visage redessiné</strong><br/><br/>Agit précisément sur la mâchoire, les joues et le bas du visage pour un effet lift naturel et visible.</p><p><strong>Hydratation en profondeur</strong><br/><br/>Nourrit intensément la peau sans laisser de film gras. Résultat : une peau souple, rebondie et confortable.</p><p><strong>Soin de nuit sans effort</strong><br/><br/>Pendant que vous dormez, le masque agit en profondeur. Réveil avec une peau plus fraîche, reposée, et éclatante.</p><p> <strong>Sensation de confort immédiat</strong><br/><br/>Tissu doux qui épouse le visage. Aucun tiraillement, aucun picotement. Un vrai moment de bien-être.</p><p><strong>Formule douce adaptée à toutes les peaux</strong><br/><br/>Testé pour convenir même aux peaux sensibles. Sans parabènes, sans parfum agressif, sans compromis.</p><p><strong>Format pratique, prêt à l’emploi</strong><br/><br/>Chaque sachet est dosé pour un soin complet. Idéal à la maison ou en voyage.</p>",
+            "page": ""
+          }
+        },
+        "tab_M9NGXa": {
+          "type": "tab",
+          "settings": {
+            "title": "Ingrédients",
+            "content": "<h2><strong>Ingrédients Clés & Bienfaits</strong></h2><h3> <strong>Rétinol (Vitamine A)</strong></h3><p> Accélère le renouvellement cellulaire, lisse la texture de la peau, et réduit les signes visibles de l’âge.<br/><br/><strong>ollagène hydrolysé</strong></p><p>Renforce l’élasticité et la fermeté de la peau. Aide à redessiner les contours du visage.</p><h3> <strong>Acide hyaluronique</strong></h3><p>Hydrate en profondeur, repulpe les tissus et prévient la déshydratation.</p><h3><strong>Extrait de Centella Asiatica</strong></h3><p>→ Apaise les inflammations, stimule la cicatrisation et soutient la barrière cutanée.<br/><br/><strong>Niacinamide (Vitamine B3)</strong></p><p>Illumine le teint, unifie la peau et réduit les taches pigmentaires.</p><h3><strong>Allantoïne</strong></h3><p>Adoucit la peau, calme les rougeurs, et favorise une texture douce et lisse.</p><h3><strong>Extrait de thé vert</strong></h3><p>Antioxydant naturel, aide à protéger la peau contre les agressions extérieures.<br/><br/><br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_fWhhTa",
+        "tab_M47byg",
+        "tab_M9NGXa"
+      ],
+      "name": "Tabs",
+      "settings": {
+        "full_width": true,
+        "content_size": "medium",
+        "subheading": "",
+        "title": "",
+        "first_tab_open": false,
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
     }
   },
   "order": [
@@ -674,6 +721,7 @@
     "image_with_text_overlay_rXr3BP",
     "multi_column_Y4kcjk",
     "featured_product_eWEegT",
-    "sectionvideo_qtqmPa"
+    "sectionvideo_qtqmPa",
+    "tabs_n6ew66"
   ]
 }
