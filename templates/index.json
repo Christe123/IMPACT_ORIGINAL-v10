@@ -861,6 +861,112 @@
         "heading_color": "",
         "heading_gradient": ""
       }
+    },
+    "faq_f4WA34": {
+      "type": "faq",
+      "blocks": {
+        "item_dQeMxc": {
+          "type": "item",
+          "settings": {
+            "title": "Ce masque est-il adapté à tous les types de peau ?",
+            "content": "<p><em>Oui. Sa formule a été pensée pour convenir à tous les types de peau, y compris les peaux sensibles. Si vous débutez avec le rétinol, commencez par une application 1 à 2 fois par semaine.</em></p>"
+          }
+        },
+        "item_mkBJXJ": {
+          "type": "item",
+          "settings": {
+            "title": "En combien de temps peut-on voir les résultats ?",
+            "content": "<p><em>Les premiers effets sont souvent visibles dès la première application : peau plus lisse, plus souple, plus éclatante. Les résultats en profondeur (fermeté, tonicité) apparaissent en général après 1 à 2 semaines d’utilisation régulière.</em></p>"
+          }
+        },
+        "item_akLnte": {
+          "type": "item",
+          "settings": {
+            "title": "À quel moment de la journée faut-il l’utiliser ?",
+            "content": "<p><em>Ce masque est conçu pour une utilisation </em><em><strong>le soir</strong></em><em>, sur peau propre, avant de dormir. Le soin agit pendant votre sommeil, quand la peau se régénère naturellement.</em></p>"
+          }
+        },
+        "item_93ycU7": {
+          "type": "item",
+          "settings": {
+            "title": "Quelle est la fréquence d’utilisation recommandée ?",
+            "content": "<p><em>Nous conseillons </em><em><strong>3 à 4 fois par semaine</strong></em><em>, selon votre type de peau et vos besoins. Il peut s’intégrer facilement à votre routine sans irriter la peau.</em></p>"
+          }
+        },
+        "item_UpLzMK": {
+          "type": "item",
+          "settings": {
+            "title": "Peut-on utiliser d’autres produits après ce masque ?",
+            "content": "<p><strong>Oui. Après avoir retiré le masque, vous pouvez appliquer une crème hydratante pour sceller l’hydratation. Évitez d’ajouter des produits contenant aussi du rétinol immédiatement après.</strong></p>"
+          }
+        },
+        "item_xqtU7F": {
+          "type": "item",
+          "settings": {
+            "title": "Que contient une boîte ?",
+            "content": "<p><em>Chaque boîte contient </em><em><strong>4 masques individuels</strong></em><em>, prêts à l’emploi. Parfait pour une cure hebdomadaire ou une routine ciblée.</em></p>"
+          }
+        },
+        "item_RME8Fh": {
+          "type": "item",
+          "settings": {
+            "title": "Que faire si le Masque Rétinol & Collagène ne répond pas à mes attentes?",
+            "content": "<p><em>Nous sommes certains que vous allez adorer votre nouveau </em><em><strong>masque Rétinol & Collagène</strong></em><em>. Toutefois, si vous n’êtes pas entièrement satisfait(e) et décidez de le retourner, nous vous garantissons un remboursement complet.</em></p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_dQeMxc",
+        "item_mkBJXJ",
+        "item_akLnte",
+        "item_93ycU7",
+        "item_UpLzMK",
+        "item_xqtU7F",
+        "item_RME8Fh"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "",
+        "team_avatar_width": 160,
+        "support_hours": "",
+        "answer_time": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    },
+    "contact_chMxRq": {
+      "type": "contact",
+      "name": "Contact form",
+      "settings": {
+        "full_width": true,
+        "subheading": "Notre service clientèle est disponible 7 jours sur 7.Temps de réponse moyen : 24h",
+        "title": "Avez-vous des questions ?",
+        "content": "",
+        "text_position": "center",
+        "contact_form_size": "large",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "contact_background": "",
+        "contact_text_color": "",
+        "button_background": "",
+        "button_text_color": ""
+      }
     }
   },
   "order": [
@@ -874,6 +980,8 @@
     "sectionvideo_qtqmPa",
     "tabs_n6ew66",
     "multi_column_XUYzUB",
-    "images_with_text_scrolling_j4FYmG"
+    "images_with_text_scrolling_j4FYmG",
+    "faq_f4WA34",
+    "contact_chMxRq"
   ]
 }
