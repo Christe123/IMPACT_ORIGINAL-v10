@@ -439,6 +439,14 @@
             "payment_button_text_color": ""
           }
         },
+        "image_DCALYX": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/badge_confianc_CTA.webp",
+            "alignment": "start",
+            "max_width": 500
+          }
+        },
         "pickup_availability_NzLq4A": {
           "type": "pickup_availability",
           "settings": {}
@@ -464,6 +472,7 @@
         "quantity_selector_tUkaFf",
         "image_c9Phai",
         "buy_buttons_KKdqrC",
+        "image_DCALYX",
         "pickup_availability_NzLq4A",
         "liquid_mGcUPR"
       ],
