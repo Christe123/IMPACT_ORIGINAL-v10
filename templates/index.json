@@ -691,12 +691,30 @@
             "content": "<h2><strong>Ingrédients Clés & Bienfaits</strong></h2><h3> <strong>Rétinol (Vitamine A)</strong></h3><p> Accélère le renouvellement cellulaire, lisse la texture de la peau, et réduit les signes visibles de l’âge.<br/><br/><strong>ollagène hydrolysé</strong></p><p>Renforce l’élasticité et la fermeté de la peau. Aide à redessiner les contours du visage.</p><h3> <strong>Acide hyaluronique</strong></h3><p>Hydrate en profondeur, repulpe les tissus et prévient la déshydratation.</p><h3><strong>Extrait de Centella Asiatica</strong></h3><p>→ Apaise les inflammations, stimule la cicatrisation et soutient la barrière cutanée.<br/><br/><strong>Niacinamide (Vitamine B3)</strong></p><p>Illumine le teint, unifie la peau et réduit les taches pigmentaires.</p><h3><strong>Allantoïne</strong></h3><p>Adoucit la peau, calme les rougeurs, et favorise une texture douce et lisse.</p><h3><strong>Extrait de thé vert</strong></h3><p>Antioxydant naturel, aide à protéger la peau contre les agressions extérieures.<br/><br/><br/></p>",
             "page": ""
           }
+        },
+        "tab_M8Trkz": {
+          "type": "tab",
+          "settings": {
+            "title": "Service Client7J/7",
+            "content": "<p>Notre service client est à votre écoute 7J/7.<br/></p><p>Vous pouvez nous contacter par en utilisant l'onglet \"Contact\" de notre boutique ou par email à l'adresse<strong> contact@Retigena.com</strong></p>",
+            "page": ""
+          }
+        },
+        "tab_gcUPAR": {
+          "type": "tab",
+          "settings": {
+            "title": "30jours satisfait ou remboursé",
+            "content": "<p>Essayer le <strong>Masque Rétinol & Collagène</strong> sans risque <strong>pendant 30 jours</strong>. Si vous n'êtes pas satisfait vous avez la possibilité de le demander <strong>un remboursement intégral</strong>.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "tab_fWhhTa",
         "tab_M47byg",
-        "tab_M9NGXa"
+        "tab_M9NGXa",
+        "tab_M8Trkz",
+        "tab_gcUPAR"
       ],
       "name": "Tabs",
       "settings": {
