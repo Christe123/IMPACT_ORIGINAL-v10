@@ -401,7 +401,7 @@
         "image_QidBtF": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/OFFRE1.jpg",
+            "image": "shopify://shop_images/Offre_masque.jpg",
             "alignment": "start",
             "max_width": 500
           }
@@ -423,7 +423,7 @@
         "image_c9Phai": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Offre2.jpg",
+            "image": "shopify://shop_images/Offre_masque_2.jpg",
             "alignment": "start",
             "max_width": 500
           }
