@@ -36,7 +36,7 @@
         "slide-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Baniere1.png",
+            "image": "shopify://shop_images/BAN_PC.png",
             "mobile_image": "shopify://shop_images/BANIERE_ONE.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
