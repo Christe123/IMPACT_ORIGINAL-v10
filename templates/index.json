@@ -402,7 +402,7 @@
         "image_QidBtF": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Offre_masque.jpg",
+            "image": "shopify://shop_images/promo.jpg",
             "alignment": "start",
             "max_width": 500
           }
