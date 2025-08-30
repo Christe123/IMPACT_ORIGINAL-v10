@@ -443,8 +443,8 @@
         "image_DCALYX": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/badge_confianc_CTA.webp",
-            "alignment": "start",
+            "image": "shopify://shop_images/Garantie.jpg",
+            "alignment": "center",
             "max_width": 500
           }
         },
@@ -724,7 +724,7 @@
         "subheading": "",
         "title": "",
         "first_tab_open": false,
-        "background": "#f8d5dd",
+        "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
         "heading_color": "",
