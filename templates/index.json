@@ -984,7 +984,7 @@
           "settings": {
             "only_photos": false,
             "hide_thumbnails": false,
-            "product_handle": "",
+            "product_handle": "masque-lifting-retinol-collagene",
             "aggregated": true,
             "data-limit": 20,
             "maxwidth": 1080,
@@ -997,9 +997,9 @@
       ],
       "settings": {
         "full_width": true,
-        "remove_vertical_spacing": true,
-        "remove_horizontal_spacing": true,
-        "background": "",
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
         "enable_review_integration": true,
