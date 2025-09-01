@@ -361,12 +361,6 @@
             "liquid": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <title>Trustpilot Stars</title> </head> <body> <a target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration: none; display: flex; align-items: center;\"> <span style=\"font-size: 25px; font-weight: bold; color: #000;\">4.8</span> <img src=\"https://cdn.shopify.com/s/files/1/0647/2148/6072/files/trustpilot_5_stars.svg?v=1721578152\" alt=\"Trustpilot 5 stars\" style=\"margin: 0 8px; width: 120px; height: auto;\"> <span style=\"font-size: 23px; color: #555;\">(898 avis)</span> </a> </body> </html>"
           }
         },
-        "countdown_timer_essential_app_block_bTzwzm": {
-          "type": "shopify://apps/countdown-timer-essential/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "settings": {
-            "id": "cmezoqr8200f5hk66ee2fef79"
-          }
-        },
         "title_fmnHLn": {
           "type": "title",
           "settings": {
@@ -387,6 +381,12 @@
           "type": "price",
           "settings": {
             "show_taxes_notice": false
+          }
+        },
+        "kaching_bundles_app_block_GpWi7J": {
+          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{section.settings.product}}"
           }
         },
         "rating_PimJyd": {
@@ -413,10 +413,10 @@
             "max_width": 500
           }
         },
-        "kaching_bundles_app_block_GpWi7J": {
-          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+        "countdown_timer_essential_app_block_bTzwzm": {
+          "type": "shopify://apps/countdown-timer-essential/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
           "settings": {
-            "product": "{{section.settings.product}}"
+            "id": "cmezoqr8200f5hk66ee2fef79"
           }
         },
         "variant_picker_Wq6bUg": {
@@ -473,16 +473,16 @@
       },
       "block_order": [
         "liquid_YQXePR",
-        "countdown_timer_essential_app_block_bTzwzm",
         "title_fmnHLn",
         "badges_iUjakt",
         "liquid_zKyrdh",
         "price_jmcCbm",
+        "kaching_bundles_app_block_GpWi7J",
         "rating_PimJyd",
         "separator_3iMhHX",
         "description_yGiKgr",
         "image_QidBtF",
-        "kaching_bundles_app_block_GpWi7J",
+        "countdown_timer_essential_app_block_bTzwzm",
         "variant_picker_Wq6bUg",
         "quantity_selector_tUkaFf",
         "image_c9Phai",
