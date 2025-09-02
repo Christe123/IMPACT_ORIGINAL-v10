@@ -75,36 +75,7 @@
         {%- sections 'footer-group' -%}
       {%- endif -%}
     </main>
-
-    <script>
-  var _learnq = _learnq || [];
-  document.querySelectorAll('form[action*="/cart/add"]').forEach(function(form) {
-    form.addEventListener('submit', function() {
-      var formData = new FormData(form);
-      var params = new URLSearchParams(formData).toString();
-      fetch('/cart/add.js', {
-        method: 'POST',
-        body: formData
-      }).then(function(response) {
-        if (response.ok) {
-          fetch('/cart.js').then(function(resp) {
-            return resp.json();
-          }).then(function(cart) {
-            var item = cart.items[cart.items.length - 1];
-            _learnq.push(['track', 'Added to Cart', {
-              ProductID: item.product_id,
-              SKU: item.sku,
-              ProductName: item.product_title,
-              Quantity: item.quantity,
-              Price: item.price / 100
-            }]);
-          });
-        }
-      });
-    });
-  });
-</script>
-
+    
 
 
 
