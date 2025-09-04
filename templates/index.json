@@ -197,6 +197,7 @@
       "blocks": {
         "item_4TAKa6": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/AVISMASQUE1.png",
             "column_size": "3",
