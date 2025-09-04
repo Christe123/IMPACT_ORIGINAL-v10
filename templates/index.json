@@ -517,9 +517,9 @@
         "video_3E9zTQ": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/videp1.mp4",
+            "video": "shopify://files/videos/A1A08594-0646-42CD-B4F9-0EEFA116EFEE.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/videp1.mp4",
+            "preload_video": "shopify://files/videos/A1A08594-0646-42CD-B4F9-0EEFA116EFEE.mov",
             "modal_heading": "",
             "modal_text": ""
           }
@@ -527,8 +527,9 @@
         "video_VmPtFF": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/745F60A4-8BD4-420B-9B8F-FED57628AEB5.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/Video2.mp4",
+            "preload_video": "shopify://files/videos/745F60A4-8BD4-420B-9B8F-FED57628AEB5.mov",
             "modal_heading": "",
             "modal_text": ""
           }
