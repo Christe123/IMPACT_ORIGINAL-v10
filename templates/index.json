@@ -752,11 +752,11 @@
         "item_HEaB3a": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/SECTION_IMAGE23.png",
+            "image": "shopify://shop_images/dr-sophie.webp",
             "icon": "none",
             "icon_width": 48,
-            "title": "Redessinez votre visage. Révélez votre éclat.",
-            "content": "<p>Ce masque est bien plus qu’un simple soin : c’est un traitement ciblé qui agit en profondeur pour lifter, raffermir et lisser la peau. Grâce à la synergie du rétinol et du collagène, il redéfinit les contours du visage, améliore l’élasticité et restaure l’éclat naturel du teint. En quelques applications seulement, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
+            "title": "Dr. Rosi Benard à propos de LiftingMask",
+            "content": "<p>Le temps qui passe relâche votre peau, creuse vos rides et affaisse vos contours. Mais ce n'est plus une fatalité ! Le masque Retigena agit comme un véritable lifting naturel pour retendre, sculpter et rajeunir votre visage en profondeur. Grâce à sa formule révolutionnaire collagène + rétinol, il restaure la fermeté perdue et redessine votre ovale pour un effet anti-âge spectaculaire.</p>"
           }
         },
         "item_VUGgep": {
@@ -876,6 +876,90 @@
         "background": "#ffffff",
         "background_gradient": "",
         "text_color": ""
+      }
+    },
+    "images_with_text_scrolling_RrmrcM": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_j3raWT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/SECTION_IMAGE23.png",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Redessinez votre visage. Révélez votre éclat.",
+            "content": "<p>Ce masque est bien plus qu’un simple soin : c’est un traitement ciblé qui agit en profondeur pour lifter, raffermir et lisser la peau. Grâce à la synergie du rétinol et du collagène, il redéfinit les contours du visage, améliore l’élasticité et restaure l’éclat naturel du teint. En quelques applications seulement, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
+          }
+        },
+        "item_caTQrn": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_j3raWT",
+        "item_caTQrn"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": true,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "images_with_text_scrolling_n67MjX": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_XxF9wj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/SECTION_IMAGE23.png",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Redessinez votre visage. Révélez votre éclat.",
+            "content": "<p>Ce masque est bien plus qu’un simple soin : c’est un traitement ciblé qui agit en profondeur pour lifter, raffermir et lisser la peau. Grâce à la synergie du rétinol et du collagène, il redéfinit les contours du visage, améliore l’élasticité et restaure l’éclat naturel du teint. En quelques applications seulement, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
+          }
+        },
+        "item_kppTXk": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_XxF9wj",
+        "item_kppTXk"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": true,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
       }
     },
     "faq_f4WA34": {
@@ -1072,6 +1156,8 @@
     "tabs_n6ew66",
     "images_with_text_scrolling_j4FYmG",
     "multi_column_XUYzUB",
+    "images_with_text_scrolling_RrmrcM",
+    "images_with_text_scrolling_n67MjX",
     "faq_f4WA34",
     "contact_chMxRq",
     "17566032008b10683c",
