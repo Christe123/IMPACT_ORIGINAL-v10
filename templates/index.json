@@ -408,8 +408,8 @@
         "image_QidBtF": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/promoo.jpg",
-            "alignment": "start",
+            "image": "shopify://shop_images/BENEFICEUTRA.jpg",
+            "alignment": "center",
             "max_width": 500
           }
         },
