@@ -1104,16 +1104,6 @@
     "images_with_text_scrolling_HmpQDM": {
       "type": "images-with-text-scrolling",
       "blocks": {
-        "item_qzd8zr": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/beautiful-senior-older-woman-smiling-looking-at-mi-2023-11-27-05-27-50-utc_1_86dd79fe-04bf-45b4-8d3a-37f98292e1c9.webp",
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Expérimentez une transformation rajeunissante",
-            "content": "<p>Tous les signes visibles de fatigue, de stress ou de vieillissement disparaissent de votre visage.</p><p>Notre Masque soutient votre peau et aide à restaurer son élasticité.</p>"
-          }
-        },
         "item_jKEzCt": {
           "type": "item",
           "disabled": true,
@@ -1126,7 +1116,6 @@
         }
       },
       "block_order": [
-        "item_qzd8zr",
         "item_jKEzCt"
       ],
       "name": "Images and text scrolling",
