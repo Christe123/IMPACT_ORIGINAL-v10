@@ -746,6 +746,48 @@
         "heading_gradient": ""
       }
     },
+    "images_with_text_scrolling_j4FYmG": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_HEaB3a": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/SECTION_IMAGE23.png",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Redessinez votre visage. Révélez votre éclat.",
+            "content": "<p>Ce masque est bien plus qu’un simple soin : c’est un traitement ciblé qui agit en profondeur pour lifter, raffermir et lisser la peau. Grâce à la synergie du rétinol et du collagène, il redéfinit les contours du visage, améliore l’élasticité et restaure l’éclat naturel du teint. En quelques applications seulement, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
+          }
+        },
+        "item_VUGgep": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_HEaB3a",
+        "item_VUGgep"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": true,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "multi_column_XUYzUB": {
       "type": "multi-column",
       "blocks": {
@@ -834,48 +876,6 @@
         "background": "#ffffff",
         "background_gradient": "",
         "text_color": ""
-      }
-    },
-    "images_with_text_scrolling_j4FYmG": {
-      "type": "images-with-text-scrolling",
-      "blocks": {
-        "item_HEaB3a": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/SECTION_IMAGE23.png",
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Redessinez votre visage. Révélez votre éclat.",
-            "content": "<p>Ce masque est bien plus qu’un simple soin : c’est un traitement ciblé qui agit en profondeur pour lifter, raffermir et lisser la peau. Grâce à la synergie du rétinol et du collagène, il redéfinit les contours du visage, améliore l’élasticité et restaure l’éclat naturel du teint. En quelques applications seulement, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
-          }
-        },
-        "item_VUGgep": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Heading",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_HEaB3a",
-        "item_VUGgep"
-      ],
-      "name": "Images and text scrolling",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": true,
-        "show_counter": false,
-        "desktop_image_effect": "reveal",
-        "image_position": "start",
-        "background": "#ffffff",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
       }
     },
     "faq_f4WA34": {
@@ -1028,8 +1028,8 @@
     "featured_product_eWEegT",
     "sectionvideo_qtqmPa",
     "tabs_n6ew66",
-    "multi_column_XUYzUB",
     "images_with_text_scrolling_j4FYmG",
+    "multi_column_XUYzUB",
     "faq_f4WA34",
     "contact_chMxRq",
     "17566032008b10683c"
