@@ -547,8 +547,9 @@
         "video_JiyhCY": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/videp1.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/a2aa68ffba1b4d8f9c45dc67e0992c6f.HD-720p-1.6Mbps-42655643.mp4",
+            "preload_video": "shopify://files/videos/videp1.mov",
             "modal_heading": "<h4>Modal Heading</h4>",
             "modal_text": "<p>Modal Text</p>"
           }
