@@ -534,20 +534,12 @@
             "modal_text": ""
           }
         },
-        "video_JLPfba": {
-          "type": "video",
-          "disabled": true,
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "modal_heading": "<h4>Modal Heading</h4>",
-            "modal_text": "<p>Modal Text</p>"
-          }
-        },
         "video_VnJrdm": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/Video2.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/Video3.mp4",
+            "preload_video": "shopify://files/videos/Video2.mov",
             "modal_heading": "",
             "modal_text": ""
           }
@@ -565,7 +557,6 @@
       "block_order": [
         "video_3E9zTQ",
         "video_VmPtFF",
-        "video_JLPfba",
         "video_VnJrdm",
         "video_JiyhCY"
       ],
