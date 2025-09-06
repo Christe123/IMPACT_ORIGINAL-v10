@@ -90,36 +90,22 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// 2. Différer le chargement des scripts lourds (Pixel, GA, autres widgets)
+// 2. Différer le chargement des scripts lourds (Google Analytics, widgets...)
 window.addEventListener("load", function() {
   setTimeout(function(){
 
-    // ========== Meta Pixel ==========
-    var fb = document.createElement('script');
-    fb.src = "https://connect.facebook.net/en_US/fbevents.js";
-    fb.async = true; fb.defer = true;
-    document.body.appendChild(fb);
-
-    // Pixel init (remplacez par votre vrai ID Pixel)
-    window.fbq = window.fbq || function(){(fbq.callMethod? fbq.callMethod:fbq.queue.push).apply(fbq, arguments)};
-    if (!window._fbq) window._fbq = fbq;
-    fbq.push = fbq; fbq.loaded = true; fbq.version = '2.0';
-    fbq.queue = [];
-    fbq('init', 'XXXXXXXXXXXXXXX'); // <-- Ton ID Pixel ici
-    fbq('track', 'PageView');
-
     // ========== Google Analytics 4 ==========
     var ga = document.createElement('script');
-    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX";
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-MCN053PRH1";
     ga.async = true; ga.defer = true;
     document.body.appendChild(ga);
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX'); // <-- Ton ID GA4 ici
+    gtag('config', 'G-MCN053PRH1');
 
-    // ========== Exemple: Autre widget (chat, heatmap) ==========
+    // ========== Exemple: Autre widget (chat, heatmap, popup) ==========
     // var widget = document.createElement('script');
     // widget.src = "https://cdn.vendor.com/widget.js";
     // widget.async = true; widget.defer = true;
@@ -143,6 +129,7 @@ preloads.forEach(function(file) {
 
 // =====================================================
 </script>
+
 
 
 
