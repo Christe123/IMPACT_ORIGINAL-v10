@@ -76,6 +76,43 @@
       {%- endif -%}
     </main>
     
+    <script>
+/* Deferer proprement les scripts non-critiques */
+(function() {
+  var queue=[], loaded=false;
+  function run(){
+    if(loaded) return;
+    loaded=true;
+    queue.forEach(function(fn){ try{fn()}catch(e){} });
+  }
+  // Lance après le 'load' ou en idle
+  if ('requestIdleCallback' in window) requestIdleCallback(run, {timeout: 3000});
+  else window.addEventListener('load', run);
+
+  // Helper: charge un script externe en async/defer
+  function lazyScript(src, attrs){
+    var s=document.createElement('script');
+    s.src=src; s.async=true; s.defer=true;
+    if(attrs) Object.keys(attrs).forEach(k=>s.setAttribute(k, attrs[k]));
+    document.body.appendChild(s);
+  }
+
+  // Mets ici TES scripts non-critiques :
+  queue.push(function(){
+    // Meta Pixel (si tu veux le décaler après le load)
+    // lazyScript('https://connect.facebook.net/en_US/fbevents.js');
+
+    // Google Analytics v4 (gtag) exemple :
+    // lazyScript('https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX');
+    // window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+    // gtag('js', new Date()); gtag('config','G-XXXXXXX',{anonymize_ip:true});
+
+    // Widgets, chats, heatmaps, etc.
+    // lazyScript('https://cdn.vendor.com/widget.js');
+  });
+})();
+</script>
+
 
 
 
