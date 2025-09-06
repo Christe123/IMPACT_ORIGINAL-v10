@@ -961,29 +961,50 @@
         "item_dQeMxc": {
           "type": "item",
           "settings": {
-            "title": "Ce masque est-il adapté à tous les types de peau ?",
-            "content": "<p><em>Oui. Sa formule a été pensée pour convenir à tous les types de peau, y compris les peaux sensibles. Si vous débutez avec le rétinol, commencez par une application 1 à 2 fois par semaine.</em></p>"
+            "title": "Est-ce que ça marche vraiment ou c'est encore du marketing ?",
+            "content": "<p>Les résultats parlent d'eux-mêmes ! Plus de 15 000 femmes ont déjà testé avec 98% de satisfaction. L'effet lifting est visible dès le retrait du masque - c'est pour ça qu'on offre une garantie 30 jours satisfait ou remboursé.</p>"
           }
         },
         "item_mkBJXJ": {
           "type": "item",
           "settings": {
-            "title": "En combien de temps peut-on voir les résultats ?",
-            "content": "<p><em>Les premiers effets sont souvent visibles dès la première application : peau plus lisse, plus souple, plus éclatante. Les résultats en profondeur (fermeté, tonicité) apparaissent en général après 1 à 2 semaines d’utilisation régulière.</em></p>"
+            "title": "Combien de temps faut-il pour voir des résultats ?",
+            "content": "<p>C'est immédiat ! Dès la première utilisation, votre peau est visiblement liftée et tendue. Après une semaine, l'effet est spectaculaire. Contrairement aux crèmes qui mettent des mois, nos résultats sont instantanés.</p>"
           }
         },
         "item_akLnte": {
           "type": "item",
           "settings": {
+            "title": "Ma peau est très sensible, puis-je l'utiliser ?",
+            "content": "<p>Absolument ! Ce masque convient à TOUTES les peaux, même les plus sensibles. Sa formule a été testée dermatologiquement. Aucune irritation rapportée sur nos 15 000 utilisatrices.</p>"
+          }
+        },
+        "item_CqReLP": {
+          "type": "item",
+          "settings": {
+            "title": "C'est cher pour un masque, non ?",
+            "content": "<p>Réfléchissez : une séance chez l'esthéticienne = 80€. Un lifting = 8000€. Notre masque vous donne le même résultat pour quelques euros ! C'est l'investissement beauté le plus rentable de votre vie.</p>"
+          }
+        },
+        "item_an86Rx": {
+          "type": "item",
+          "settings": {
+            "title": "Quelle est la différence avec les autres masques ?",
+            "content": "<p><em>Les masques classiques hydratent en surface. Le nôtre PÉNÈTRE en profondeur grâce à sa texture révolutionnaire et STIMULE votre collagène naturel. Résultat : lifting réel, pas juste hydratation temporaire.</em></p>"
+          }
+        },
+        "item_nPTtBz": {
+          "type": "item",
+          "settings": {
             "title": "À quel moment de la journée faut-il l’utiliser ?",
-            "content": "<p><em>Ce masque est conçu pour une utilisation </em><em><strong>le soir</strong></em><em>, sur peau propre, avant de dormir. Le soin agit pendant votre sommeil, quand la peau se régénère naturellement.</em></p>"
+            "content": "<p><em>Utilisez ce masque </em><em><strong>matin et soir</strong></em><em> sur peau propre. Sa formule révolutionnaire sert de base parfaite au maquillage le matin et agit toute la nuit pour régénérer votre peau en profondeur.</em></p>"
           }
         },
         "item_93ycU7": {
           "type": "item",
           "settings": {
             "title": "Quelle est la fréquence d’utilisation recommandée ?",
-            "content": "<p><em>Nous conseillons </em><em><strong>3 à 4 fois par semaine</strong></em><em>, selon votre type de peau et vos besoins. Il peut s’intégrer facilement à votre routine sans irriter la peau.</em></p>"
+            "content": "<p><em>Nous conseillons </em><em><strong>2 utilisations par jour (matin et soir), 3 à 4 fois par semaine</strong></em><em> pour des résultats optimaux</em></p>"
           }
         },
         "item_UpLzMK": {
@@ -1012,6 +1033,9 @@
         "item_dQeMxc",
         "item_mkBJXJ",
         "item_akLnte",
+        "item_CqReLP",
+        "item_an86Rx",
+        "item_nPTtBz",
         "item_93ycU7",
         "item_UpLzMK",
         "item_xqtU7F",
