@@ -962,28 +962,14 @@
           "type": "item",
           "settings": {
             "title": "Est-ce que ça marche vraiment ou c'est encore du marketing ?",
-            "content": "<p>Les résultats parlent d'eux-mêmes ! Plus de 15 000 femmes ont déjà testé avec 98% de satisfaction. L'effet lifting est visible dès le retrait du masque - c'est pour ça qu'on offre une garantie 30 jours satisfait ou remboursé.</p>"
-          }
-        },
-        "item_mkBJXJ": {
-          "type": "item",
-          "settings": {
-            "title": "Combien de temps faut-il pour voir des résultats ?",
-            "content": "<p>C'est immédiat ! Dès la première utilisation, votre peau est visiblement liftée et tendue. Après une semaine, l'effet est spectaculaire. Contrairement aux crèmes qui mettent des mois, nos résultats sont instantanés.</p>"
-          }
-        },
-        "item_akLnte": {
-          "type": "item",
-          "settings": {
-            "title": "Ma peau est très sensible, puis-je l'utiliser ?",
-            "content": "<p>Absolument ! Ce masque convient à TOUTES les peaux, même les plus sensibles. Sa formule a été testée dermatologiquement. Aucune irritation rapportée sur nos 15 000 utilisatrices.</p>"
+            "content": "<p><em>Les résultats parlent d'eux-mêmes ! Plus de 15 000 femmes ont déjà testé avec 98% de satisfaction. L'effet lifting est visible dès le retrait du masque - c'est pour ça qu'on offre une garantie 30 jours satisfait ou remboursé</em>.</p>"
           }
         },
         "item_CqReLP": {
           "type": "item",
           "settings": {
             "title": "C'est cher pour un masque, non ?",
-            "content": "<p>Réfléchissez : une séance chez l'esthéticienne = 80€. Un lifting = 8000€. Notre masque vous donne le même résultat pour quelques euros ! C'est l'investissement beauté le plus rentable de votre vie.</p>"
+            "content": "<p><em>Réfléchissez : une séance chez l'esthéticienne = 80€. Un lifting = 8000€. Notre masque vous donne le même résultat pour quelques euros ! C'est l'investissement beauté le plus rentable de votre vie.</em></p>"
           }
         },
         "item_an86Rx": {
@@ -993,7 +979,64 @@
             "content": "<p><em>Les masques classiques hydratent en surface. Le nôtre PÉNÈTRE en profondeur grâce à sa texture révolutionnaire et STIMULE votre collagène naturel. Résultat : lifting réel, pas juste hydratation temporaire.</em></p>"
           }
         },
+        "item_mkBJXJ": {
+          "type": "item",
+          "settings": {
+            "title": "Combien de temps faut-il pour voir des résultats ?",
+            "content": "<p><em>C'est immédiat ! Dès la première utilisation, votre peau est visiblement liftée et tendue. Après une semaine, l'effet est spectaculaire. Contrairement aux crèmes qui mettent des mois, nos résultats sont instantanés.</em></p>"
+          }
+        },
+        "item_qTTGy9": {
+          "type": "item",
+          "settings": {
+            "title": "Pourquoi ce masque vient des États-Unis ?",
+            "content": "<p><em>Les Américains sont en avance de 5 ans sur l'anti-âge ! Cette technologie exclusive a conquis Hollywood avant d'arriver en France. Vous avez accès à l'innovation beauté du futur.</em></p>"
+          }
+        },
         "item_nPTtBz": {
+          "type": "item",
+          "settings": {
+            "title": "Ça marche sur les rides profondes ?",
+            "content": "<p>OUI ! Même les rides marquées s'atténuent visiblement. Le collagène concentré et le rétinol agissent directement sur les rides profondes. Nos clientes de 60+ ans sont bluffées par les résultats.</p>"
+          }
+        },
+        "item_akLnte": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je l'utiliser avec mes autres soins ?",
+            "content": "<p><em>Bien sûr ! Il remplace même plusieurs produits : sérum, masque, soin anti-âge. Votre routine beauté devient plus simple et plus efficace.</em></p>"
+          }
+        },
+        "item_4Greb6": {
+          "type": "item",
+          "settings": {
+            "title": "Ce masque peut-il vraiment redessiner mon ovale ?",
+            "content": "<p><em>ABSOLUMENT ! Sa formule collagène + rétinol retend la peau relâchée et raffermit les tissus. Dès la première utilisation, votre ovale se redessine. Après une semaine, l'effet est spectaculaire - comme un lifting naturel !</em></p><h3></h3>"
+          }
+        },
+        "item_jHVYmd": {
+          "type": "item",
+          "settings": {
+            "title": "Mes rides vont-elles revenir si j'arrête ?",
+            "content": "<p><em>Le masque STIMULE votre collagène naturel, donc les bénéfices durent même entre les utilisations. Mais pourquoi arrêter quand vous avez trouvé LA solution ?</em></p>"
+          }
+        },
+        "item_reJtCT": {
+          "type": "item",
+          "settings": {
+            "title": "Ma peau est très sensible, puis-je l'utiliser ?",
+            "content": "<p><em>Absolument ! Ce masque convient à TOUTES les peaux, même les plus sensibles. Sa formule a été testée dermatologiquement. Aucune irritation rapportée sur nos 15 000 utilisatrices.</em></p>"
+          }
+        },
+        "item_jyYnkh": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "C'est cher pour un masque, non ?",
+            "content": "<p><em>Réfléchissez : une séance chez l'esthéticienne = 80€. Un lifting = 8000€. Notre masque vous donne le même résultat pour quelques euros ! C'est l'investissement beauté le plus rentable de votre vie.</em></p>"
+          }
+        },
+        "item_rimYpc": {
           "type": "item",
           "settings": {
             "title": "À quel moment de la journée faut-il l’utiliser ?",
@@ -1004,14 +1047,14 @@
           "type": "item",
           "settings": {
             "title": "Quelle est la fréquence d’utilisation recommandée ?",
-            "content": "<p><em>Nous conseillons </em><em><strong>2 utilisations par jour (matin et soir), 3 à 4 fois par semaine</strong></em><em> pour des résultats optimaux</em></p>"
+            "content": "<p>Nous conseillons <strong>2 utilisations par jour (matin et soir), 3 à 4 fois par semaine</strong> pour des résultats optimaux</p>"
           }
         },
         "item_UpLzMK": {
           "type": "item",
           "settings": {
             "title": "Peut-on utiliser d’autres produits après ce masque ?",
-            "content": "<p><strong>Oui. Après avoir retiré le masque, vous pouvez appliquer une crème hydratante pour sceller l’hydratation. Évitez d’ajouter des produits contenant aussi du rétinol immédiatement après.</strong></p>"
+            "content": "<p><em>Oui. Après avoir retiré le masque, vous pouvez appliquer une crème hydratante pour sceller l’hydratation. Évitez d’ajouter des produits contenant aussi du rétinol immédiatement après.</em></p>"
           }
         },
         "item_xqtU7F": {
@@ -1024,18 +1067,24 @@
         "item_RME8Fh": {
           "type": "item",
           "settings": {
-            "title": "Que faire si le Masque Rétinol & Collagène ne répond pas à mes attentes?",
-            "content": "<p><em>Nous sommes certains que vous allez adorer votre nouveau </em><em><strong>masque Rétinol & Collagène</strong></em><em>. Toutefois, si vous n’êtes pas entièrement satisfait(e) et décidez de le retourner, nous vous garantissons un remboursement complet.</em></p>"
+            "title": "Et si ça ne marche pas sur moi ?",
+            "content": "<p><em>IMPOSSIBLE ! Mais si par miracle vous n'êtes pas satisfaite, on vous rembourse intégralement pendant 30 jours. Zéro risque, que des bénéfices.</em></p>"
           }
         }
       },
       "block_order": [
         "item_dQeMxc",
-        "item_mkBJXJ",
-        "item_akLnte",
         "item_CqReLP",
         "item_an86Rx",
+        "item_mkBJXJ",
+        "item_qTTGy9",
         "item_nPTtBz",
+        "item_akLnte",
+        "item_4Greb6",
+        "item_jHVYmd",
+        "item_reJtCT",
+        "item_jyYnkh",
+        "item_rimYpc",
         "item_93ycU7",
         "item_UpLzMK",
         "item_xqtU7F",
