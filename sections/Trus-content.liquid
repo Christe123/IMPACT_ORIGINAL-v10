@@ -1,86 +1,77 @@
-<div class="trustpilot-minimal">
-  <div class="trustpilot-content">
+<div class="trustpilot-compact">
+  <div class="tp-container">
     
-    {% if section.settings.show_title and section.settings.title != blank %}
-    <h2 class="main-title">{{ section.settings.title }}</h2>
+    {% if section.settings.title != blank %}
+    <h2 class="tp-title">{{ section.settings.title }}</h2>
     {% endif %}
     
-    <div class="rating-block">
-      <div class="rating-line">
-        <span class="excellent-label">{{ section.settings.excellent_text }}</span>
-        <span class="rating-number">{{ section.settings.rating }} / 5</span>
-        
-        <div class="stars-block">
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-          <span class="star">★</span>
-        </div>
-      </div>
+    <div class="tp-rating-line">
+      <span class="tp-excellent">{{ section.settings.excellent_text }}</span>
+      <span class="tp-score">{{ section.settings.rating }} / 5</span>
       
-      <div class="info-line">
-        {{ section.settings.review_prefix }}<span class="count">{{ section.settings.review_count }}</span>{{ section.settings.review_suffix }}
-        <span class="brand">⭐ {{ section.settings.brand_text }}</span>
+      <div class="tp-stars">
+        <span class="tp-star">★</span>
+        <span class="tp-star">★</span>
+        <span class="tp-star">★</span>
+        <span class="tp-star">★</span>
+        <span class="tp-star">★</span>
       </div>
+    </div>
+    
+    <div class="tp-info">
+      {{ section.settings.review_prefix }}<span class="tp-count">{{ section.settings.review_count }}</span>{{ section.settings.review_suffix }} ⭐ {{ section.settings.brand_text }}
     </div>
     
   </div>
 </div>
 
 <style>
-.trustpilot-minimal {
+.trustpilot-compact {
   background: {{ section.settings.background_color }};
-  padding: {{ section.settings.top_spacing }}px 15px {{ section.settings.bottom_spacing }}px 15px;
+  padding: {{ section.settings.spacing }}px 20px;
 }
 
-.trustpilot-content {
-  max-width: 1000px;
+.tp-container {
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
 
-.main-title {
+.tp-title {
   font-size: {{ section.settings.title_size }}px;
   color: {{ section.settings.title_color }};
   font-weight: 600;
-  margin: 0 0 {{ section.settings.title_gap }}px 0;
+  margin: 0 0 {{ section.settings.title_spacing }}px 0;
   line-height: 1.2;
 }
 
-.rating-block {
-  display: flex;
-  flex-direction: column;
-  gap: {{ section.settings.lines_gap }}px;
-  align-items: center;
-}
-
-.rating-line {
+.tp-rating-line {
   display: flex;
   align-items: center;
-  gap: {{ section.settings.elements_gap }}px;
-  flex-wrap: wrap;
   justify-content: center;
+  gap: {{ section.settings.element_gap }}px;
+  margin-bottom: {{ section.settings.info_spacing }}px;
+  flex-wrap: wrap;
 }
 
-.excellent-label {
+.tp-excellent {
   font-size: {{ section.settings.text_size }}px;
   color: {{ section.settings.text_color }};
   font-weight: 500;
 }
 
-.rating-number {
+.tp-score {
   font-size: {{ section.settings.rating_size }}px;
   color: {{ section.settings.rating_color }};
   font-weight: 700;
 }
 
-.stars-block {
+.tp-stars {
   display: flex;
-  gap: {{ section.settings.stars_gap }}px;
+  gap: {{ section.settings.star_spacing }}px;
 }
 
-.star {
+.tp-star {
   width: {{ section.settings.star_size }}px;
   height: {{ section.settings.star_size }}px;
   background: {{ section.settings.star_color }};
@@ -93,64 +84,53 @@
   font-weight: bold;
 }
 
-.info-line {
+.tp-info {
   font-size: {{ section.settings.info_size }}px;
   color: {{ section.settings.info_color }};
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
-.count {
+.tp-count {
   color: {{ section.settings.count_color }};
   font-weight: 600;
   text-decoration: underline;
 }
 
-.brand {
-  color: {{ section.settings.brand_color }};
-  font-weight: 600;
-}
-
-/* Mobile responsive */
+/* Mobile */
 @media (max-width: 768px) {
-  .rating-line {
-    flex-direction: column;
+  .trustpilot-compact {
+    padding: {{ section.settings.mobile_spacing }}px 15px;
+  }
+  
+  .tp-title {
+    font-size: {{ section.settings.mobile_title_size }}px;
+  }
+  
+  .tp-rating-line {
     gap: {{ section.settings.mobile_gap }}px;
-  }
-  
-  .info-line {
+    {% if section.settings.mobile_stack %}
     flex-direction: column;
-    gap: {{ section.settings.mobile_gap }}px;
+    {% endif %}
   }
   
-  .main-title {
-    font-size: {{ section.settings.title_size | minus: 4 }}px;
+  .tp-star {
+    width: {{ section.settings.mobile_star_size }}px;
+    height: {{ section.settings.mobile_star_size }}px;
+    font-size: {{ section.settings.mobile_star_icon }}px;
   }
   
-  .star {
-    width: {{ section.settings.star_size | minus: 3 }}px;
-    height: {{ section.settings.star_size | minus: 3 }}px;
-    font-size: {{ section.settings.star_icon_size | minus: 2 }}px;
+  .tp-info {
+    font-size: {{ section.settings.mobile_info_size }}px;
   }
 }
 </style>
 
 {% schema %}
 {
-  "name": "Trustpilot Minimal",
+  "name": "Trustpilot Compact",
   "settings": [
     {
       "type": "header",
-      "content": "📝 Contenu"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_title",
-      "label": "Afficher le titre",
-      "default": true
+      "content": "Contenu"
     },
     {
       "type": "text",
@@ -196,91 +176,65 @@
     },
     {
       "type": "header",
-      "content": "📏 Espacements"
+      "content": "Espacements"
     },
     {
       "type": "range",
-      "id": "top_spacing",
-      "label": "Espacement haut",
-      "min": 0,
-      "max": 60,
+      "id": "spacing",
+      "label": "Espacement général",
+      "min": 10,
+      "max": 50,
       "step": 5,
-      "default": 15,
-      "unit": "px"
+      "default": 15
     },
     {
       "type": "range",
-      "id": "bottom_spacing",
-      "label": "Espacement bas",
-      "min": 0,
-      "max": 60,
-      "step": 5,
-      "default": 15,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "title_gap",
-      "label": "Espace après titre",
-      "min": 5,
-      "max": 30,
-      "step": 5,
-      "default": 15,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "lines_gap",
-      "label": "Espace entre lignes",
+      "id": "title_spacing",
+      "label": "Espace sous titre",
       "min": 5,
       "max": 25,
       "step": 5,
-      "default": 10,
-      "unit": "px"
+      "default": 10
     },
     {
       "type": "range",
-      "id": "elements_gap",
+      "id": "element_gap",
       "label": "Espace entre éléments",
-      "min": 8,
+      "min": 5,
       "max": 20,
-      "step": 2,
-      "default": 12,
-      "unit": "px"
+      "step": 5,
+      "default": 10
     },
     {
       "type": "range",
-      "id": "stars_gap",
+      "id": "info_spacing",
+      "label": "Espace avant info",
+      "min": 5,
+      "max": 15,
+      "step": 5,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "star_spacing",
       "label": "Espace entre étoiles",
       "min": 2,
-      "max": 8,
-      "step": 1,
-      "default": 3,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "mobile_gap",
-      "label": "Espace mobile",
-      "min": 6,
-      "max": 15,
-      "step": 1,
-      "default": 8,
-      "unit": "px"
+      "max": 6,
+      "step": 2,
+      "default": 2
     },
     {
       "type": "header",
-      "content": "📐 Tailles"
+      "content": "Tailles Desktop"
     },
     {
       "type": "range",
       "id": "title_size",
       "label": "Taille titre",
       "min": 20,
-      "max": 36,
-      "step": 2,
-      "default": 26,
-      "unit": "px"
+      "max": 35,
+      "step": 5,
+      "default": 25
     },
     {
       "type": "range",
@@ -288,9 +242,8 @@
       "label": "Taille texte",
       "min": 14,
       "max": 20,
-      "step": 1,
-      "default": 16,
-      "unit": "px"
+      "step": 2,
+      "default": 16
     },
     {
       "type": "range",
@@ -298,9 +251,8 @@
       "label": "Taille note",
       "min": 16,
       "max": 24,
-      "step": 1,
-      "default": 20,
-      "unit": "px"
+      "step": 2,
+      "default": 18
     },
     {
       "type": "range",
@@ -308,19 +260,17 @@
       "label": "Taille info",
       "min": 12,
       "max": 18,
-      "step": 1,
-      "default": 14,
-      "unit": "px"
+      "step": 2,
+      "default": 14
     },
     {
       "type": "range",
       "id": "star_size",
       "label": "Taille étoiles",
       "min": 20,
-      "max": 32,
-      "step": 2,
-      "default": 26,
-      "unit": "px"
+      "max": 30,
+      "step": 5,
+      "default": 25
     },
     {
       "type": "range",
@@ -328,13 +278,76 @@
       "label": "Taille icône étoile",
       "min": 12,
       "max": 18,
-      "step": 1,
-      "default": 15,
-      "unit": "px"
+      "step": 2,
+      "default": 14
     },
     {
       "type": "header",
-      "content": "🎨 Couleurs"
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_spacing",
+      "label": "Espacement mobile",
+      "min": 5,
+      "max": 25,
+      "step": 5,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "mobile_title_size",
+      "label": "Taille titre mobile",
+      "min": 20,
+      "max": 30,
+      "step": 5,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_star_size",
+      "label": "Taille étoiles mobile",
+      "min": 18,
+      "max": 24,
+      "step": 2,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_star_icon",
+      "label": "Icône étoiles mobile",
+      "min": 10,
+      "max": 16,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_info_size",
+      "label": "Taille info mobile",
+      "min": 12,
+      "max": 16,
+      "step": 2,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Espace éléments mobile",
+      "min": 5,
+      "max": 15,
+      "step": 5,
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_stack",
+      "label": "Empiler sur mobile",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Couleurs"
     },
     {
       "type": "color",
@@ -377,17 +390,11 @@
       "id": "count_color",
       "label": "Couleur nombre",
       "default": "#1a202c"
-    },
-    {
-      "type": "color",
-      "id": "brand_color",
-      "label": "Couleur marque",
-      "default": "#1a202c"
     }
   ],
   "presets": [
     {
-      "name": "Trustpilot Minimal"
+      "name": "Trustpilot Compact"
     }
   ]
 }
