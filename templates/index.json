@@ -205,6 +205,38 @@
         "text_color": ""
       }
     },
+    "trus_content_gJR6Bd": {
+      "type": "Trus-content",
+      "name": "Avis Trustpilot",
+      "settings": {
+        "show_title": true,
+        "title": "Nos clients en parlent le mieux",
+        "show_excellent": true,
+        "excellent_text": "Excellent",
+        "show_rating": true,
+        "rating_value": "4,7",
+        "show_stars": true,
+        "show_review_count": true,
+        "reviews_text_prefix": "basé sur +",
+        "review_count": "1 067",
+        "reviews_text_suffix": "avis",
+        "show_trustpilot_logo": true,
+        "trustpilot_text": "Trustpilot",
+        "background_color": "#ffffff",
+        "text_align": "center",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "title_color": "#1a202c",
+        "text_color": "#2d3748",
+        "rating_color": "#1a202c",
+        "star_color": "#00b67a",
+        "info_color": "#718096",
+        "count_color": "#1a202c",
+        "logo_text_color": "#1a202c",
+        "title_size": 40,
+        "star_size": 35
+      }
+    },
     "multi_column_Y4kcjk": {
       "type": "multi-column",
       "blocks": {
@@ -352,6 +384,7 @@
         "item_xCExHT",
         "item_xCRgik"
       ],
+      "custom_css": [],
       "name": "Multi-column",
       "settings": {
         "full_width": true,
@@ -360,7 +393,7 @@
         "text_alignment": "center",
         "subheading": "",
         "title": "AVANT/APRÈS",
-        "content": "<p><strong>Nos clientes en parlent le mieux</strong></p>",
+        "content": "",
         "background": "#ffffff",
         "background_gradient": "",
         "text_color": ""
@@ -1220,6 +1253,7 @@
     "rich_text_MDywVg",
     "image_with_text_overlay_rXr3BP",
     "custom_liquid_6iMCdz",
+    "trus_content_gJR6Bd",
     "multi_column_Y4kcjk",
     "featured_product_eWEegT",
     "sectionvideo_qtqmPa",
