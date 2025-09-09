@@ -1,236 +1,357 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avis Clients - Version Shopify</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-            background: #f8f9fa;
-            padding: 20px;
-        }
-
-        /* Section principale */
-        .trustpilot-section {
-            background: white;
-            padding: 40px 30px;
-            margin: 0 auto;
-            max-width: 1200px;
-            border: 1px solid #e1e8ed;
-            border-radius: 8px;
-        }
-
-        /* Titre principal */
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #1a202c;
-            text-align: center;
-            margin-bottom: 35px;
-            font-family: inherit;
-        }
-
-        /* Container des avis */
-        .reviews-wrapper {
-            text-align: center;
-        }
-
-        /* Ligne rating */
-        .rating-line {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .excellent-text {
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: #2d3748;
-        }
-
-        .rating-score {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #1a202c;
-        }
-
-        /* Étoiles */
-        .stars-row {
-            display: flex;
-            gap: 4px;
-            align-items: center;
-        }
-
-        .trustpilot-star {
-            width: 35px;
-            height: 35px;
-            background: #00b67a;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .trustpilot-star::after {
-            content: "★";
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        /* Info ligne */
-        .reviews-meta {
-            color: #718096;
-            font-size: 1.1rem;
-            margin-top: 15px;
-        }
-
-        .review-count {
-            color: #1a202c;
-            font-weight: 600;
-            text-decoration: underline;
-        }
-
-        /* Logo Trustpilot */
-        .trustpilot-brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .brand-star {
-            width: 22px;
-            height: 22px;
-            background: #00b67a;
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .brand-star::after {
-            content: "★";
-            color: white;
-            font-size: 14px;
-        }
-
-        .brand-text {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1a202c;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .trustpilot-section {
-                padding: 30px 20px;
-                margin: 0 10px;
-            }
-
-            .section-title {
-                font-size: 2rem;
-                margin-bottom: 25px;
-            }
-
-            .rating-line {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .excellent-text {
-                font-size: 1.2rem;
-            }
-
-            .rating-score {
-                font-size: 1.4rem;
-            }
-
-            .trustpilot-star {
-                width: 30px;
-                height: 30px;
-            }
-
-            .trustpilot-star::after {
-                font-size: 18px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section-title {
-                font-size: 1.7rem;
-            }
-
-            .stars-row {
-                gap: 3px;
-            }
-
-            .trustpilot-star {
-                width: 28px;
-                height: 28px;
-            }
-
-            .trustpilot-star::after {
-                font-size: 16px;
-            }
-        }
-
-        /* Animation subtile */
-        .trustpilot-section {
-            transition: box-shadow 0.3s ease;
-        }
-
-        .trustpilot-section:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        .trustpilot-star {
-            transition: transform 0.2s ease;
-        }
-
-        .trustpilot-star:hover {
-            transform: scale(1.05);
-        }
-    </style>
-</head>
-<body>
-    <div class="trustpilot-section">
-        <h2 class="section-title">Nos clients en parlent le mieux</h2>
+<!-- Section Trustpilot Personnalisable -->
+<div class="trustpilot-reviews-section" 
+     style="background-color: {{ section.settings.background_color }}; 
+            padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px 0;">
+  
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+    {% if section.settings.show_title %}
+    <h2 class="trustpilot-title" 
+        style="color: {{ section.settings.title_color }}; 
+               font-size: {{ section.settings.title_size }}px; 
+               text-align: {{ section.settings.text_align }}; 
+               margin-bottom: 35px;">
+      {{ section.settings.title }}
+    </h2>
+    {% endif %}
+    
+    <div class="trustpilot-content" style="text-align: {{ section.settings.text_align }};">
+      
+      <!-- Ligne principale avec note et étoiles -->
+      <div class="rating-row" style="margin-bottom: 25px;">
         
-        <div class="reviews-wrapper">
-            <div class="rating-line">
-                <span class="excellent-text">Excellent</span>
-                <span class="rating-score">4,7 / 5</span>
-                
-                <div class="stars-row">
-                    <div class="trustpilot-star"></div>
-                    <div class="trustpilot-star"></div>
-                    <div class="trustpilot-star"></div>
-                    <div class="trustpilot-star"></div>
-                    <div class="trustpilot-star"></div>
-                </div>
-            </div>
-            
-            <div class="reviews-meta">
-                basé sur +<span class="review-count">1 067</span> avis
-            </div>
-            
-            <div class="trustpilot-brand">
-                <div class="brand-star"></div>
-                <span class="brand-text">Trustpilot</span>
-            </div>
+        {% if section.settings.show_excellent %}
+        <span class="excellent-label" 
+              style="color: {{ section.settings.text_color }}; 
+                     font-size: 22px; 
+                     font-weight: 500; 
+                     margin-right: 15px;">
+          {{ section.settings.excellent_text }}
+        </span>
+        {% endif %}
+        
+        {% if section.settings.show_rating %}
+        <span class="rating-score" 
+              style="color: {{ section.settings.rating_color }}; 
+                     font-size: 26px; 
+                     font-weight: 700; 
+                     margin-right: 20px;">
+          {{ section.settings.rating_value }} / 5
+        </span>
+        {% endif %}
+        
+        {% if section.settings.show_stars %}
+        <div class="stars-container" style="display: inline-flex; gap: 4px;">
+          {% for i in (1..5) %}
+          <div class="trustpilot-star" 
+               style="width: {{ section.settings.star_size }}px; 
+                      height: {{ section.settings.star_size }}px; 
+                      background-color: {{ section.settings.star_color }}; 
+                      border-radius: 4px; 
+                      display: flex; 
+                      align-items: center; 
+                      justify-content: center;">
+            <span style="color: white; 
+                         font-size: 20px; 
+                         font-weight: bold;">★</span>
+          </div>
+          {% endfor %}
         </div>
+        {% endif %}
+        
+      </div>
+      
+      <!-- Ligne nombre d'avis -->
+      {% if section.settings.show_review_count %}
+      <div class="reviews-info" 
+           style="color: {{ section.settings.info_color }}; 
+                  font-size: 18px; 
+                  margin-bottom: 25px;">
+        {{ section.settings.reviews_text_prefix }}
+        <span style="color: {{ section.settings.count_color }}; 
+                     font-weight: 600; 
+                     text-decoration: underline;">
+          {{ section.settings.review_count }}
+        </span>
+        {{ section.settings.reviews_text_suffix }}
+      </div>
+      {% endif %}
+      
+      <!-- Logo Trustpilot -->
+      {% if section.settings.show_trustpilot_logo %}
+      <div class="trustpilot-brand" style="display: inline-flex; align-items: center; gap: 8px;">
+        <div class="brand-star" 
+             style="width: 22px; 
+                    height: 22px; 
+                    background-color: {{ section.settings.star_color }}; 
+                    border-radius: 3px; 
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: center;">
+          <span style="color: white; font-size: 14px;">★</span>
+        </div>
+        <span style="color: {{ section.settings.logo_text_color }}; 
+                     font-size: 18px; 
+                     font-weight: 600;">
+          {{ section.settings.trustpilot_text }}
+        </span>
+      </div>
+      {% endif %}
+      
     </div>
-</body>
-</html>
+  </div>
+</div>
+
+<!-- CSS responsive -->
+<style>
+  .trustpilot-reviews-section {
+    width: 100%;
+  }
+  
+  .rating-row {
+    display: flex;
+    align-items: center;
+    justify-content: {{ section.settings.text_align }};
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .trustpilot-star {
+    transition: transform 0.2s ease;
+  }
+  
+  .trustpilot-star:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .rating-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .trustpilot-title {
+      font-size: {{ section.settings.title_size | minus: 10 }}px !important;
+    }
+    
+    .excellent-label {
+      font-size: 18px !important;
+    }
+    
+    .rating-score {
+      font-size: 22px !important;
+    }
+    
+    .trustpilot-star {
+      width: {{ section.settings.star_size | minus: 8 }}px !important;
+      height: {{ section.settings.star_size | minus: 8 }}px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Avis Trustpilot",
+  "class": "trustpilot-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "📱 Contenu"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_title",
+      "label": "Afficher le titre",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre principal",
+      "default": "Nos clients en parlent le mieux"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excellent",
+      "label": "Afficher 'Excellent'",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "excellent_text",
+      "label": "Texte 'Excellent'",
+      "default": "Excellent"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Afficher la note",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "rating_value",
+      "label": "Note (ex: 4,7)",
+      "default": "4,7"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stars",
+      "label": "Afficher les étoiles",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_review_count",
+      "label": "Afficher le nombre d'avis",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "reviews_text_prefix",
+      "label": "Texte avant le nombre",
+      "default": "basé sur +"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Nombre d'avis",
+      "default": "1 067"
+    },
+    {
+      "type": "text",
+      "id": "reviews_text_suffix",
+      "label": "Texte après le nombre",
+      "default": " avis"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trustpilot_logo",
+      "label": "Afficher le logo Trustpilot",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "trustpilot_text",
+      "label": "Texte Trustpilot",
+      "default": "Trustpilot"
+    },
+    {
+      "type": "header",
+      "content": "🎨 Design"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur d'arrière-plan",
+      "default": "#ffffff"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alignement du texte",
+      "options": [
+        {"value": "left", "label": "Gauche"},
+        {"value": "center", "label": "Centre"},
+        {"value": "right", "label": "Droite"}
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Espacement haut",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Espacement bas",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "📝 Couleurs"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur du titre",
+      "default": "#1a202c"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur du texte",
+      "default": "#2d3748"
+    },
+    {
+      "type": "color",
+      "id": "rating_color",
+      "label": "Couleur de la note",
+      "default": "#1a202c"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Couleur des étoiles",
+      "default": "#00b67a"
+    },
+    {
+      "type": "color",
+      "id": "info_color",
+      "label": "Couleur texte info",
+      "default": "#718096"
+    },
+    {
+      "type": "color",
+      "id": "count_color",
+      "label": "Couleur du nombre",
+      "default": "#1a202c"
+    },
+    {
+      "type": "color",
+      "id": "logo_text_color",
+      "label": "Couleur texte logo",
+      "default": "#1a202c"
+    },
+    {
+      "type": "header",
+      "content": "📏 Tailles"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Taille du titre",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "label": "Taille des étoiles",
+      "min": 25,
+      "max": 50,
+      "step": 5,
+      "default": 35,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Avis Trustpilot"
+    }
+  ]
+}
+{% endschema %}
