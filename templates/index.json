@@ -418,6 +418,7 @@
         },
         "price_jmcCbm": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "show_taxes_notice": false
           }
@@ -447,7 +448,7 @@
         "image_QidBtF": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/promoo.jpg",
+            "image": "shopify://shop_images/BENEFICEUTRA.jpg",
             "alignment": "start",
             "max_width": 500
           }
