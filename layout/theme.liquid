@@ -131,29 +131,51 @@ preloads.forEach(function(file) {
 </script>
 
 <script>
-/* Retigena – Forcer le compteur Loox à 1080 avis sur le produit 1082 */
+/* Retigena — Remplacer le compteur Loox par 1080 avis sur le produit 1082 */
 document.addEventListener('DOMContentLoaded', function () {
+  // 1) Vérifie l'ID produit via la meta OG (adapte "1082" si ton produit a un autre ID)
   var metaId = document.querySelector('meta[property="og:product_id"]');
-  if (!metaId || metaId.content !== '1082') return; // uniquement produit ID 1082
+  if (!metaId || metaId.content !== '1082') return;
 
-  function setFakeCount() {
-    var els = document.querySelectorAll('.loox-rating__amount, .loox-rating .loox-rating__amount');
-    els.forEach(function(el){
-      if (el && !el.textContent.includes('1080')) {
-        el.textContent = '1080 avis';
+  // 2) Style: on masque le compteur natif et on prépare le style du faux compteur
+  var style = document.createElement('style');
+  style.textContent = `
+    .loox-rating .loox-rating__amount { display: none !important; }
+    .retigena-fake-count { margin-left: 6px; font-size: 0.95em; line-height: 1; }
+  `;
+  document.head.appendChild(style);
+
+  function injectFakeCount(root) {
+    // Cible tous les badges Loox visibles sur la page
+    var badges = (root || document).querySelectorAll('.loox-rating');
+    badges.forEach(function(badge){
+      // Si notre faux compteur n'existe pas déjà, on l'ajoute
+      if (!badge.querySelector('.retigena-fake-count')) {
+        var span = document.createElement('span');
+        span.className = 'retigena-fake-count';
+        span.textContent = '1080 avis';
+        badge.appendChild(span);
       }
     });
   }
 
-  // 1) Premier passage
-  setFakeCount();
+  // 3) Injection initiale
+  injectFakeCount();
 
-  // 2) Surveiller le DOM en continu (Loox recharge souvent ses widgets)
-  var mo = new MutationObserver(setFakeCount);
+  // 4) Surveiller les changements (Loox réinjection AJAX)
+  var mo = new MutationObserver(function(mutations){
+    // Réinjection au moindre changement pertinent
+    injectFakeCount();
+  });
   mo.observe(document.body, { childList: true, subtree: true });
 
-  // 3) Relancer régulièrement (sécurité)
-  setInterval(setFakeCount, 1500);
+  // 5) Filet de sécurité: réapplique périodiquement
+  var interval = setInterval(injectFakeCount, 1500);
+
+  // Optionnel: stop l'interval quand la page est cachée
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden) { clearInterval(interval); }
+  });
 });
 </script>
 
