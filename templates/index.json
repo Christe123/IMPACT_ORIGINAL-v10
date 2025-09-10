@@ -991,7 +991,7 @@
           "type": "item",
           "settings": {
             "title": "Pourquoi ce masque vient des États-Unis ?",
-            "content": "<p><em>Les Américains sont en avance de 5 ans sur l'anti-âge ! Cette technologie exclusive a conquis Hollywood avant d'arriver en europe. Vous avez accès à l'innovation beauté du futur.</em></p>"
+            "content": "<p><em>Les Américains sont en avance de 5 ans sur l'anti-âge ! Cette technologie exclusive a conquis Hollywood avant d'arriver en france. Vous avez accès à l'innovation beauté du futur.</em></p>"
           }
         },
         "item_akLnte": {
@@ -1050,6 +1050,13 @@
             "content": "<p><em>2 à 3 fois par semaine suffisent pour des résultats spectaculaires ! Plus économique que vos crèmes quotidiennes et 10 fois plus efficace.</em></p>"
           }
         },
+        "item_TckErD": {
+          "type": "item",
+          "settings": {
+            "title": "Ce masque fonctionne-t-il aussi pour les hommes ?",
+            "content": "<p>Absolument ! La peau masculine vieillit de la même façon que la peau féminine. Le collagène et le rétinol agissent efficacement sur tous les types de peau, homme ou femme. De plus en plus d'hommes adoptent des routines anti-âge</p><h3></h3>"
+          }
+        },
         "item_rpA7zB": {
           "type": "item",
           "settings": {
@@ -1065,18 +1072,18 @@
             "content": "<p>Le masque STIMULE votre collagène naturel, donc les bénéfices durent même entre les utilisations. Mais pourquoi arrêter quand vous avez trouvé LA solution ?</p>"
           }
         },
-        "item_TckErD": {
-          "type": "item",
-          "settings": {
-            "title": "Et si ça ne marche pas sur moi ?",
-            "content": "<p> IMPOSSIBLE ! Mais si par miracle vous n'êtes pas satisfaite, on vous rembourse intégralement pendant 30 jours. Zéro risque, que des bénéfices.</p><h3></h3>"
-          }
-        },
         "item_4T9RYG": {
           "type": "item",
           "settings": {
             "title": "Et si ça ne marche pas sur moi ?",
-            "content": "<p> IMPOSSIBLE ! Mais si par miracle vous n'êtes pas satisfaite, on vous rembourse intégralement pendant 30 jours. Zéro risque, que des bénéfices.</p><h3></h3>"
+            "content": "<p><em> IMPOSSIBLE ! Mais si par miracle vous n'êtes pas satisfaite, on vous rembourse intégralement pendant 30 jours. Zéro risque, que des bénéfices.</em></p><h3></h3>"
+          }
+        },
+        "item_rAYFm4": {
+          "type": "item",
+          "settings": {
+            "title": "La livraison prend combien de temps ?",
+            "content": "<p>Livraison gratuite en 5 à 8 jours ouvrés en France. Pour l'étranger : 7 à 10 jours ouvrés. </p>"
           }
         }
       },
@@ -1092,10 +1099,11 @@
         "item_Vmm3zC",
         "item_LdNrUE",
         "item_UpLzMK",
+        "item_TckErD",
         "item_rpA7zB",
         "item_4LU8x9",
-        "item_TckErD",
-        "item_4T9RYG"
+        "item_4T9RYG",
+        "item_rAYFm4"
       ],
       "name": "FAQ",
       "settings": {
