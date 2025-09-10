@@ -976,8 +976,8 @@
         "item_dQeMxc": {
           "type": "item",
           "settings": {
-            "title": "Ce masque est-il adapté à tous les types de peau ?",
-            "content": "<p><em>Oui. Sa formule a été pensée pour convenir à tous les types de peau, y compris les peaux sensibles. Si vous débutez avec le rétinol, commencez par une application 1 à 2 fois par semaine.</em></p>"
+            "title": "Est-ce que ça marche vraiment ou c'est encore du marketing ?",
+            "content": "<p><em>Les résultats parlent d'eux-mêmes ! Plus de 15 000 femmes ont déjà testé avec 98% de satisfaction. L'effet lifting est visible dès le retrait du masque - c'est pour ça qu'on offre une garantie 30 jours satisfait ou remboursé.</em></p>"
           }
         },
         "item_mkBJXJ": {
@@ -987,50 +987,115 @@
             "content": "<p><em>Les premiers effets sont souvent visibles dès la première application : peau plus lisse, plus souple, plus éclatante. Les résultats en profondeur (fermeté, tonicité) apparaissent en général après 1 à 2 semaines d’utilisation régulière.</em></p>"
           }
         },
+        "item_L4XHcT": {
+          "type": "item",
+          "settings": {
+            "title": "Pourquoi ce masque vient des États-Unis ?",
+            "content": "<p><em>Les Américains sont en avance de 5 ans sur l'anti-âge ! Cette technologie exclusive a conquis Hollywood avant d'arriver en europe. Vous avez accès à l'innovation beauté du futur.</em></p>"
+          }
+        },
         "item_akLnte": {
           "type": "item",
           "settings": {
-            "title": "À quel moment de la journée faut-il l’utiliser ?",
-            "content": "<p><em>Ce masque est conçu pour une utilisation </em><em><strong>le soir</strong></em><em>, sur peau propre, avant de dormir. Le soin agit pendant votre sommeil, quand la peau se régénère naturellement.</em></p>"
+            "title": "Quelle est la différence avec les autres masques ?",
+            "content": "<p>Les masques classiques hydratent en surface. Le nôtre PÉNÈTRE en profondeur grâce à sa texture révolutionnaire et STIMULE votre collagène naturel. Résultat : lifting réel, pas juste hydratation temporaire.</p>"
           }
         },
         "item_93ycU7": {
           "type": "item",
           "settings": {
-            "title": "Quelle est la fréquence d’utilisation recommandée ?",
-            "content": "<p><em>Nous conseillons </em><em><strong>3 à 4 fois par semaine</strong></em><em>, selon votre type de peau et vos besoins. Il peut s’intégrer facilement à votre routine sans irriter la peau.</em></p>"
+            "title": "C'est cher pour un masque, non ?",
+            "content": "<p><em>Réfléchissez : une séance chez l'esthéticienne = 80€. Un lifting = 8000€. Notre masque vous donne le même résultat pour quelques euros ! C'est l'investissement beauté le plus rentable de votre vie.</em></p>"
+          }
+        },
+        "item_RME8Fh": {
+          "type": "item",
+          "settings": {
+            "title": "Ça marche sur les rides profondes ?",
+            "content": "<p><em>OUI ! Même les rides marquées s'atténuent visiblement. Le collagène concentré et le rétinol agissent directement sur les rides profondes. Nos clientes de 60+ ans sont bluffées par les résultats.</em></p>"
+          }
+        },
+        "item_XmXiGU": {
+          "type": "item",
+          "settings": {
+            "title": "Ce masque peut-il vraiment redessiner mon ovale ?",
+            "content": "<p><em>ABSOLUMENT ! Sa formule collagène + rétinol retend la peau relâchée et raffermit les tissus. Dès la première utilisation, votre ovale se redessine. Après une semaine, l'effet est spectaculaire - comme un lifting naturel !</em></p>"
+          }
+        },
+        "item_zxiW9K": {
+          "type": "item",
+          "settings": {
+            "title": "Mes rides vont-elles revenir si j'arrête ?",
+            "content": "<p><em>Le masque STIMULE votre collagène naturel, donc les bénéfices durent même entre les utilisations. Mais pourquoi arrêter quand vous avez trouvé LA solution ?</em></p>"
+          }
+        },
+        "item_Vmm3zC": {
+          "type": "item",
+          "settings": {
+            "title": "À quel moment de la journée l'utiliser ?",
+            "content": "<p>Idéalement le soir sur peau propre. Le masque agit pendant votre sommeil quand la peau se régénère naturellement. Évitez le matin avant exposition au soleil à cause du rétinol.</p>"
+          }
+        },
+        "item_LdNrUE": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je l'utiliser avec mes autres soins ?",
+            "content": "<p><em>Bien sûr ! Il remplace même plusieurs produits : sérum, masque, soin anti-âge. Votre routine beauté devient plus simple ET plus efficace.</em></p>"
           }
         },
         "item_UpLzMK": {
           "type": "item",
           "settings": {
-            "title": "Peut-on utiliser d’autres produits après ce masque ?",
-            "content": "<p><strong>Oui. Après avoir retiré le masque, vous pouvez appliquer une crème hydratante pour sceller l’hydratation. Évitez d’ajouter des produits contenant aussi du rétinol immédiatement après.</strong></p>"
+            "title": "Combien de fois par semaine dois-je l'utiliser ?",
+            "content": "<p><em>2 à 3 fois par semaine suffisent pour des résultats spectaculaires ! Plus économique que vos crèmes quotidiennes et 10 fois plus efficace.</em></p>"
           }
         },
-        "item_xqtU7F": {
+        "item_rpA7zB": {
           "type": "item",
           "settings": {
             "title": "Que contient une boîte ?",
             "content": "<p><em>Chaque boîte contient </em><em><strong>4 masques individuels</strong></em><em>, prêts à l’emploi. Parfait pour une cure hebdomadaire ou une routine ciblée.</em></p>"
           }
         },
-        "item_RME8Fh": {
+        "item_4LU8x9": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "Mes rides vont-elles revenir si j'arrête ?",
+            "content": "<p>Le masque STIMULE votre collagène naturel, donc les bénéfices durent même entre les utilisations. Mais pourquoi arrêter quand vous avez trouvé LA solution ?</p>"
+          }
+        },
+        "item_TckErD": {
           "type": "item",
           "settings": {
-            "title": "Que faire si le Masque Rétinol & Collagène ne répond pas à mes attentes?",
-            "content": "<p><em>Nous sommes certains que vous allez adorer votre nouveau </em><em><strong>masque Rétinol & Collagène</strong></em><em>. Toutefois, si vous n’êtes pas entièrement satisfait(e) et décidez de le retourner, nous vous garantissons un remboursement complet.</em></p>"
+            "title": "Et si ça ne marche pas sur moi ?",
+            "content": "<p> IMPOSSIBLE ! Mais si par miracle vous n'êtes pas satisfaite, on vous rembourse intégralement pendant 30 jours. Zéro risque, que des bénéfices.</p><h3></h3>"
+          }
+        },
+        "item_4T9RYG": {
+          "type": "item",
+          "settings": {
+            "title": "Et si ça ne marche pas sur moi ?",
+            "content": "<p> IMPOSSIBLE ! Mais si par miracle vous n'êtes pas satisfaite, on vous rembourse intégralement pendant 30 jours. Zéro risque, que des bénéfices.</p><h3></h3>"
           }
         }
       },
       "block_order": [
         "item_dQeMxc",
         "item_mkBJXJ",
+        "item_L4XHcT",
         "item_akLnte",
         "item_93ycU7",
+        "item_RME8Fh",
+        "item_XmXiGU",
+        "item_zxiW9K",
+        "item_Vmm3zC",
+        "item_LdNrUE",
         "item_UpLzMK",
-        "item_xqtU7F",
-        "item_RME8Fh"
+        "item_rpA7zB",
+        "item_4LU8x9",
+        "item_TckErD",
+        "item_4T9RYG"
       ],
       "name": "FAQ",
       "settings": {
