@@ -130,27 +130,39 @@ preloads.forEach(function(file) {
 // =====================================================
 </script>
 
+<style id="retigena-loox-override">
+  /* S’applique UNIQUEMENT au produit 1082 (classe ajoutée par le JS plus bas) */
+  .retigena-p1082 .loox-rating [class*="amount"],
+  .retigena-p1082 .loox-rating [class*="count"]{
+    font-size: 0 !important; line-height: 1 !important; /* on cache le texte natif (ex: 39) */
+  }
+  .retigena-p1082 .loox-rating [class*="amount"]::after,
+  .retigena-p1082 .loox-rating [class*="count"]::after{
+    content: "1080 avis";      /* nouveau texte */
+    font-size: 0.95em; 
+    margin-left: 6px;
+  }
+
+  /* Style du badge custom si on doit en injecter un (filet de sécurité) */
+  .retigena-fake-count { margin-left: 6px; font-size: 0.95em; line-height: 1; }
+</style>
+
 <script>
-/* Retigena — Remplacer le compteur Loox par 1080 avis sur le produit 1082 */
+/* Retigena — Forcer 1080 avis sur le produit 1082 (Loox) */
 document.addEventListener('DOMContentLoaded', function () {
-  // 1) Vérifie l'ID produit via la meta OG (adapte "1082" si ton produit a un autre ID)
+  // 1) Vérifier l’ID produit via la meta OG
   var metaId = document.querySelector('meta[property="og:product_id"]');
-  if (!metaId || metaId.content !== '1082') return;
+  if (metaId && metaId.content === '1082') {
+    document.documentElement.classList.add('retigena-p1082');
+  } else {
+    return; // on sort si ce n'est pas le bon produit
+  }
 
-  // 2) Style: on masque le compteur natif et on prépare le style du faux compteur
-  var style = document.createElement('style');
-  style.textContent = `
-    .loox-rating .loox-rating__amount { display: none !important; }
-    .retigena-fake-count { margin-left: 6px; font-size: 0.95em; line-height: 1; }
-  `;
-  document.head.appendChild(style);
-
-  function injectFakeCount(root) {
-    // Cible tous les badges Loox visibles sur la page
-    var badges = (root || document).querySelectorAll('.loox-rating');
-    badges.forEach(function(badge){
-      // Si notre faux compteur n'existe pas déjà, on l'ajoute
-      if (!badge.querySelector('.retigena-fake-count')) {
+  // 2) Filet de sécu : si Loox n’a pas de noeud "amount/count", on ajoute notre span à côté du badge
+  function ensureFakeCount(){
+    document.querySelectorAll('.retigena-p1082 .loox-rating').forEach(function(badge){
+      var hasAmount = badge.querySelector('[class*="amount"], [class*="count"]');
+      if (!hasAmount && !badge.querySelector('.retigena-fake-count')) {
         var span = document.createElement('span');
         span.className = 'retigena-fake-count';
         span.textContent = '1080 avis';
@@ -159,23 +171,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 3) Injection initiale
-  injectFakeCount();
-
-  // 4) Surveiller les changements (Loox réinjection AJAX)
-  var mo = new MutationObserver(function(mutations){
-    // Réinjection au moindre changement pertinent
-    injectFakeCount();
-  });
+  ensureFakeCount();
+  var mo = new MutationObserver(ensureFakeCount);
   mo.observe(document.body, { childList: true, subtree: true });
 
-  // 5) Filet de sécurité: réapplique périodiquement
-  var interval = setInterval(injectFakeCount, 1500);
-
-  // Optionnel: stop l'interval quand la page est cachée
-  document.addEventListener('visibilitychange', function(){
-    if (document.hidden) { clearInterval(interval); }
-  });
+  // Sécurité supplémentaire si Loox re-render agressif
+  setInterval(ensureFakeCount, 1500);
 });
 </script>
 
