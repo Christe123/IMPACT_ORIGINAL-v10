@@ -785,6 +785,48 @@
         "heading_gradient": ""
       }
     },
+    "images_with_text_scrolling_j4FYmG": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_HEaB3a": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/dr-sophie.webp",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Dr. Sophie Bernad à propos du LiftingMask",
+            "content": "<p>Avec l'âge, la peau de votre visage s'amincit et perd sa fermeté naturelle, favorisant l'apparition des rides profondes, du relâchement et du double menton. Le LiftingMask est un masque révolutionnaire  offre une action complète pour lifter, raffermir et restructurer tout votre visage. Sa formule magique au collagène et rétinol contribue à restaurer l'élasticité et la tonicité cutanée, pour un visage visiblement plus jeune, tendu et éclatant.</p>"
+          }
+        },
+        "item_VUGgep": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_HEaB3a",
+        "item_VUGgep"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": true,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "multi_column_XUYzUB": {
       "type": "multi-column",
       "blocks": {
@@ -875,10 +917,10 @@
         "text_color": ""
       }
     },
-    "images_with_text_scrolling_j4FYmG": {
+    "images_with_text_scrolling_XWJPjD": {
       "type": "images-with-text-scrolling",
       "blocks": {
-        "item_HEaB3a": {
+        "item_48DWiR": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/SECTION_IMAGE23.png",
@@ -888,7 +930,17 @@
             "content": "<p>Ce masque est bien plus qu’un simple soin : c’est un traitement ciblé qui agit en profondeur pour lifter, raffermir et lisser la peau. Grâce à la synergie du rétinol et du collagène, il redéfinit les contours du visage, améliore l’élasticité et restaure l’éclat naturel du teint. En quelques applications seulement, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
           }
         },
-        "item_VUGgep": {
+        "item_FPhAfX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/beautiful-senior-older-woman-smiling-looking-at-mi-2023-11-27-05-27-50-utc_1_86dd79fe-04bf-45b4-8d3a-37f98292e1c9.webp",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Découvrez une nouvelle expérience beauté",
+            "content": "<p>Offrez à votre peau le soin révolutionnaire qu'elle mérite. Ce masque nouvelle génération combine collagène concentré et rétinol pour transformer votre visage en 20 minutes seulement. Grâce à la synergie de ces actifs puissants, il redéfinit les contours, améliore l'élasticité et restaure l'éclat naturel du teint. En quelques applications, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
+          }
+        },
+        "item_U9PMxa": {
           "type": "item",
           "disabled": true,
           "settings": {
@@ -900,8 +952,9 @@
         }
       },
       "block_order": [
-        "item_HEaB3a",
-        "item_VUGgep"
+        "item_48DWiR",
+        "item_FPhAfX",
+        "item_U9PMxa"
       ],
       "name": "Images and text scrolling",
       "settings": {
@@ -1068,8 +1121,9 @@
     "featured_product_eWEegT",
     "sectionvideo_qtqmPa",
     "tabs_n6ew66",
-    "multi_column_XUYzUB",
     "images_with_text_scrolling_j4FYmG",
+    "multi_column_XUYzUB",
+    "images_with_text_scrolling_XWJPjD",
     "faq_f4WA34",
     "contact_chMxRq",
     "17566032008b10683c"
