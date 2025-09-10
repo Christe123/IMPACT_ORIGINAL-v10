@@ -752,7 +752,7 @@
         "highlight_color": "#4b5563",
         "stats_color": "#6b7280",
         "study_color": "#1a1a1a",
-        "badge_size": 90,
+        "badge_size": 100,
         "number_size": 32,
         "title_size": 24,
         "highlight_size": 16,
