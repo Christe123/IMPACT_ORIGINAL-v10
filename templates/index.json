@@ -406,6 +406,12 @@
             "heading_tag": "h2"
           }
         },
+        "text_L3dVht": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>ÉLU #1 DES MASQUES ANTI-ÂGE 2025 </strong>🇨🇵</p>"
+          }
+        },
         "badges_iUjakt": {
           "type": "badges",
           "settings": {}
@@ -449,7 +455,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/BENEFICEUTRA.jpg",
-            "alignment": "start",
+            "alignment": "center",
             "max_width": 500
           }
         },
@@ -514,6 +520,7 @@
       "block_order": [
         "liquid_YQXePR",
         "title_fmnHLn",
+        "text_L3dVht",
         "badges_iUjakt",
         "liquid_zKyrdh",
         "price_jmcCbm",
