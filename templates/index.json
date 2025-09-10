@@ -1110,7 +1110,7 @@
           "type": "item",
           "settings": {
             "title": "Quelle est la différence avec les autres masques ?",
-            "content": "<p>Les masques classiques hydratent en surface. Le nôtre PÉNÈTRE en profondeur grâce à sa texture révolutionnaire et STIMULE votre collagène naturel. Résultat : lifting réel, pas juste hydratation temporaire.</p>"
+            "content": "<p><em>Les masques classiques hydratent en surface. Le nôtre PÉNÈTRE en profondeur grâce à sa texture révolutionnaire et STIMULE votre collagène naturel. Résultat : lifting réel, pas juste hydratation temporaire.</em></p>"
           }
         },
         "item_93ycU7": {
@@ -1145,7 +1145,7 @@
           "type": "item",
           "settings": {
             "title": "À quel moment de la journée l'utiliser ?",
-            "content": "<p>Idéalement le soir sur peau propre. Le masque agit pendant votre sommeil quand la peau se régénère naturellement. Évitez le matin avant exposition au soleil à cause du rétinol.</p>"
+            "content": "<p><em>Idéalement le soir sur peau propre. Le masque agit pendant votre sommeil quand la peau se régénère naturellement. Évitez le matin avant exposition au soleil à cause du rétinol.</em></p>"
           }
         },
         "item_LdNrUE": {
@@ -1166,7 +1166,7 @@
           "type": "item",
           "settings": {
             "title": "Ce masque fonctionne-t-il aussi pour les hommes ?",
-            "content": "<p>Absolument ! La peau masculine vieillit de la même façon que la peau féminine. Le collagène et le rétinol agissent efficacement sur tous les types de peau, homme ou femme. De plus en plus d'hommes adoptent des routines anti-âge</p><h3></h3>"
+            "content": "<p><em>Absolument ! La peau masculine vieillit de la même façon que la peau féminine. Le collagène et le rétinol agissent efficacement sur tous les types de peau, homme ou femme. De plus en plus d'hommes adoptent des routines anti-âge</em></p><h3></h3>"
           }
         },
         "item_rpA7zB": {
@@ -1195,7 +1195,7 @@
           "type": "item",
           "settings": {
             "title": "La livraison prend combien de temps ?",
-            "content": "<p>Livraison gratuite en 5 à 8 jours ouvrés en France. Pour l'étranger : 7 à 10 jours ouvrés. </p>"
+            "content": "<p><em>Livraison gratuite en 5 à 8 jours ouvrés en France. Pour l'étranger : 7 à 10 jours ouvrés. </em></p>"
           }
         }
       },
