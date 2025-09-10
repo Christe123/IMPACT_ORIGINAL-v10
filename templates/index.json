@@ -42,8 +42,8 @@
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "",
-            "title": "Rides profondes et double menton  ? Liftez-les en une utilisation !",
-            "heading_tag": "h4",
+            "title": "EFFET LIFTING VISIBLE EN UNE UTILISATION",
+            "heading_tag": "h3",
             "button_text": "",
             "button_link": "",
             "text_color": "#ffffff",
@@ -155,7 +155,7 @@
         "heading_qc6CFq": {
           "type": "heading",
           "settings": {
-            "text": "Pourquoi choisir LiftingMask ?",
+            "text": "Pourquoi choisir ce masque ?",
             "heading_tag": "h1",
             "text_color": "",
             "gradient": ""
@@ -192,51 +192,6 @@
         "overlay_opacity": 0
       }
     },
-    "custom_liquid_6iMCdz": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "trus_content_gJR6Bd": {
-      "type": "Trus-content",
-      "name": "Avis Trustpilot",
-      "settings": {
-        "show_title": true,
-        "title": "Nos clients en parlent le mieux",
-        "show_excellent": true,
-        "excellent_text": "Excellent",
-        "show_rating": true,
-        "rating_value": "4,7",
-        "show_stars": true,
-        "show_review_count": true,
-        "reviews_text_prefix": "basé sur +",
-        "review_count": "1 067",
-        "reviews_text_suffix": "avis",
-        "show_trustpilot_logo": true,
-        "trustpilot_text": "Trustpilot",
-        "background_color": "#ffffff",
-        "text_align": "center",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "title_color": "#1a202c",
-        "text_color": "#2d3748",
-        "rating_color": "#1a202c",
-        "star_color": "#00b67a",
-        "info_color": "#718096",
-        "count_color": "#1a202c",
-        "logo_text_color": "#1a202c",
-        "title_size": 40,
-        "star_size": 35
-      }
-    },
     "multi_column_Y4kcjk": {
       "type": "multi-column",
       "blocks": {
@@ -261,7 +216,7 @@
             "column_size": "3",
             "title": "Julie G.",
             "heading_tag": "h4",
-            "content": "<p>Je pensais que  c'etait du  markting,mais j'ai quand même testé... Et là, MIRACLE ! En 20 minutes, ma peau fatiguée s'est complètement transformée. Texture si agréable, facile à appliquer, et surtout : résultat immédiat ! Ma peau est retendus, lumineuse, mes petites rides ont disparu. Mon teint n'a jamais été aussi éclatant. Franchement, je suis bluffée !</p>",
+            "content": "<p><em>\"Très bon produit. Texture agréable, facile à poser, et surtout pas collant. Ce que je remarque surtout, c’est une vraie amélioration au niveau de la fermeté. Ce n’est pas magique, mais au fil des utilisations, on voit clairement que la peau se tonifie.\"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -274,7 +229,7 @@
             "column_size": "3",
             "title": "Monique T.",
             "heading_tag": "h4",
-            "content": "<p>À 68ans , je pensais que c'était fini pour moi... Erreur ! Ce masque a fait l'impossible : j'ai retrouvé la peau de mes 50 ans ! Mes petits-enfants me disent que je parais plus jeune que leur maman. J'ai essayé des centaines de produits  RIEN ne m'avait jamais fait ça. Si ça marche sur moi, ça marchera sur tout le monde !</p>",
+            "content": "<p><em>\"J'ai 68 ans, et j’ai essayé beaucoup de crèmes et de soins. Ce masque m’a vraiment surprise. Ma peau paraît plus fraîche, moins relâchée. Même ma petite-fille m’a dit que j’avais meilleure mine. C’est devenu un de mes petits plaisirs de la semaine\"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -287,7 +242,7 @@
             "column_size": "3",
             "title": "Élodie P.",
             "heading_tag": "h4",
-            "content": "<p> J'AVAIS DES IMPERFECTIONS QUI ME COMPLEXAIENT depuis des années... En une semaine avec ce masque, ma peau s'est complètement transformée ! Teint unifié, imperfections estompées, éclat naturel retrouvé. Je n'ose même plus sortir sans ! Mes amies n'en reviennent pas de la transformation. Ce masque a changé ma vie !</p>",
+            "content": "<p>\"Je l’ai recommandé à mes collègues, et maintenant on est plusieurs à l’utiliser au bureau ! Effet visible, peau lissée, et surtout un vrai moment de détente. Pour moi c’est un soin complet : visuel + confort + efficacité.\"</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -300,7 +255,7 @@
             "column_size": "3",
             "title": "Amina K.",
             "heading_tag": "h4",
-            "content": "<p>Au début  ma peau était  terne  et fatiguée... Après une utilisation, transformation totale ! L'éclat est revenu, ma peau est lumineuse et parfaitement hydratée. Mes amies me demandent quel filtre j'utilise sur mes photos ! Résultat : je ne peux plus m'en passer.</p>",
+            "content": "<p><em>\"J’ai acheté ce masque pour ma mère, et finalement je l’ai testé aussi. On l’a toutes les deux adoré. Elle trouve que sa peau est moins relâchée, et moi je sens que ça hydrate profondément. Ça fait une vraie différence dans notre routine.\"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -313,7 +268,7 @@
             "column_size": "3",
             "title": "Claire R.",
             "heading_tag": "h4",
-            "content": "<p>Ce masque est devenu mon indispensable avant les événements importants ! En 20 minutes, j'ai une peau parfaite : effet lifting, éclat naturel, pores resserrés. Mon secret beauté pour être rayonnante en toutes circonstances !</p>",
+            "content": "<p><em>\"Ce masque est devenu mon indispensable avant les événements importants. Je le fais la veille au soir, et le lendemain, ma peau est plus nette, plus lumineuse, et surtout plus ferme. Pas besoin de filtre \"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -326,7 +281,7 @@
             "column_size": "3",
             "title": "Jacqueline D.",
             "heading_tag": "h4",
-            "content": "<p>J'AVAIS PERDU ESPOIR DE RETROUVER UNE BELLE PEAU... Mes rides du sourire étaient très marquées et ma peau fatiguée. Après une semaine avec ce masque : transformation spectaculaire ! Mes rides se sont lissées, mon teint rayonne de jeunesse. Je souris à nouveau sans complexe !</p>",
+            "content": "<p><em>\"Avec l’âge, la peau perd en fermeté, surtout autour du cou et des joues. Ce masque m’a redonné une sensation de peau plus dense, plus tonique. Ce n’est pas miraculeux, mais c’est très agréable et je vois une différence. Et surtout, ça me fait du bien.\"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -339,7 +294,7 @@
             "column_size": "3",
             "title": "Mélanie D.",
             "heading_tag": "h4",
-            "content": "<p>Je suis très sceptique en général avec les produits cosmétiques, mais là... WOW ! Effet lifting visible immédiatement, peau lissée et éclatante. Mes amies me demandent si j'ai fait de la médecine esthétique. Mon nouveau secret beauté !</p>",
+            "content": "<p>\"Je suis très sceptique en général avec les produits anti-âge, mais là j’ai senti un effet immédiat. C’est subtil, mais réel : la peau est plus ferme, l’ovale du visage un peu plus dessiné. Et surtout, aucune réaction malgré ma peau très sensible. J’adopte.\"</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -350,9 +305,9 @@
           "settings": {
             "image": "shopify://shop_images/AVISMASQUE9.png",
             "column_size": "3",
-            "title": "Ruth D.",
+            "title": "Mélanie D.",
             "heading_tag": "h4",
-            "content": "<p>Résultat spectaculaire dès la première utilisation ! Ma peau terne et fatiguée s'est transformée : teint éclatant, texture lissée, fermeté retrouvée. En une semaine d'utilisation, c'est une vraie cure de jouvence. Je ne peux plus m'en passer !</p>",
+            "content": "<p>\"Je suis très sceptique en général avec les produits anti-âge, mais là j’ai senti un effet immédiat. C’est subtil, mais réel : la peau est plus ferme, l’ovale du visage un peu plus dessiné. Et surtout, aucune réaction malgré ma peau très sensible. J’adopte.\"</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -365,7 +320,7 @@
             "column_size": "3",
             "title": "Lucie F.",
             "heading_tag": "h4",
-            "content": "<p>J'étais complexée par mes petites imperfection et mon double menton naissant... Ce masque a tout changé ! Mon ovale du visage s'est redessiné, ma peau est ferme et éclatante. En une utilisation, j'ai retrouvé confiance en moi ! Produit révolutionnaire.</p>",
+            "content": "<p><em>\"Produit très agréable à utiliser. Je ne ressens pas de picotement, pas de rougeur. Ce qui est fou, c’est la sensation de peau retendue après 30 minutes. Pas artificiel, juste naturel. Et l’odeur est très discrète, ce que j’apprécie.\"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -384,7 +339,6 @@
         "item_xCExHT",
         "item_xCRgik"
       ],
-      "custom_css": [],
       "name": "Multi-column",
       "settings": {
         "full_width": true,
@@ -393,7 +347,7 @@
         "text_alignment": "center",
         "subheading": "",
         "title": "AVANT/APRÈS",
-        "content": "",
+        "content": "<p><strong>Nos clientes en parlent le mieux</strong></p>",
         "background": "#ffffff",
         "background_gradient": "",
         "text_color": ""
@@ -421,12 +375,11 @@
         "liquid_zKyrdh": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"unique-container-Abc456\" style=\"z-index: 21;\">\n  <div class=\"unique-badge-Def789\">\n    <span>\n      <svg class=\"unique-icon-Jkl345\" viewBox=\"0 0 24 24\" xmlns=\"http://w3.org/2000/svg\">\n        <path fill=\"#004d00\" d=\"M12 2C9.24 2 7 4.24 7 7V10H5C3.9 10 3 10.9 3 12V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V12C21 10.9 20.1 10 19 10H17V7C17 4.24 14.76 2 12 2M12 4C13.66 4 15 5.34 15 7V10H9V7C9 5.34 10.34 4 12 4M12 12C13.1 12 14 12.9 14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 10.9 12 12 12Z\"></path>\n      </svg>\n      30 JOURS SATISFAIT OU REMBOURSÉ\n    </span>\n  </div>\n\n  <div class=\"unique-badge-Ghi012\">\n    <span>\n      <svg class=\"unique-icon-Jkl345\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#b22222\" stroke-width=\"2\" fill=\"none\"></circle>\n        <line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"6\" stroke=\"#b22222\" stroke-width=\"2\" class=\"unique-clock-hand-Pqr901\"></line>\n        <line x1=\"12\" y1=\"12\" x2=\"16\" y2=\"12\" stroke=\"#b22222\" stroke-width=\"2\"></line>\n      </svg>\n      En stock : 6 restants !\n    </span>\n  </div>\n</div>\n\n<style style=\"z-index: 22;\">\n.unique-body-Xyz123 {\n  background-color: #f9f9f9;\n  color: #333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.unique-container-Abc456 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 10px;\n}\n\n.unique-badge-Def789 {\n  display: inline-flex;\n  align-items: center;\n  background-color: #e0ffd8;\n  color: #004d00;\n  padding: 2px 4px;\n  border-radius: 3px;\n  font-size: 10px;\n  font-weight: bold;\n  text-align: center;\n  position: relative;\n}\n\n.unique-badge-Ghi012 {\n  display: inline-flex;\n  align-items: center;\n  background-color: #ffdede;\n  color: #b22222;\n  padding: 2px 4px;\n  border-radius: 3px;\n  font-size: 10px;\n  font-weight: bold;\n  text-align: center;\n  position: relative;\n}\n\n.unique-icon-Jkl345 {\n  width: 12px;\n  height: 12px;\n  margin-right: 2px;\n  vertical-align: middle;\n}\n\n.unique-badge-Def789 span, .unique-badge-Ghi012 span {\n  display: flex;\n  align-items: center;\n  white-space: nowrap;\n}\n\n@keyframes unique-rotate-Mno678 {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n.unique-clock-hand-Pqr901 {\n  transform-origin: 50% 50%;\n  animation: unique-rotate-Mno678 2s linear infinite;\n}\n</style>  "
+            "liquid": "<div class=\"unique-container-Abc456\" style=\"z-index: 21;\">\n  <div class=\"unique-badge-Def789\">\n    <span>\n      <svg class=\"unique-icon-Jkl345\" viewBox=\"0 0 24 24\" xmlns=\"http://w3.org/2000/svg\">\n        <path fill=\"#004d00\" d=\"M12 2C9.24 2 7 4.24 7 7V10H5C3.9 10 3 10.9 3 12V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V12C21 10.9 20.1 10 19 10H17V7C17 4.24 14.76 2 12 2M12 4C13.66 4 15 5.34 15 7V10H9V7C9 5.34 10.34 4 12 4M12 12C13.1 12 14 12.9 14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 10.9 12 12 12Z\"></path>\n      </svg>\n      30 JOURS SATISFAIT OU REMBOURSÉ\n    </span>\n  </div>\n\n  <div class=\"unique-badge-Ghi012\">\n    <span>\n      <svg class=\"unique-icon-Jkl345\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n        <circle cx=\"12\" cy=\"12\" r=\"10\" stroke=\"#b22222\" stroke-width=\"2\" fill=\"none\"></circle>\n        <line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"6\" stroke=\"#b22222\" stroke-width=\"2\" class=\"unique-clock-hand-Pqr901\"></line>\n        <line x1=\"12\" y1=\"12\" x2=\"16\" y2=\"12\" stroke=\"#b22222\" stroke-width=\"2\"></line>\n      </svg>\n      En stock : 8 restants !\n    </span>\n  </div>\n</div>\n\n<style style=\"z-index: 22;\">\n.unique-body-Xyz123 {\n  background-color: #f9f9f9;\n  color: #333;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.unique-container-Abc456 {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 10px;\n}\n\n.unique-badge-Def789 {\n  display: inline-flex;\n  align-items: center;\n  background-color: #e0ffd8;\n  color: #004d00;\n  padding: 2px 4px;\n  border-radius: 3px;\n  font-size: 10px;\n  font-weight: bold;\n  text-align: center;\n  position: relative;\n}\n\n.unique-badge-Ghi012 {\n  display: inline-flex;\n  align-items: center;\n  background-color: #ffdede;\n  color: #b22222;\n  padding: 2px 4px;\n  border-radius: 3px;\n  font-size: 10px;\n  font-weight: bold;\n  text-align: center;\n  position: relative;\n}\n\n.unique-icon-Jkl345 {\n  width: 12px;\n  height: 12px;\n  margin-right: 2px;\n  vertical-align: middle;\n}\n\n.unique-badge-Def789 span, .unique-badge-Ghi012 span {\n  display: flex;\n  align-items: center;\n  white-space: nowrap;\n}\n\n@keyframes unique-rotate-Mno678 {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n.unique-clock-hand-Pqr901 {\n  transform-origin: 50% 50%;\n  animation: unique-rotate-Mno678 2s linear infinite;\n}\n</style>  "
           }
         },
         "price_jmcCbm": {
           "type": "price",
-          "disabled": true,
           "settings": {
             "show_taxes_notice": false
           }
@@ -456,8 +409,8 @@
         "image_QidBtF": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BENEFICEUTRA.jpg",
-            "alignment": "center",
+            "image": "shopify://shop_images/promoo.jpg",
+            "alignment": "start",
             "max_width": 500
           }
         },
@@ -564,9 +517,9 @@
         "video_3E9zTQ": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/A1A08594-0646-42CD-B4F9-0EEFA116EFEE.mov",
+            "video": "shopify://files/videos/videp1.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/A1A08594-0646-42CD-B4F9-0EEFA116EFEE.mov",
+            "preload_video": "shopify://files/videos/videp1.mp4",
             "modal_heading": "",
             "modal_text": ""
           }
@@ -574,19 +527,26 @@
         "video_VmPtFF": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/snaptik_7496846877921479979_hd.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/snaptik_7496846877921479979_hd.mov",
+            "preload_video": "shopify://files/videos/Video2.mp4",
             "modal_heading": "",
             "modal_text": ""
+          }
+        },
+        "video_JLPfba": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "modal_heading": "<h4>Modal Heading</h4>",
+            "modal_text": "<p>Modal Text</p>"
           }
         },
         "video_VnJrdm": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/Video2.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/Video2.mov",
+            "preload_video": "shopify://files/videos/Video3.mp4",
             "modal_heading": "",
             "modal_text": ""
           }
@@ -594,9 +554,8 @@
         "video_JiyhCY": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/videp1.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/videp1.mov",
+            "preload_video": "shopify://files/videos/a2aa68ffba1b4d8f9c45dc67e0992c6f.HD-720p-1.6Mbps-42655643.mp4",
             "modal_heading": "<h4>Modal Heading</h4>",
             "modal_text": "<p>Modal Text</p>"
           }
@@ -605,6 +564,7 @@
       "block_order": [
         "video_3E9zTQ",
         "video_VmPtFF",
+        "video_JLPfba",
         "video_VnJrdm",
         "video_JiyhCY"
       ],
@@ -786,48 +746,6 @@
         "heading_gradient": ""
       }
     },
-    "images_with_text_scrolling_j4FYmG": {
-      "type": "images-with-text-scrolling",
-      "blocks": {
-        "item_HEaB3a": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/dr-sophie.webp",
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Dr. Rosi Benard à propos de LiftingMask",
-            "content": "<p>Le temps qui passe relâche votre peau, creuse vos rides et affaisse vos contours. Mais ce n'est plus une fatalité ! Le masque Retigena agit comme un véritable lifting naturel pour retendre, sculpter et rajeunir votre visage en profondeur. Grâce à sa formule révolutionnaire collagène + rétinol, il restaure la fermeté perdue et redessine votre ovale pour un effet anti-âge spectaculaire.</p>"
-          }
-        },
-        "item_VUGgep": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Heading",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_HEaB3a",
-        "item_VUGgep"
-      ],
-      "name": "Images and text scrolling",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": true,
-        "show_counter": false,
-        "desktop_image_effect": "reveal",
-        "image_position": "start",
-        "background": "#ffffff",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
-      }
-    },
     "multi_column_XUYzUB": {
       "type": "multi-column",
       "blocks": {
@@ -918,10 +836,10 @@
         "text_color": ""
       }
     },
-    "images_with_text_scrolling_RrmrcM": {
+    "images_with_text_scrolling_j4FYmG": {
       "type": "images-with-text-scrolling",
       "blocks": {
-        "item_j3raWT": {
+        "item_HEaB3a": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/SECTION_IMAGE23.png",
@@ -931,7 +849,7 @@
             "content": "<p>Ce masque est bien plus qu’un simple soin : c’est un traitement ciblé qui agit en profondeur pour lifter, raffermir et lisser la peau. Grâce à la synergie du rétinol et du collagène, il redéfinit les contours du visage, améliore l’élasticité et restaure l’éclat naturel du teint. En quelques applications seulement, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
           }
         },
-        "item_caTQrn": {
+        "item_VUGgep": {
           "type": "item",
           "disabled": true,
           "settings": {
@@ -943,50 +861,8 @@
         }
       },
       "block_order": [
-        "item_j3raWT",
-        "item_caTQrn"
-      ],
-      "name": "Images and text scrolling",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": true,
-        "show_counter": false,
-        "desktop_image_effect": "reveal",
-        "image_position": "start",
-        "background": "#ffffff",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
-      }
-    },
-    "images_with_text_scrolling_n67MjX": {
-      "type": "images-with-text-scrolling",
-      "blocks": {
-        "item_XxF9wj": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/beautiful-senior-older-woman-smiling-looking-at-mi-2023-11-27-05-27-50-utc_1_86dd79fe-04bf-45b4-8d3a-37f98292e1c9.webp",
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Expérimentez une transformation rajeunissante",
-            "content": "<p>Tous les signes visibles de fatigue, de stress ou de vieillissement disparaissent de votre visage.</p><p>Notre traitement soutient votre peau et aide à restaurer son élasticité.</p>"
-          }
-        },
-        "item_kppTXk": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Heading",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_XxF9wj",
-        "item_kppTXk"
+        "item_HEaB3a",
+        "item_VUGgep"
       ],
       "name": "Images and text scrolling",
       "settings": {
@@ -1008,100 +884,36 @@
         "item_dQeMxc": {
           "type": "item",
           "settings": {
-            "title": "Est-ce que ça marche vraiment ou c'est encore du marketing ?",
-            "content": "<p><em>Les résultats parlent d'eux-mêmes ! Plus de 15 000 femmes ont déjà testé avec 98% de satisfaction. L'effet lifting est visible dès le retrait du masque - c'est pour ça qu'on offre une garantie 30 jours satisfait ou remboursé</em>.</p>"
-          }
-        },
-        "item_CqReLP": {
-          "type": "item",
-          "settings": {
-            "title": "C'est cher pour un masque, non ?",
-            "content": "<p><em>Réfléchissez : une séance chez l'esthéticienne = 80€. Un lifting = 8000€. Notre masque vous donne le même résultat pour quelques euros ! C'est l'investissement beauté le plus rentable de votre vie.</em></p>"
-          }
-        },
-        "item_an86Rx": {
-          "type": "item",
-          "settings": {
-            "title": "Quelle est la différence avec les autres masques ?",
-            "content": "<p><em>Les masques classiques hydratent en surface. Le nôtre PÉNÈTRE en profondeur grâce à sa texture révolutionnaire et STIMULE votre collagène naturel. Résultat : lifting réel, pas juste hydratation temporaire.</em></p>"
+            "title": "Ce masque est-il adapté à tous les types de peau ?",
+            "content": "<p><em>Oui. Sa formule a été pensée pour convenir à tous les types de peau, y compris les peaux sensibles. Si vous débutez avec le rétinol, commencez par une application 1 à 2 fois par semaine.</em></p>"
           }
         },
         "item_mkBJXJ": {
           "type": "item",
           "settings": {
-            "title": "Combien de temps faut-il pour voir des résultats ?",
-            "content": "<p><em>C'est immédiat ! Dès la première utilisation, votre peau est visiblement liftée et tendue. Après une semaine, l'effet est spectaculaire. Contrairement aux crèmes qui mettent des mois, nos résultats sont instantanés.</em></p>"
-          }
-        },
-        "item_qTTGy9": {
-          "type": "item",
-          "settings": {
-            "title": "Pourquoi ce masque vient des États-Unis ?",
-            "content": "<p><em>Les Américains sont en avance de 5 ans sur l'anti-âge ! Cette technologie exclusive a conquis Hollywood avant d'arriver en France. Vous avez accès à l'innovation beauté du futur.</em></p>"
-          }
-        },
-        "item_nPTtBz": {
-          "type": "item",
-          "settings": {
-            "title": "Ça marche sur les rides profondes ?",
-            "content": "<p>OUI ! Même les rides marquées s'atténuent visiblement. Le collagène concentré et le rétinol agissent directement sur les rides profondes. Nos clientes de 60+ ans sont bluffées par les résultats.</p>"
+            "title": "En combien de temps peut-on voir les résultats ?",
+            "content": "<p><em>Les premiers effets sont souvent visibles dès la première application : peau plus lisse, plus souple, plus éclatante. Les résultats en profondeur (fermeté, tonicité) apparaissent en général après 1 à 2 semaines d’utilisation régulière.</em></p>"
           }
         },
         "item_akLnte": {
           "type": "item",
           "settings": {
-            "title": "Puis-je l'utiliser avec mes autres soins ?",
-            "content": "<p><em>Bien sûr ! Il remplace même plusieurs produits : sérum, masque, soin anti-âge. Votre routine beauté devient plus simple et plus efficace.</em></p>"
-          }
-        },
-        "item_4Greb6": {
-          "type": "item",
-          "settings": {
-            "title": "Ce masque peut-il vraiment redessiner mon ovale ?",
-            "content": "<p><em>ABSOLUMENT ! Sa formule collagène + rétinol retend la peau relâchée et raffermit les tissus. Dès la première utilisation, votre ovale se redessine. Après une semaine, l'effet est spectaculaire - comme un lifting naturel !</em></p><h3></h3>"
-          }
-        },
-        "item_jHVYmd": {
-          "type": "item",
-          "settings": {
-            "title": "Mes rides vont-elles revenir si j'arrête ?",
-            "content": "<p><em>Le masque STIMULE votre collagène naturel, donc les bénéfices durent même entre les utilisations. Mais pourquoi arrêter quand vous avez trouvé LA solution ?</em></p>"
-          }
-        },
-        "item_reJtCT": {
-          "type": "item",
-          "settings": {
-            "title": "Ma peau est très sensible, puis-je l'utiliser ?",
-            "content": "<p><em>Absolument ! Ce masque convient à TOUTES les peaux, même les plus sensibles. Sa formule a été testée dermatologiquement. Aucune irritation rapportée sur nos 15 000 utilisatrices.</em></p>"
-          }
-        },
-        "item_jyYnkh": {
-          "type": "item",
-          "disabled": true,
-          "settings": {
-            "title": "C'est cher pour un masque, non ?",
-            "content": "<p><em>Réfléchissez : une séance chez l'esthéticienne = 80€. Un lifting = 8000€. Notre masque vous donne le même résultat pour quelques euros ! C'est l'investissement beauté le plus rentable de votre vie.</em></p>"
-          }
-        },
-        "item_rimYpc": {
-          "type": "item",
-          "settings": {
             "title": "À quel moment de la journée faut-il l’utiliser ?",
-            "content": "<p>Appliquez ce masque le soir sur une peau propre. Sa formule révolutionnaire agit toute la nuit pour régénérer votre peau en profondeur.</p>"
+            "content": "<p><em>Ce masque est conçu pour une utilisation </em><em><strong>le soir</strong></em><em>, sur peau propre, avant de dormir. Le soin agit pendant votre sommeil, quand la peau se régénère naturellement.</em></p>"
           }
         },
         "item_93ycU7": {
           "type": "item",
           "settings": {
             "title": "Quelle est la fréquence d’utilisation recommandée ?",
-            "content": "<p>Nous conseillons 1<strong> utilisation par jour  ( le soir), 3 à 4 fois par semaine</strong> pour des résultats optimaux</p>"
+            "content": "<p><em>Nous conseillons </em><em><strong>3 à 4 fois par semaine</strong></em><em>, selon votre type de peau et vos besoins. Il peut s’intégrer facilement à votre routine sans irriter la peau.</em></p>"
           }
         },
         "item_UpLzMK": {
           "type": "item",
           "settings": {
             "title": "Peut-on utiliser d’autres produits après ce masque ?",
-            "content": "<p><em>Oui. Après avoir retiré le masque, vous pouvez appliquer une crème hydratante pour sceller l’hydratation. Évitez d’ajouter des produits contenant aussi du rétinol immédiatement après.</em></p>"
+            "content": "<p><strong>Oui. Après avoir retiré le masque, vous pouvez appliquer une crème hydratante pour sceller l’hydratation. Évitez d’ajouter des produits contenant aussi du rétinol immédiatement après.</strong></p>"
           }
         },
         "item_xqtU7F": {
@@ -1114,24 +926,15 @@
         "item_RME8Fh": {
           "type": "item",
           "settings": {
-            "title": "Et si ça ne marche pas sur moi ?",
-            "content": "<p><em>IMPOSSIBLE ! Mais si par miracle vous n'êtes pas satisfaite, on vous rembourse intégralement pendant 30 jours. Zéro risque, que des bénéfices.</em></p>"
+            "title": "Que faire si le Masque Rétinol & Collagène ne répond pas à mes attentes?",
+            "content": "<p><em>Nous sommes certains que vous allez adorer votre nouveau </em><em><strong>masque Rétinol & Collagène</strong></em><em>. Toutefois, si vous n’êtes pas entièrement satisfait(e) et décidez de le retourner, nous vous garantissons un remboursement complet.</em></p>"
           }
         }
       },
       "block_order": [
         "item_dQeMxc",
-        "item_CqReLP",
-        "item_an86Rx",
         "item_mkBJXJ",
-        "item_qTTGy9",
-        "item_nPTtBz",
         "item_akLnte",
-        "item_4Greb6",
-        "item_jHVYmd",
-        "item_reJtCT",
-        "item_jyYnkh",
-        "item_rimYpc",
         "item_93ycU7",
         "item_UpLzMK",
         "item_xqtU7F",
@@ -1214,35 +1017,44 @@
         "review_button_text_color": "#ffffff"
       }
     },
-    "images_with_text_scrolling_HmpQDM": {
-      "type": "images-with-text-scrolling",
+    "rich_text_FXWqpx": {
+      "type": "rich-text",
       "blocks": {
-        "item_jKEzCt": {
-          "type": "item",
-          "disabled": true,
+        "subheading_JRAMwH": {
+          "type": "subheading",
           "settings": {
-            "icon": "none",
-            "icon_width": 48,
-            "title": "Heading 2",
+            "text": "Subheading"
+          }
+        },
+        "heading_a3Y7wU": {
+          "type": "heading",
+          "settings": {
+            "text": "Heading",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_kR8Mcq": {
+          "type": "richtext",
+          "settings": {
             "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
           }
         }
       },
       "block_order": [
-        "item_jKEzCt"
+        "subheading_JRAMwH",
+        "heading_a3Y7wU",
+        "richtext_kR8Mcq"
       ],
-      "name": "Images and text scrolling",
+      "name": "Rich text",
       "settings": {
         "full_width": true,
-        "stack_on_mobile": true,
-        "show_counter": false,
-        "desktop_image_effect": "reveal",
-        "image_position": "end",
+        "content_width": "small",
+        "text_position": "center",
         "background": "",
         "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
+        "text_color": ""
       }
     }
   },
@@ -1252,19 +1064,15 @@
     "logo_list_AbAtBh",
     "rich_text_MDywVg",
     "image_with_text_overlay_rXr3BP",
-    "custom_liquid_6iMCdz",
-    "trus_content_gJR6Bd",
     "multi_column_Y4kcjk",
     "featured_product_eWEegT",
     "sectionvideo_qtqmPa",
     "tabs_n6ew66",
-    "images_with_text_scrolling_j4FYmG",
     "multi_column_XUYzUB",
-    "images_with_text_scrolling_RrmrcM",
-    "images_with_text_scrolling_n67MjX",
+    "images_with_text_scrolling_j4FYmG",
     "faq_f4WA34",
     "contact_chMxRq",
     "17566032008b10683c",
-    "images_with_text_scrolling_HmpQDM"
+    "rich_text_FXWqpx"
   ]
 }
