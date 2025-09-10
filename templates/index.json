@@ -556,9 +556,9 @@
         "video_3E9zTQ": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/videp1.mp4",
+            "video": "shopify://files/videos/A1A08594-0646-42CD-B4F9-0EEFA116EFEE.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/videp1.mp4",
+            "preload_video": "shopify://files/videos/A1A08594-0646-42CD-B4F9-0EEFA116EFEE.mov",
             "modal_heading": "",
             "modal_text": ""
           }
@@ -566,8 +566,9 @@
         "video_VmPtFF": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/snaptik_7496846877921479979_hd.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/Video2.mp4",
+            "preload_video": "shopify://files/videos/snaptik_7496846877921479979_hd.mov",
             "modal_heading": "",
             "modal_text": ""
           }
@@ -576,7 +577,9 @@
           "type": "video",
           "disabled": true,
           "settings": {
+            "video": "shopify://files/videos/Video2.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "preload_video": "shopify://files/videos/Video2.mov",
             "modal_heading": "<h4>Modal Heading</h4>",
             "modal_text": "<p>Modal Text</p>"
           }
@@ -584,19 +587,11 @@
         "video_VnJrdm": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/videp1.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/Video3.mp4",
+            "preload_video": "shopify://files/videos/videp1.mov",
             "modal_heading": "",
             "modal_text": ""
-          }
-        },
-        "video_JiyhCY": {
-          "type": "video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "preload_video": "shopify://files/videos/a2aa68ffba1b4d8f9c45dc67e0992c6f.HD-720p-1.6Mbps-42655643.mp4",
-            "modal_heading": "<h4>Modal Heading</h4>",
-            "modal_text": "<p>Modal Text</p>"
           }
         }
       },
@@ -604,8 +599,7 @@
         "video_3E9zTQ",
         "video_VmPtFF",
         "video_JLPfba",
-        "video_VnJrdm",
-        "video_JiyhCY"
+        "video_VnJrdm"
       ],
       "name": "SS - Product Videos",
       "settings": {
