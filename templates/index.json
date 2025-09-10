@@ -1016,46 +1016,6 @@
         "review_button_background": "#000000",
         "review_button_text_color": "#ffffff"
       }
-    },
-    "rich_text_FXWqpx": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading_JRAMwH": {
-          "type": "subheading",
-          "settings": {
-            "text": "Subheading"
-          }
-        },
-        "heading_a3Y7wU": {
-          "type": "heading",
-          "settings": {
-            "text": "Heading",
-            "heading_tag": "h1",
-            "text_color": "",
-            "gradient": ""
-          }
-        },
-        "richtext_kR8Mcq": {
-          "type": "richtext",
-          "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "subheading_JRAMwH",
-        "heading_a3Y7wU",
-        "richtext_kR8Mcq"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "full_width": true,
-        "content_width": "small",
-        "text_position": "center",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
     }
   },
   "order": [
@@ -1072,7 +1032,6 @@
     "images_with_text_scrolling_j4FYmG",
     "faq_f4WA34",
     "contact_chMxRq",
-    "17566032008b10683c",
-    "rich_text_FXWqpx"
+    "17566032008b10683c"
   ]
 }
