@@ -1,0 +1,613 @@
+<div class="exact-design-section">
+  <div class="exact-container">
+    
+    <div class="exact-content">
+      <div class="exact-badge">
+        <div class="medal-badge">
+          <div class="medal-circle">
+            <span class="medal-number">{{ section.settings.badge_number }}</span>
+          </div>
+          <div class="medal-ribbons">
+            <div class="ribbon-left"></div>
+            <div class="ribbon-right"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="exact-text">
+        <h2 class="exact-title">{{ section.settings.main_title }}</h2>
+        <p class="exact-description">{{ section.settings.description_text }}</p>
+        <p class="exact-stats">
+          <strong>{{ section.settings.percentage }}</strong> {{ section.settings.stats_text }} <strong>{{ section.settings.time_result }}</strong> {{ section.settings.study_note }}
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<style>
+.exact-design-section {
+  background: {{ section.settings.background_color }};
+  padding: {{ section.settings.section_padding }}px 20px;
+  border-radius: {{ section.settings.border_radius }}px;
+  margin: {{ section.settings.section_margin }}px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.exact-container {
+  max-width: {{ section.settings.max_width }}px;
+  margin: 0 auto;
+}
+
+.exact-content {
+  display: flex;
+  align-items: flex-start;
+  gap: {{ section.settings.content_gap }}px;
+}
+
+.exact-badge {
+  flex-shrink: 0;
+  padding-top: 10px;
+}
+
+.medal-badge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.medal-circle {
+  width: {{ section.settings.medal_size }}px;
+  height: {{ section.settings.medal_size }}px;
+  border-radius: 50%;
+  background: {{ section.settings.medal_bg_color }};
+  border: {{ section.settings.medal_border }}px solid {{ section.settings.medal_border_color }};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.medal-number {
+  font-size: {{ section.settings.number_size }}px;
+  font-weight: {{ section.settings.number_weight }};
+  color: {{ section.settings.number_color }};
+  line-height: 1;
+}
+
+.medal-ribbons {
+  position: relative;
+  top: -5px;
+  display: flex;
+  gap: 2px;
+}
+
+.ribbon-left,
+.ribbon-right {
+  width: {{ section.settings.ribbon_width }}px;
+  height: {{ section.settings.ribbon_height }}px;
+  background: {{ section.settings.ribbon_color }};
+  position: relative;
+}
+
+.ribbon-left::after,
+.ribbon-right::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: {{ section.settings.ribbon_width | divided_by: 2 }}px solid transparent;
+  border-right: {{ section.settings.ribbon_width | divided_by: 2 }}px solid transparent;
+  border-top: 8px solid {{ section.settings.ribbon_color }};
+}
+
+.exact-text {
+  flex: 1;
+}
+
+.exact-title {
+  font-size: {{ section.settings.title_size }}px;
+  font-weight: {{ section.settings.title_weight }};
+  color: {{ section.settings.title_color }};
+  margin: 0 0 {{ section.settings.title_margin }}px 0;
+  line-height: 1.3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.exact-description {
+  font-size: {{ section.settings.description_size }}px;
+  color: {{ section.settings.description_color }};
+  margin: 0 0 {{ section.settings.paragraph_spacing }}px 0;
+  line-height: 1.5;
+}
+
+.exact-stats {
+  font-size: {{ section.settings.stats_size }}px;
+  color: {{ section.settings.stats_color }};
+  margin: 0;
+  line-height: 1.6;
+}
+
+.exact-stats strong {
+  color: {{ section.settings.stats_bold_color }};
+  font-weight: {{ section.settings.stats_bold_weight }};
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .exact-design-section {
+    padding: {{ section.settings.mobile_padding }}px 15px;
+  }
+  
+  .exact-content {
+    flex-direction: column;
+    gap: {{ section.settings.mobile_gap }}px;
+    text-align: center;
+  }
+  
+  .medal-circle {
+    width: {{ section.settings.mobile_medal_size }}px;
+    height: {{ section.settings.mobile_medal_size }}px;
+  }
+  
+  .medal-number {
+    font-size: {{ section.settings.mobile_number_size }}px;
+  }
+  
+  .ribbon-left,
+  .ribbon-right {
+    width: {{ section.settings.mobile_ribbon_width }}px;
+    height: {{ section.settings.mobile_ribbon_height }}px;
+  }
+  
+  .ribbon-left::after,
+  .ribbon-right::after {
+    border-left-width: {{ section.settings.mobile_ribbon_width | divided_by: 2 }}px;
+    border-right-width: {{ section.settings.mobile_ribbon_width | divided_by: 2 }}px;
+  }
+  
+  .exact-title {
+    font-size: {{ section.settings.mobile_title_size }}px;
+  }
+  
+  .exact-description {
+    font-size: {{ section.settings.mobile_description_size }}px;
+  }
+  
+  .exact-stats {
+    font-size: {{ section.settings.mobile_stats_size }}px;
+  }
+}
+
+/* Simple animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.exact-design-section {
+  animation: slideUp 0.6s ease-out;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Badge Design Exact",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Contenu"
+    },
+    {
+      "type": "text",
+      "id": "badge_number",
+      "label": "Numéro badge",
+      "default": "1"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Titre principal",
+      "default": "Le traitement anti-poches N°1 en Europe !"
+    },
+    {
+      "type": "textarea",
+      "id": "description_text",
+      "label": "Description",
+      "default": "*Un regard plus jeune en 3 minutes ! L'Instant Lift+ d'Harvey Ross lisse et raffermit immédiatement le contour des yeux, atténuant poches et rides."
+    },
+    {
+      "type": "text",
+      "id": "percentage",
+      "label": "Pourcentage",
+      "default": "100% des utilisatrices"
+    },
+    {
+      "type": "text",
+      "id": "stats_text",
+      "label": "Texte stats",
+      "default": "ont constaté une réduction des poches en seulement"
+    },
+    {
+      "type": "text",
+      "id": "time_result",
+      "label": "Temps résultat",
+      "default": "3 minutes"
+    },
+    {
+      "type": "text",
+      "id": "study_note",
+      "label": "Note étude",
+      "default": "(étude clinique réalisée auprès de 25 femmes âgées de 36 à 65 ans)."
+    },
+    {
+      "type": "header",
+      "content": "Design général"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur arrière-plan",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximum",
+      "min": 800,
+      "max": 1200,
+      "step": 100,
+      "default": 1000,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Espacement section",
+      "min": 20,
+      "max": 60,
+      "step": 10,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_margin",
+      "label": "Marge section",
+      "min": 0,
+      "max": 40,
+      "step": 10,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Arrondi section",
+      "min": 0,
+      "max": 20,
+      "step": 5,
+      "default": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "label": "Espace badge-texte",
+      "min": 20,
+      "max": 60,
+      "step": 10,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Badge médaille"
+    },
+    {
+      "type": "range",
+      "id": "medal_size",
+      "label": "Taille médaille",
+      "min": 60,
+      "max": 100,
+      "step": 10,
+      "default": 80,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "medal_bg_color",
+      "label": "Fond médaille",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "medal_border_color",
+      "label": "Bordure médaille",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "medal_border",
+      "label": "Épaisseur bordure",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "label": "Taille numéro",
+      "min": 24,
+      "max": 40,
+      "step": 4,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "number_color",
+      "label": "Couleur numéro",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Rubans"
+    },
+    {
+      "type": "range",
+      "id": "ribbon_width",
+      "label": "Largeur rubans",
+      "min": 8,
+      "max": 16,
+      "step": 2,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "ribbon_height",
+      "label": "Hauteur rubans",
+      "min": 20,
+      "max": 35,
+      "step": 5,
+      "default": 25,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "ribbon_color",
+      "label": "Couleur rubans",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Typographie"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Taille titre",
+      "min": 20,
+      "max": 32,
+      "step": 2,
+      "default": 26,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Couleur titre",
+      "default": "#1f2937"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Taille description",
+      "min": 14,
+      "max": 18,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Couleur description",
+      "default": "#374151"
+    },
+    {
+      "type": "range",
+      "id": "stats_size",
+      "label": "Taille stats",
+      "min": 14,
+      "max": 18,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "stats_color",
+      "label": "Couleur stats",
+      "default": "#374151"
+    },
+    {
+      "type": "color",
+      "id": "stats_bold_color",
+      "label": "Couleur stats gras",
+      "default": "#1f2937"
+    },
+    {
+      "type": "header",
+      "content": "Espacements"
+    },
+    {
+      "type": "range",
+      "id": "title_margin",
+      "label": "Marge sous titre",
+      "min": 10,
+      "max": 25,
+      "step": 5,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "paragraph_spacing",
+      "label": "Espace paragraphes",
+      "min": 10,
+      "max": 25,
+      "step": 5,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding",
+      "label": "Espacement mobile",
+      "min": 15,
+      "max": 40,
+      "step": 5,
+      "default": 25,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Espace mobile",
+      "min": 15,
+      "max": 30,
+      "step": 5,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_medal_size",
+      "label": "Taille médaille mobile",
+      "min": 50,
+      "max": 80,
+      "step": 10,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_number_size",
+      "label": "Taille numéro mobile",
+      "min": 18,
+      "max": 28,
+      "step": 2,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_ribbon_width",
+      "label": "Largeur rubans mobile",
+      "min": 6,
+      "max": 12,
+      "step": 2,
+      "default": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_ribbon_height",
+      "label": "Hauteur rubans mobile",
+      "min": 15,
+      "max": 25,
+      "step": 5,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_title_size",
+      "label": "Taille titre mobile",
+      "min": 18,
+      "max": 26,
+      "step": 2,
+      "default": 22,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_description_size",
+      "label": "Taille description mobile",
+      "min": 13,
+      "max": 16,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "mobile_stats_size",
+      "label": "Taille stats mobile",
+      "min": 13,
+      "max": 16,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "number_weight",
+      "label": "Poids numéro",
+      "options": [
+        {"value": "600", "label": "Semi-gras"},
+        {"value": "700", "label": "Gras"},
+        {"value": "800", "label": "Très gras"}
+      ],
+      "default": "700"
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Poids titre",
+      "options": [
+        {"value": "600", "label": "Semi-gras"},
+        {"value": "700", "label": "Gras"},
+        {"value": "800", "label": "Très gras"}
+      ],
+      "default": "700"
+    },
+    {
+      "type": "select",
+      "id": "stats_bold_weight",
+      "label": "Poids stats gras",
+      "options": [
+        {"value": "600", "label": "Semi-gras"},
+        {"value": "700", "label": "Gras"},
+        {"value": "800", "label": "Très gras"}
+      ],
+      "default": "700"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Badge Design Exact"
+    }
+  ]
+}
+{% endschema %}
