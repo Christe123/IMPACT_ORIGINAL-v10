@@ -131,27 +131,28 @@ preloads.forEach(function(file) {
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Vérifie si on est bien sur le produit ID 1082
-  var productIdMeta = document.querySelector('meta[property="og:product_id"]');
-  if (productIdMeta && productIdMeta.content === "1082") {
+/* Retigena – Forcer le compteur Loox à 1080 avis sur le produit 1082 */
+document.addEventListener('DOMContentLoaded', function () {
+  // 1) Vérifier qu'on est sur une page produit et récupérer l'ID via la meta OG
+  var metaId = document.querySelector('meta[property="og:product_id"]');
+  if (!metaId || metaId.content !== '1082') return; // on sort si ce n'est pas le bon produit
 
-    function replaceLooxCount() {
-      document.querySelectorAll('.loox-rating .loox-rating__amount').forEach(function(el) {
-        // Force l'affichage de 1080 avis
-        el.innerText = "1080 avis";
-      });
-    }
-
-    // Premier remplacement au chargement
-    replaceLooxCount();
-
-    // Surveille si Loox recharge dynamiquement son widget
-    var observer = new MutationObserver(replaceLooxCount);
-    observer.observe(document.body, { childList: true, subtree: true });
+  function setFakeCount() {
+    // 2) Cibler le compteur Loox et le remplacer
+    document.querySelectorAll('.loox-rating .loox-rating__amount').forEach(function(el){
+      el.textContent = '1080 avis';
+    });
   }
+
+  // Premier passage
+  setFakeCount();
+
+  // 3) Loox réinjection dynamique -> on surveille et on remet la valeur
+  var mo = new MutationObserver(setFakeCount);
+  mo.observe(document.body, { childList: true, subtree: true });
 });
 </script>
+
 
 
 
