@@ -1,26 +1,28 @@
-<div class="numero1-section">
-  <div class="numero1-container">
+<div class="professional-badge-section">
+  <div class="professional-container">
     
-    <div class="numero1-content">
-      <div class="numero1-badge">
-        <div class="badge-circle">
-          <div class="number">{{ section.settings.badge_number }}</div>
-          <div class="ribbons">
-            <div class="ribbon ribbon-left"></div>
-            <div class="ribbon ribbon-right"></div>
+    <div class="professional-content">
+      <div class="professional-badge">
+        <div class="badge-wrapper">
+          <div class="badge-number">{{ section.settings.badge_number }}</div>
+          <div class="badge-crown">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="currentColor">
+              <path d="M5 16L3 3l5.5 7L12 4l3.5 6L21 3l-2 13H5z"/>
+            </svg>
           </div>
         </div>
       </div>
       
-      <div class="numero1-text">
-        <h2 class="main-title">{{ section.settings.main_title }}</h2>
-        <div class="description">
-          <p class="highlight">{{ section.settings.highlight_text }}</p>
-          <p class="stats">
-            <strong>{{ section.settings.percentage }}</strong> {{ section.settings.stats_text1 }} 
-            <strong>{{ section.settings.time_result }}</strong> {{ section.settings.stats_text2 }}
-          </p>
-          <p class="study-info">{{ section.settings.study_info }}</p>
+      <div class="professional-text">
+        <h2 class="professional-title">{{ section.settings.main_title }}</h2>
+        <div class="professional-description">
+          <p class="highlight-text">{{ section.settings.highlight_text }}</p>
+          <div class="stats-block">
+            <span class="stats-percentage">{{ section.settings.percentage }}</span>
+            <span class="stats-description">{{ section.settings.stats_description }}</span>
+            <span class="stats-time">{{ section.settings.time_result }}</span>
+          </div>
+          <p class="study-reference">{{ section.settings.study_info }}</p>
         </div>
       </div>
     </div>
@@ -29,212 +31,186 @@
 </div>
 
 <style>
-.numero1-section {
+.professional-badge-section {
   background: {{ section.settings.background_color }};
   padding: {{ section.settings.section_padding }}px 20px;
+  border: 1px solid {{ section.settings.border_color }};
   border-radius: {{ section.settings.section_radius }}px;
   margin: {{ section.settings.section_margin }}px 0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.numero1-container {
+.professional-container {
   max-width: {{ section.settings.max_width }}px;
   margin: 0 auto;
 }
 
-.numero1-content {
+.professional-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: {{ section.settings.content_gap }}px;
-  justify-content: flex-start;
 }
 
-.numero1-badge {
+.professional-badge {
   flex-shrink: 0;
 }
 
-.badge-circle {
+.badge-wrapper {
   width: {{ section.settings.badge_size }}px;
   height: {{ section.settings.badge_size }}px;
   border-radius: 50%;
   background: {{ section.settings.badge_bg_color }};
-  border: {{ section.settings.border_width }}px solid {{ section.settings.border_color }};
+  border: {{ section.settings.border_width }}px solid {{ section.settings.badge_border_color }};
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
-.number {
+.badge-number {
   font-size: {{ section.settings.number_size }}px;
   font-weight: {{ section.settings.number_weight }};
   color: {{ section.settings.number_color }};
+  line-height: 1;
 }
 
-.ribbons {
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 3px;
+.badge-crown {
+  color: {{ section.settings.crown_color }};
+  margin-top: 4px;
+  opacity: 0.8;
 }
 
-.ribbon {
-  width: 12px;
-  height: 30px;
-  background: {{ section.settings.ribbon_color }};
-  position: relative;
-  border-radius: 2px 2px 0 0;
-}
-
-.ribbon::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 6px solid {{ section.settings.ribbon_color }};
-  border-right: 6px solid {{ section.settings.ribbon_color }};
-  border-bottom: 8px solid transparent;
-}
-
-.ribbon-left {
-  transform: rotate(-10deg);
-}
-
-.ribbon-right {
-  transform: rotate(10deg);
-}
-
-.numero1-text {
+.professional-text {
   flex: 1;
-  color: {{ section.settings.text_color }};
 }
 
-.main-title {
+.professional-title {
   font-size: {{ section.settings.title_size }}px;
   font-weight: {{ section.settings.title_weight }};
   color: {{ section.settings.title_color }};
   margin-bottom: {{ section.settings.title_margin }}px;
   line-height: 1.3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 }
 
-.highlight {
+.professional-description {
+  color: {{ section.settings.text_color }};
+}
+
+.highlight-text {
   font-size: {{ section.settings.highlight_size }}px;
   margin-bottom: {{ section.settings.paragraph_spacing }}px;
-  color: {{ section.settings.highlight_color }};
   line-height: 1.5;
+  color: {{ section.settings.highlight_color }};
 }
 
-.stats {
-  font-size: {{ section.settings.stats_size }}px;
+.stats-block {
+  background: {{ section.settings.stats_bg_color }};
+  padding: {{ section.settings.stats_padding }}px;
+  border-radius: {{ section.settings.stats_radius }}px;
+  border-left: 4px solid {{ section.settings.accent_color }};
   margin-bottom: {{ section.settings.paragraph_spacing }}px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats-percentage {
+  font-size: {{ section.settings.stats_size }}px;
+  font-weight: {{ section.settings.stats_weight }};
+  color: {{ section.settings.accent_color }};
+}
+
+.stats-description {
+  font-size: {{ section.settings.stats_size }}px;
   color: {{ section.settings.stats_color }};
-  line-height: 1.6;
 }
 
-.stats strong {
-  color: {{ section.settings.stats_bold_color }};
-  font-weight: {{ section.settings.stats_bold_weight }};
+.stats-time {
+  font-size: {{ section.settings.stats_size }}px;
+  font-weight: {{ section.settings.stats_weight }};
+  color: {{ section.settings.accent_color }};
+  background: {{ section.settings.time_bg_color }};
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
-.study-info {
+.study-reference {
   font-size: {{ section.settings.study_size }}px;
   color: {{ section.settings.study_color }};
   font-style: italic;
-  line-height: 1.5;
-  margin-bottom: 0;
+  line-height: 1.4;
+  margin: 0;
 }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-  .numero1-section {
+  .professional-badge-section {
     padding: {{ section.settings.mobile_padding }}px 15px;
-    border-radius: {{ section.settings.mobile_radius }}px;
   }
   
-  .numero1-content {
+  .professional-content {
     flex-direction: column;
     gap: {{ section.settings.mobile_gap }}px;
     text-align: center;
   }
   
-  .badge-circle {
+  .badge-wrapper {
     width: {{ section.settings.mobile_badge_size }}px;
     height: {{ section.settings.mobile_badge_size }}px;
+    margin: 0 auto;
   }
   
-  .number {
+  .badge-number {
     font-size: {{ section.settings.mobile_number_size }}px;
   }
   
-  .main-title {
+  .professional-title {
     font-size: {{ section.settings.mobile_title_size }}px;
   }
   
-  .highlight {
+  .highlight-text {
     font-size: {{ section.settings.mobile_highlight_size }}px;
   }
   
-  .stats {
+  .stats-percentage,
+  .stats-description,
+  .stats-time {
     font-size: {{ section.settings.mobile_stats_size }}px;
   }
   
-  .study-info {
+  .study-reference {
     font-size: {{ section.settings.mobile_study_size }}px;
   }
 }
 
-/* Animation */
-@keyframes bounceInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px) scale(0.8);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(10px) scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
-
-@keyframes slideInRight {
+/* Subtle animation */
+@keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: scale(1);
   }
 }
 
-.badge-circle {
-  animation: bounceInLeft 0.8s ease-out;
-}
-
-.numero1-text {
-  animation: slideInRight 0.8s ease-out 0.3s both;
-}
-
-.ribbons {
-  animation: bounceInLeft 0.8s ease-out 0.5s both;
+.professional-badge-section {
+  animation: fadeInScale 0.6s ease-out;
 }
 </style>
 
 {% schema %}
 {
-  "name": "N°1 en Europe",
+  "name": "Badge Professionnel",
   "settings": [
     {
       "type": "header",
-      "content": "Badge N°1"
+      "content": "Badge"
     },
     {
       "type": "text",
@@ -243,44 +219,20 @@
       "default": "1"
     },
     {
-      "type": "color",
-      "id": "badge_bg_color",
-      "label": "Fond badge",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "border_color",
-      "label": "Couleur bordure",
-      "default": "#333333"
-    },
-    {
-      "type": "color",
-      "id": "number_color",
-      "label": "Couleur numéro",
-      "default": "#333333"
-    },
-    {
-      "type": "color",
-      "id": "ribbon_color",
-      "label": "Couleur rubans",
-      "default": "#333333"
-    },
-    {
       "type": "header",
-      "content": "Contenu principal"
+      "content": "Contenu"
     },
     {
       "type": "text",
       "id": "main_title",
       "label": "Titre principal",
-      "default": "Le traitement anti-poches N°1 en Europe !"
+      "default": "Le traitement anti-poches N°1 en Europe"
     },
     {
       "type": "textarea",
       "id": "highlight_text",
-      "label": "Texte mis en avant",
-      "default": "*Un regard plus jeune en 3 minutes ! L'Instant Lift+ d'Harvey Ross lisse et raffermit immédiatement le contour des yeux, atténuant poches et rides."
+      "label": "Texte descriptif",
+      "default": "Un regard plus jeune en 3 minutes ! L'Instant Lift+ lisse et raffermit immédiatement le contour des yeux, atténuant poches et rides."
     },
     {
       "type": "text",
@@ -290,158 +242,167 @@
     },
     {
       "type": "text",
-      "id": "stats_text1",
-      "label": "Texte stats partie 1",
+      "id": "stats_description",
+      "label": "Description stats",
       "default": "ont constaté une réduction des poches en seulement"
     },
     {
       "type": "text",
       "id": "time_result",
-      "label": "Temps du résultat",
+      "label": "Temps résultat",
       "default": "3 minutes"
-    },
-    {
-      "type": "text",
-      "id": "stats_text2",
-      "label": "Texte stats partie 2",
-      "default": "."
     },
     {
       "type": "textarea",
       "id": "study_info",
-      "label": "Informations étude",
-      "default": "(étude clinique réalisée auprès de 25 femmes âgées de 36 à 65 ans)."
+      "label": "Info étude",
+      "default": "Étude clinique réalisée auprès de 25 femmes âgées de 36 à 65 ans"
     },
     {
       "type": "header",
-      "content": "Design"
+      "content": "Couleurs"
     },
     {
       "type": "color",
       "id": "background_color",
-      "label": "Couleur arrière-plan",
+      "label": "Arrière-plan",
       "default": "#ffffff"
     },
     {
-      "type": "range",
-      "id": "badge_size",
-      "label": "Taille badge",
-      "min": 80,
-      "max": 140,
-      "step": 10,
-      "default": 100,
-      "unit": "px"
+      "type": "color",
+      "id": "border_color",
+      "label": "Bordure section",
+      "default": "#e5e7eb"
     },
     {
-      "type": "range",
-      "id": "border_width",
-      "label": "Épaisseur bordure",
-      "min": 2,
-      "max": 6,
-      "step": 1,
-      "default": 3,
-      "unit": "px"
+      "type": "color",
+      "id": "badge_bg_color",
+      "label": "Fond badge",
+      "default": "#ffffff"
     },
     {
-      "type": "range",
-      "id": "number_size",
-      "label": "Taille numéro",
-      "min": 30,
-      "max": 60,
-      "step": 5,
-      "default": 45,
-      "unit": "px"
+      "type": "color",
+      "id": "badge_border_color",
+      "label": "Bordure badge",
+      "default": "#374151"
     },
     {
-      "type": "select",
-      "id": "number_weight",
-      "label": "Poids numéro",
-      "options": [
-        {"value": "700", "label": "Gras"},
-        {"value": "800", "label": "Très gras"},
-        {"value": "900", "label": "Ultra gras"}
-      ],
-      "default": "800"
+      "type": "color",
+      "id": "number_color",
+      "label": "Couleur numéro",
+      "default": "#374151"
+    },
+    {
+      "type": "color",
+      "id": "crown_color",
+      "label": "Couleur couronne",
+      "default": "#fbbf24"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Couleur accent",
+      "default": "#3b82f6"
+    },
+    {
+      "type": "color",
+      "id": "stats_bg_color",
+      "label": "Fond stats",
+      "default": "#f8fafc"
+    },
+    {
+      "type": "color",
+      "id": "time_bg_color",
+      "label": "Fond temps",
+      "default": "#dbeafe"
     },
     {
       "type": "header",
       "content": "Typographie"
     },
     {
-      "type": "range",
-      "id": "title_size",
-      "label": "Taille titre",
-      "min": 20,
-      "max": 40,
-      "step": 2,
-      "default": 28,
-      "unit": "px"
-    },
-    {
       "type": "color",
       "id": "title_color",
       "label": "Couleur titre",
-      "default": "#2c3e50"
+      "default": "#1f2937"
     },
     {
-      "type": "select",
-      "id": "title_weight",
-      "label": "Poids titre",
-      "options": [
-        {"value": "600", "label": "Semi-gras"},
-        {"value": "700", "label": "Gras"},
-        {"value": "800", "label": "Très gras"}
-      ],
-      "default": "700"
-    },
-    {
-      "type": "range",
-      "id": "highlight_size",
-      "label": "Taille texte highlight",
-      "min": 14,
-      "max": 20,
-      "step": 1,
-      "default": 16,
-      "unit": "px"
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur texte",
+      "default": "#374151"
     },
     {
       "type": "color",
       "id": "highlight_color",
       "label": "Couleur highlight",
-      "default": "#2c3e50"
+      "default": "#4b5563"
+    },
+    {
+      "type": "color",
+      "id": "stats_color",
+      "label": "Couleur stats",
+      "default": "#6b7280"
+    },
+    {
+      "type": "color",
+      "id": "study_color",
+      "label": "Couleur étude",
+      "default": "#9ca3af"
+    },
+    {
+      "type": "header",
+      "content": "Tailles"
+    },
+    {
+      "type": "range",
+      "id": "badge_size",
+      "label": "Taille badge",
+      "min": 80,
+      "max": 120,
+      "step": 10,
+      "default": 90,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "number_size",
+      "label": "Taille numéro",
+      "min": 24,
+      "max": 40,
+      "step": 2,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Taille titre",
+      "min": 20,
+      "max": 32,
+      "step": 2,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "highlight_size",
+      "label": "Taille highlight",
+      "min": 14,
+      "max": 18,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
     },
     {
       "type": "range",
       "id": "stats_size",
       "label": "Taille stats",
       "min": 14,
-      "max": 20,
+      "max": 18,
       "step": 1,
-      "default": 16,
+      "default": 15,
       "unit": "px"
-    },
-    {
-      "type": "color",
-      "id": "stats_color",
-      "label": "Couleur stats",
-      "default": "#2c3e50"
-    },
-    {
-      "type": "color",
-      "id": "stats_bold_color",
-      "label": "Couleur stats gras",
-      "default": "#2c3e50"
-    },
-    {
-      "type": "select",
-      "id": "stats_bold_weight",
-      "label": "Poids stats gras",
-      "options": [
-        {"value": "600", "label": "Semi-gras"},
-        {"value": "700", "label": "Gras"},
-        {"value": "800", "label": "Très gras"}
-      ],
-      "default": "700"
     },
     {
       "type": "range",
@@ -450,20 +411,8 @@
       "min": 12,
       "max": 16,
       "step": 1,
-      "default": 14,
+      "default": 13,
       "unit": "px"
-    },
-    {
-      "type": "color",
-      "id": "study_color",
-      "label": "Couleur étude",
-      "default": "#6c757d"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Couleur texte général",
-      "default": "#2c3e50"
     },
     {
       "type": "header",
@@ -472,11 +421,11 @@
     {
       "type": "range",
       "id": "max_width",
-      "label": "Largeur maximum",
+      "label": "Largeur max",
       "min": 800,
-      "max": 1400,
+      "max": 1200,
       "step": 100,
-      "default": 1200,
+      "default": 1000,
       "unit": "px"
     },
     {
@@ -484,9 +433,9 @@
       "id": "section_padding",
       "label": "Padding section",
       "min": 20,
-      "max": 60,
-      "step": 10,
-      "default": 40,
+      "max": 50,
+      "step": 5,
+      "default": 30,
       "unit": "px"
     },
     {
@@ -494,9 +443,9 @@
       "id": "section_margin",
       "label": "Marge section",
       "min": 0,
-      "max": 40,
-      "step": 10,
-      "default": 20,
+      "max": 30,
+      "step": 5,
+      "default": 15,
       "unit": "px"
     },
     {
@@ -504,9 +453,9 @@
       "id": "section_radius",
       "label": "Arrondi section",
       "min": 5,
-      "max": 25,
+      "max": 20,
       "step": 5,
-      "default": 15,
+      "default": 10,
       "unit": "px"
     },
     {
@@ -514,9 +463,9 @@
       "id": "content_gap",
       "label": "Espace badge-texte",
       "min": 20,
-      "max": 60,
-      "step": 10,
-      "default": 40,
+      "max": 50,
+      "step": 5,
+      "default": 30,
       "unit": "px"
     },
     {
@@ -524,19 +473,39 @@
       "id": "title_margin",
       "label": "Marge sous titre",
       "min": 10,
-      "max": 30,
+      "max": 25,
       "step": 5,
-      "default": 20,
+      "default": 15,
       "unit": "px"
     },
     {
       "type": "range",
       "id": "paragraph_spacing",
-      "label": "Espace entre paragraphes",
+      "label": "Espace paragraphes",
       "min": 10,
       "max": 25,
       "step": 5,
       "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "stats_padding",
+      "label": "Padding stats",
+      "min": 10,
+      "max": 20,
+      "step": 5,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "stats_radius",
+      "label": "Arrondi stats",
+      "min": 6,
+      "max": 15,
+      "step": 3,
+      "default": 9,
       "unit": "px"
     },
     {
@@ -548,19 +517,9 @@
       "id": "mobile_padding",
       "label": "Padding mobile",
       "min": 15,
-      "max": 40,
+      "max": 35,
       "step": 5,
-      "default": 25,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "mobile_radius",
-      "label": "Arrondi mobile",
-      "min": 5,
-      "max": 20,
-      "step": 5,
-      "default": 10,
+      "default": 20,
       "unit": "px"
     },
     {
@@ -568,29 +527,29 @@
       "id": "mobile_gap",
       "label": "Espace mobile",
       "min": 15,
-      "max": 35,
+      "max": 30,
       "step": 5,
-      "default": 25,
+      "default": 20,
       "unit": "px"
     },
     {
       "type": "range",
       "id": "mobile_badge_size",
       "label": "Taille badge mobile",
-      "min": 70,
-      "max": 100,
+      "min": 60,
+      "max": 90,
       "step": 10,
-      "default": 80,
+      "default": 70,
       "unit": "px"
     },
     {
       "type": "range",
       "id": "mobile_number_size",
       "label": "Taille numéro mobile",
-      "min": 25,
-      "max": 40,
-      "step": 5,
-      "default": 35,
+      "min": 20,
+      "max": 30,
+      "step": 2,
+      "default": 24,
       "unit": "px"
     },
     {
@@ -598,9 +557,9 @@
       "id": "mobile_title_size",
       "label": "Taille titre mobile",
       "min": 18,
-      "max": 28,
+      "max": 24,
       "step": 2,
-      "default": 22,
+      "default": 20,
       "unit": "px"
     },
     {
@@ -608,9 +567,9 @@
       "id": "mobile_highlight_size",
       "label": "Taille highlight mobile",
       "min": 13,
-      "max": 17,
+      "max": 16,
       "step": 1,
-      "default": 15,
+      "default": 14,
       "unit": "px"
     },
     {
@@ -618,9 +577,9 @@
       "id": "mobile_stats_size",
       "label": "Taille stats mobile",
       "min": 13,
-      "max": 17,
+      "max": 16,
       "step": 1,
-      "default": 15,
+      "default": 14,
       "unit": "px"
     },
     {
@@ -628,15 +587,59 @@
       "id": "mobile_study_size",
       "label": "Taille étude mobile",
       "min": 11,
-      "max": 15,
+      "max": 14,
       "step": 1,
-      "default": 13,
+      "default": 12,
       "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "border_width",
+      "label": "Épaisseur bordure badge",
+      "options": [
+        {"value": "2", "label": "Fine"},
+        {"value": "3", "label": "Moyenne"},
+        {"value": "4", "label": "Épaisse"}
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "number_weight",
+      "label": "Poids numéro",
+      "options": [
+        {"value": "600", "label": "Semi-gras"},
+        {"value": "700", "label": "Gras"},
+        {"value": "800", "label": "Très gras"}
+      ],
+      "default": "700"
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Poids titre",
+      "options": [
+        {"value": "500", "label": "Moyen"},
+        {"value": "600", "label": "Semi-gras"},
+        {"value": "700", "label": "Gras"}
+      ],
+      "default": "600"
+    },
+    {
+      "type": "select",
+      "id": "stats_weight",
+      "label": "Poids stats",
+      "options": [
+        {"value": "500", "label": "Moyen"},
+        {"value": "600", "label": "Semi-gras"},
+        {"value": "700", "label": "Gras"}
+      ],
+      "default": "600"
     }
   ],
   "presets": [
     {
-      "name": "N°1 en Europe"
+      "name": "Badge Professionnel"
     }
   ]
 }
