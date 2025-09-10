@@ -74,39 +74,39 @@
 
 .ribbons {
   position: absolute;
-  bottom: -8px;
+  bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 2px;
+  gap: 3px;
 }
 
 .ribbon {
-  width: 20px;
-  height: 25px;
+  width: 12px;
+  height: 30px;
   background: {{ section.settings.ribbon_color }};
   position: relative;
+  border-radius: 2px 2px 0 0;
 }
 
 .ribbon::after {
   content: '';
   position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 8px solid {{ section.settings.ribbon_color }};
+  border-left: 6px solid {{ section.settings.ribbon_color }};
+  border-right: 6px solid {{ section.settings.ribbon_color }};
+  border-bottom: 8px solid transparent;
 }
 
 .ribbon-left {
-  border-radius: 3px 0 0 3px;
+  transform: rotate(-10deg);
 }
 
 .ribbon-right {
-  border-radius: 0 3px 3px 0;
+  transform: rotate(10deg);
 }
 
 .numero1-text {
