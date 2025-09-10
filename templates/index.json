@@ -406,10 +406,16 @@
             "heading_tag": "h2"
           }
         },
+        "liquid_cE9AHq": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
         "text_L3dVht": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>ÉLU #1 DES MASQUES ANTI-ÂGE 2025 </strong>🇨🇵</p>"
+            "text": "<p><strong>ÉLU #1 DES MASQUES ANTI-ÂGE 2025 🇫🇷</strong></p>"
           }
         },
         "badges_iUjakt": {
@@ -520,6 +526,7 @@
       "block_order": [
         "liquid_YQXePR",
         "title_fmnHLn",
+        "liquid_cE9AHq",
         "text_L3dVht",
         "badges_iUjakt",
         "liquid_zKyrdh",
