@@ -131,29 +131,18 @@ preloads.forEach(function(file) {
 </script>
 
 <style id="retigena-loox-hard-override">
-  /* Actif uniquement sur le produit 1082 (classe ajoutée par le JS ci-dessous) */
-  .retigena-p1082 #header .summary button div > span,
-  .retigena-p1082 .summary button div > span {
-    /* On cache visuellement le texte natif (ex: 39) et on le remplace via ::after */
+  /* Cibler tous les compteurs Loox ou spans dans le résumé produit */
+  .summary button div > span,
+  .loox-rating .loox-rating__amount,
+  .loox-rating__amount {
     font-size: 0 !important;
     line-height: 1 !important;
     visibility: visible !important;
   }
-  .retigena-p1082 #header .summary button div > span::after,
-  .retigena-p1082 .summary button div > span::after {
-    content: "1080 avis";
-    font-size: 0.95em;         /* taille réelle du texte */
-    margin-left: 6px;
-  }
 
-  /* En plus, on neutralise les sélecteurs Loox classiques, au cas où */
-  .retigena-p1082 .loox-rating .loox-rating__amount,
-  .retigena-p1082 .loox-rating__amount {
-    font-size: 0 !important;
-    line-height: 1 !important;
-  }
-  .retigena-p1082 .loox-rating .loox-rating__amount::after,
-  .retigena-p1082 .loox-rating__amount::after {
+  .summary button div > span::after,
+  .loox-rating .loox-rating__amount::after,
+  .loox-rating__amount::after {
     content: "1080 avis";
     font-size: 0.95em;
     margin-left: 6px;
@@ -161,39 +150,27 @@ preloads.forEach(function(file) {
 </style>
 
 <script>
-/* Retigena — Verrouiller le compteur à 1080 avis sur le produit 1082 */
+/* Retigena — Forcer 1080 avis sur tous les produits */
 document.addEventListener('DOMContentLoaded', function () {
-  // 1) Vérifier l’ID produit via la meta OG (change "1082" si besoin)
-  var metaId = document.querySelector('meta[property="og:product_id"]');
-  if (!metaId || metaId.content !== '1082') return;
-
-  // 2) Marquer la page pour activer le CSS ciblé
-  document.documentElement.classList.add('retigena-p1082');
-
-  // 3) Filet de sécurité JS : si Loox/Thème réécrit le nœud, on reforce le texte
   function forceCount() {
-    // Chemin que tu as donné
-    var el = document.querySelector('#header > div.summary > button > div > span');
-    if (!el) {
-      // versions responsive / variantes de structure
-      el = document.querySelector('.summary button div > span') ||
-           document.querySelector('.loox-rating__amount') ||
-           document.querySelector('.loox-rating .loox-rating__amount');
-    }
-    if (el) {
-      // Certains thèmes encapsulent dans un <span> sans classe : on remplace le texte brut
-      if (!/1080\s*avis/i.test(el.textContent)) el.textContent = '1080 avis';
-    }
+    var els = document.querySelectorAll(
+      '.summary button div > span, .loox-rating__amount, .loox-rating .loox-rating__amount'
+    );
+    els.forEach(function(el){
+      if (el && !/1080\s*avis/i.test(el.textContent)) {
+        el.textContent = '1080 avis';
+      }
+    });
   }
 
   // Premier passage
   forceCount();
 
-  // Observer tous les changements du DOM (Loox ré-injecte souvent)
+  // Observer tous les changements (Loox recharge ses widgets en AJAX)
   var mo = new MutationObserver(forceCount);
   mo.observe(document.body, { childList: true, subtree: true });
 
-  // Impulsion périodique pendant les 10 premières secondes (ultra safe)
+  // Relancer plusieurs fois pendant les 10 premières secondes
   var t0 = Date.now();
   var iv = setInterval(function(){
     forceCount();
@@ -201,6 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 500);
 });
 </script>
+
 
 
 
