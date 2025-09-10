@@ -1,0 +1,323 @@
+<div class="comparison-section">
+  <div class="comparison-container">
+    
+    <h2 class="comparison-title">Comparez nos produits</h2>
+    
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th class="feature-col">Caractéristiques</th>
+            <th class="product-col">
+              <div class="product-header">
+                <h3>Produit Basic</h3>
+                <div class="price">29€</div>
+              </div>
+            </th>
+            <th class="product-col recommended">
+              <div class="product-header">
+                <h3>Produit Pro</h3>
+                <div class="price">49€</div>
+                <div class="badge">Recommandé</div>
+              </div>
+            </th>
+            <th class="product-col">
+              <div class="product-header">
+                <h3>Produit Premium</h3>
+                <div class="price">79€</div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feature-name">Livraison gratuite</td>
+            <td class="feature-value"><span class="no">✗</span></td>
+            <td class="feature-value"><span class="yes">✓</span></td>
+            <td class="feature-value"><span class="yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Support 24/7</td>
+            <td class="feature-value"><span class="no">✗</span></td>
+            <td class="feature-value"><span class="yes">✓</span></td>
+            <td class="feature-value"><span class="yes">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Garantie</td>
+            <td class="feature-value">1 an</td>
+            <td class="feature-value">2 ans</td>
+            <td class="feature-value">3 ans</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Formation incluse</td>
+            <td class="feature-value"><span class="no">✗</span></td>
+            <td class="feature-value"><span class="no">✗</span></td>
+            <td class="feature-value"><span class="yes">✓</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="action-label">Choisir</td>
+            <td class="action-cell">
+              <a href="#" class="btn-basic">Acheter</a>
+            </td>
+            <td class="action-cell">
+              <a href="#" class="btn-recommended">Acheter</a>
+            </td>
+            <td class="action-cell">
+              <a href="#" class="btn-premium">Acheter</a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    
+  </div>
+</div>
+
+<style>
+.comparison-section {
+  padding: 50px 20px;
+  background: #f8f9fa;
+}
+
+.comparison-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comparison-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a202c;
+  font-weight: 600;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.feature-col {
+  background: #2d3748;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  width: 30%;
+}
+
+.product-col {
+  background: white;
+  border-left: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.product-col.recommended {
+  background: #f0fff4;
+  border-left: 2px solid #48bb78;
+  border-right: 2px solid #48bb78;
+}
+
+.product-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a202c;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e53e3e;
+  margin-bottom: 8px;
+}
+
+.badge {
+  background: #48bb78;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.feature-name {
+  font-weight: 500;
+  text-align: left;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.feature-value {
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.yes {
+  color: #48bb78;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.no {
+  color: #e53e3e;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background: #f7fafc;
+}
+
+.comparison-table tbody tr:nth-child(even) .product-col.recommended {
+  background: #f0fff4;
+}
+
+.action-label {
+  font-weight: 600;
+  text-align: left;
+  color: #2d3748;
+  font-size: 14px;
+  background: #edf2f7;
+}
+
+.action-cell {
+  background: #edf2f7;
+  border-left: 1px solid #e2e8f0;
+}
+
+.action-cell .product-col.recommended {
+  background: #f0fff4;
+}
+
+.btn-basic,
+.btn-recommended,
+.btn-premium {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-basic {
+  background: #4299e1;
+  color: white;
+}
+
+.btn-recommended {
+  background: #48bb78;
+  color: white;
+  border-color: #38a169;
+}
+
+.btn-premium {
+  background: #805ad5;
+  color: white;
+}
+
+.btn-basic:hover,
+.btn-recommended:hover,
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .comparison-section {
+    padding: 30px 15px;
+  }
+  
+  .comparison-title {
+    font-size: 24px;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+  
+  .product-header h3 {
+    font-size: 14px;
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+  
+  .btn-basic,
+  .btn-recommended,
+  .btn-premium {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-col {
+    width: 40%;
+  }
+  
+  .product-col {
+    min-width: 100px;
+  }
+  
+  .product-header h3 {
+    font-size: 12px;
+  }
+  
+  .price {
+    font-size: 16px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.comparison-table {
+  animation: fadeInUp 0.8s ease-out;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Comparaison Basique",
+  "presets": [
+    {
+      "name": "Comparaison Basique"
+    }
+  ]
+}
+{% endschema %}
