@@ -414,6 +414,7 @@
         },
         "text_L3dVht": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>ÉLU #1 DES MASQUES ANTI-ÂGE 2025 🇫🇷</strong></p>"
           }
