@@ -594,8 +594,8 @@
             "video": "shopify://files/videos/Video2.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "preload_video": "shopify://files/videos/Video2.mov",
-            "modal_heading": "<h4>Modal Heading</h4>",
-            "modal_text": "<p>Modal Text</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         },
         "video_VnJrdm": {
