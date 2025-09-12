@@ -1,4 +1,5 @@
-/* PLEIN ÉCRAN - Suppression des marges blanches */
+html, body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
+.page-width { max-width: 100% !important; width: 100% !important; margin: 0 !important; padding: 0 !important; }/* PLEIN ÉCRAN - Suppression des marges blanches */
 html, body {
     margin: 0 !important;
     padding: 0 !important;
