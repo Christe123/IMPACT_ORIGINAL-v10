@@ -730,6 +730,7 @@
     },
     "numero1_europe_xVGtfn": {
       "type": "numero1-europe",
+      "disabled": true,
       "name": "Badge Professionnel",
       "settings": {
         "badge_number": "1",
