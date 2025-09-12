@@ -9878,3 +9878,41 @@ split-lines {
   display: -webkit-box;
   overflow: hidden;
 }
+
+
+
+
+
+
+/* Retigena - Forcer le site en full-width */
+html, body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container,
+.page-width,
+.site-wrapper,
+main,
+#MainContent,
+.content-for-layout,
+.shopify-section {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Certains thèmes forcent une largeur par défaut */
+[class*="page-width"], [class*="container"] {
+  max-width: 100% !important;
+}
+
+/* Évite des marges latérales automatiques */
+[class*="page-width"], [class*="container"] {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
