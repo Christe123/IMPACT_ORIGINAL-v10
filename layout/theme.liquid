@@ -130,59 +130,6 @@ preloads.forEach(function(file) {
 // =====================================================
 </script>
 
-<style id="retigena-loox-hard-override">
-  /* Cibler tous les compteurs Loox ou spans dans le résumé produit */
-  .summary button div > span,
-  .loox-rating .loox-rating__amount,
-  .loox-rating__amount {
-    font-size: 0 !important;
-    line-height: 1 !important;
-    visibility: visible !important;
-  }
-
-  .summary button div > span::after,
-  .loox-rating .loox-rating__amount::after,
-  .loox-rating__amount::after {
-    content: "1080 avis";
-    font-size: 0.95em;
-    margin-left: 6px;
-  }
-</style>
-
-<script>
-/* Retigena — Forcer 1080 avis sur tous les produits */
-document.addEventListener('DOMContentLoaded', function () {
-  function forceCount() {
-    var els = document.querySelectorAll(
-      '.summary button div > span, .loox-rating__amount, .loox-rating .loox-rating__amount'
-    );
-    els.forEach(function(el){
-      if (el && !/1080\s*avis/i.test(el.textContent)) {
-        el.textContent = '1080 avis';
-      }
-    });
-  }
-
-  // Premier passage
-  forceCount();
-
-  // Observer tous les changements (Loox recharge ses widgets en AJAX)
-  var mo = new MutationObserver(forceCount);
-  mo.observe(document.body, { childList: true, subtree: true });
-
-  // Relancer plusieurs fois pendant les 10 premières secondes
-  var t0 = Date.now();
-  var iv = setInterval(function(){
-    forceCount();
-    if (Date.now() - t0 > 10000) clearInterval(iv);
-  }, 500);
-});
-</script>
-
-
-
-
-
 
 
   </body>
