@@ -42,7 +42,7 @@
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "",
-            "title": "Rides profonde et double menton ?Liftez-les en une utilisation",
+            "title": "Rides profondes et double menton ? Liftez-les en une seule utilisation.",
             "heading_tag": "h3",
             "button_text": "",
             "button_link": "",
@@ -196,7 +196,7 @@
       "type": "Trus-content",
       "name": "Trustpilot Compact",
       "settings": {
-        "title": "Nos clients en parlent le mieux",
+        "title": "Nos clients témoignent : ils en parlent mieux que nous.",
         "excellent_text": "Excellent",
         "rating": "4,7",
         "review_prefix": "basé sur +",
