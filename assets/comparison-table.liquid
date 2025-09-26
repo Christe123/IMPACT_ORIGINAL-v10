@@ -1,0 +1,301 @@
+{%- liquid 
+  assign heading = section.settings.heading
+  assign background_color = section.settings.background_color
+  assign padding_top = section.settings.padding_top
+  assign padding_bottom = section.settings.padding_bottom
+-%}
+
+{%- style -%}
+  .section-{{ section.id }} {
+    padding: {{ padding_top }}px 20px {{ padding_bottom }}px;
+    background-color: {{ background_color }};
+  }
+  
+  .comparison-table {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .comparison-heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .comparison-heading h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .comparison-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .comparison-column {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .comparison-column.active {
+    border-color: #007acc;
+    background: #f0f8ff;
+  }
+  
+  .column-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .comparison-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .item-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .item-content h4 {
+    font-weight: bold;
+    margin: 0 0 4px 0;
+    color: #333;
+  }
+  
+  .item-content p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .comparison-button {
+    display: inline-block;
+    background: #007acc;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .comparison-heading h2 {
+      font-size: 48px;
+    }
+    
+    .comparison-columns {
+      flex-direction: row;
+      gap: 32px;
+    }
+    
+    .comparison-column {
+      flex: 1;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}">
+  <div class="comparison-table">
+    
+    {% if heading != blank %}
+      <div class="comparison-heading">
+        {{ heading }}
+      </div>
+    {% endif %}
+    
+    <div class="comparison-columns">
+      {% assign inside_column = false %}
+      
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'column' %}
+            {% if inside_column %}
+              {% if block.settings.button != blank %}
+                <a href="{{ block.settings.button_url }}" class="comparison-button">
+                  {{ block.settings.button }}
+                </a>
+              {% endif %}
+              </div>
+            {% endif %}
+            
+            <div class="comparison-column {% if block.settings.active %}active{% endif %}">
+              {% assign inside_column = true %}
+              
+              {% if block.settings.heading != blank %}
+                <div class="column-heading">{{ block.settings.heading }}</div>
+              {% endif %}
+          
+          {% when 'property' %}
+            <div class="comparison-item">
+              <div class="item-icon">
+                {% if block.settings.icon == 'worse' %}
+                  <svg viewBox="0 0 24 24" fill="#ff4444">
+                    <circle cx="12" cy="12" r="12"/>
+                    <path fill="white" d="M16 8L8 16M8 8l8 8" stroke="white" stroke-width="2"/>
+                  </svg>
+                {% else %}
+                  <svg viewBox="0 0 24 24" fill="#44bb44">
+                    <circle cx="12" cy="12" r="12"/>
+                    <path fill="white" d="M9 12l2 2 4-4" stroke="white" stroke-width="2"/>
+                  </svg>
+                {% endif %}
+              </div>
+              
+              <div class="item-content">
+                <h4>{{ block.settings.heading }}</h4>
+                {% if block.settings.text != blank %}
+                  <p>{{ block.settings.text }}</p>
+                {% endif %}
+              </div>
+            </div>
+            
+        {% endcase %}
+      {% endfor %}
+      
+      {% if inside_column %}
+        </div>
+      {% endif %}
+      
+    </div>
+  </div>
+</div>
+
+{
+  "name": "Comparison Table",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<h2>Compare Solutions</h2>"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Column Heading",
+          "default": "Our Solution"
+        },
+        {
+          "type": "checkbox",
+          "id": "active",
+          "label": "Highlight Column"
+        },
+        {
+          "type": "text",
+          "id": "button",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    },
+    {
+      "type": "property",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Item Heading",
+          "default": "Feature"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "default": "better",
+          "options": [
+            { "value": "better", "label": "Check" },
+            { "value": "worse", "label": "Cross" }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Comparison Table",
+      "blocks": [
+        {
+          "type": "column",
+          "settings": {
+            "heading": "Our Product",
+            "active": true
+          }
+        },
+        {
+          "type": "property",
+          "settings": {
+            "heading": "Quality",
+            "text": "Premium materials"
+          }
+        },
+        {
+          "type": "column",
+          "settings": {
+            "heading": "Competitors"
+          }
+        },
+        {
+          "type": "property",
+          "settings": {
+            "heading": "Quality",
+            "text": "Basic materials",
+            "icon": "worse"
+          }
+        }
+      ]
+    }
+  ]
+}
