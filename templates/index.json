@@ -286,19 +286,6 @@
             "link_style": "link"
           }
         },
-        "item_DATGFL": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/AVISMASQUE3.png",
-            "column_size": "3",
-            "title": "Élodie P.",
-            "heading_tag": "h4",
-            "content": "<p>J'AVAIS DES IMPERFECTIONS QUI ME COMPLEXAIENT depuis des années... En une semaine avec ce masque, ma peau s'est complètement transformée ! Teint unifié, imperfections estompées, éclat naturel retrouvé. Je n'ose même plus sortir sans ! Mes amies n'en reviennent pas de la transformation. Ce masque a changé ma vie !</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
         "item_pRBaTW": {
           "type": "item",
           "settings": {
@@ -320,6 +307,19 @@
             "title": "Claire R.",
             "heading_tag": "h4",
             "content": "<p><em>\"Ce masque est devenu mon indispensable avant les événements importants. Je le fais la veille au soir, et le lendemain, ma peau est plus nette, plus lumineuse, et surtout plus ferme. Pas besoin de filtre \"</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_DATGFL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE3.png",
+            "column_size": "3",
+            "title": "Élodie P.",
+            "heading_tag": "h4",
+            "content": "<p>J'AVAIS DES IMPERFECTIONS QUI ME COMPLEXAIENT depuis des années... En une semaine avec ce masque, ma peau s'est complètement transformée ! Teint unifié, imperfections estompées, éclat naturel retrouvé. Je n'ose même plus sortir sans ! Mes amies n'en reviennent pas de la transformation. Ce masque a changé ma vie !</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -370,9 +370,9 @@
         "item_XXTYp8",
         "item_UKxdpg",
         "item_d3wbMG",
-        "item_DATGFL",
         "item_pRBaTW",
         "item_NUKJNt",
+        "item_DATGFL",
         "item_BARfAd",
         "item_xCExHT",
         "item_xCRgik"
