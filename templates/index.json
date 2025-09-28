@@ -273,6 +273,19 @@
             "link_style": "link"
           }
         },
+        "item_d3wbMG": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE5.png",
+            "column_size": "3",
+            "title": "Jacqueline D.",
+            "heading_tag": "h4",
+            "content": "<p>'AVAIS PERDU ESPOIR DE RETROUVER UNE BELLE PEAU... Mes rides du sourire étaient très marquées et ma peau fatiguée. Après une semaine avec ce masque : transformation spectaculaire ! Mes rides se sont lissées, mon teint rayonne de jeunesse. Je souris à nouveau sans complexe !\"</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
         "item_DATGFL": {
           "type": "item",
           "settings": {
@@ -289,11 +302,11 @@
         "item_pRBaTW": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/AVISMASQUE7.png",
+            "image": "shopify://shop_images/1_5c17dcba-17ab-4bba-b12e-0dafae132ed9.png",
             "column_size": "3",
             "title": "Amina K.",
             "heading_tag": "h4",
-            "content": "<p>AU DÉBUT, MA PEAU ÉTAIT TERNE ET FATIGUÉE... Après une utilisation, transformation totale ! L'éclat est revenu, ma peau est lumineuse et parfaitement hydratée. Mes amies me demandent quel filtre j'utilise sur mes photos ! Résultat : je ne peux plus m'en passer.\"</p>",
+            "content": "<p>Problème de pores dilatés depuis des années, j'avais tout essayé. Ce masque fait vraiment la différence ! Les pores se resserrent et la peau devient plus uniforme. Même ma fille a remarqué l'amélioration. Très contente de cet achat.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -307,19 +320,6 @@
             "title": "Claire R.",
             "heading_tag": "h4",
             "content": "<p><em>\"Ce masque est devenu mon indispensable avant les événements importants. Je le fais la veille au soir, et le lendemain, ma peau est plus nette, plus lumineuse, et surtout plus ferme. Pas besoin de filtre \"</em></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_d3wbMG": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/AVISMASQUE5.png",
-            "column_size": "3",
-            "title": "Jacqueline D.",
-            "heading_tag": "h4",
-            "content": "<p>'AVAIS PERDU ESPOIR DE RETROUVER UNE BELLE PEAU... Mes rides du sourire étaient très marquées et ma peau fatiguée. Après une semaine avec ce masque : transformation spectaculaire ! Mes rides se sont lissées, mon teint rayonne de jeunesse. Je souris à nouveau sans complexe !\"</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -369,10 +369,10 @@
         "item_4TAKa6",
         "item_XXTYp8",
         "item_UKxdpg",
+        "item_d3wbMG",
         "item_DATGFL",
         "item_pRBaTW",
         "item_NUKJNt",
-        "item_d3wbMG",
         "item_BARfAd",
         "item_xCExHT",
         "item_xCRgik"
