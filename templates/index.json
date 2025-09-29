@@ -247,6 +247,19 @@
             "link_style": "link"
           }
         },
+        "item_UKxdpg": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE2.png",
+            "column_size": "3",
+            "title": "Monique T.",
+            "heading_tag": "h4",
+            "content": "<p><em>\"</em>Quand j'ai vu la pub, je me suis dit 'c'est pour les jeunes, pas pour moi'. J'ai failli ne pas commander... Quelle erreur ça aurait été ! À 68 ans, ce masque a transformé ma peau comme rien d'autre avant. Mes rides se sont atténuées, ma peau s'est retendus. Ne passez pas à côté à cause de votre âge, c'est nous qui en avons le plus besoin ! Franchement, ça vaut vraiment son prix, je le recommande à toutes les femmes de mon âge.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
         "item_XXTYp8": {
           "type": "item",
           "settings": {
@@ -255,19 +268,6 @@
             "title": "Julie G.",
             "heading_tag": "h4",
             "content": "<p>Je pensais que c'étais du marketing,mais j'ai quand même testé....Et là, MIRACLE ! En 20 minutes, ma peau fatiguée s'est complètement transformée. Texture si agréable, facile à appliquer, et surtout : résultat immédiat ! Ma peau est retendus, lumineuse, mes petites rides ont disparu. Mon teint n'a jamais été aussi éclatant. Franchement, je suis bluffée !</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_UKxdpg": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/AVISMASQUE2.png",
-            "column_size": "3",
-            "title": "Monique T.",
-            "heading_tag": "h4",
-            "content": "<p><em>\"</em>À 68 ANS, JE PENSAIS QUE C'ÉTAIT FINI POUR MOI... Erreur ! Ce masque a fait l'impossible : j'ai retrouvé la peau de mes 50 ans ! Mes petits-enfants me disent que je parais plus jeune que leur maman. J'ai essayé des centaines de produits - RIEN ne m'avait jamais fait ça. Si ça marche sur moi, ça marchera sur tout le monde !</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -367,8 +367,8 @@
       },
       "block_order": [
         "item_4TAKa6",
-        "item_XXTYp8",
         "item_UKxdpg",
+        "item_XXTYp8",
         "item_d3wbMG",
         "item_pRBaTW",
         "item_NUKJNt",
