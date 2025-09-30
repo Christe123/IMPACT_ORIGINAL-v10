@@ -284,34 +284,34 @@
         "modal_text_align": "center",
         "modal_text_align_mobile": "center",
         "modal_text_mt": 16,
-        "card_bg_color": "#FFFFFF",
+        "card_bg_color": "#ffffff",
         "card_border_color": "#000000",
         "card_shadow_color": "#000000",
         "video_overlay_color": "#000000",
         "icon_bg_color": "#000000",
-        "icon_border_color": "#FFFFFF",
-        "icon_color": "#FFFFFF",
-        "arrow_bg_color": "#FFFFFF",
-        "arrow_bg_hover_color": "#FFFFFF",
+        "icon_border_color": "#ffffff",
+        "icon_color": "#ffffff",
+        "arrow_bg_color": "#ffffff",
+        "arrow_bg_hover_color": "#ffffff",
         "arrow_border_color": "#000000",
         "arrow_border_hover_color": "#000000",
         "arrow_icon_color": "#1c1c1c",
         "arrow_icon_hover_color": "#1c1c1c",
-        "modal_bg_color": "#FFFFFF",
+        "modal_bg_color": "#ffffff",
         "modal_border_color": "#000000",
-        "close_bg_color": "#FFFFFF",
+        "close_bg_color": "#ffffff",
         "close_border_color": "#000000",
-        "close_icon_color": "#FFFFFF",
-        "buttons_bg_color": "#FFFFFF",
+        "close_icon_color": "#ffffff",
+        "buttons_bg_color": "#ffffff",
         "buttons_border_color": "#000000",
-        "buttons_icon_color": "#FFFFFF",
+        "buttons_icon_color": "#ffffff",
         "modal_video_border_color": "#000000",
-        "modal_content_bg_color": "#FFFFFF",
+        "modal_content_bg_color": "#ffffff",
         "modal_content_border_color": "#000000",
         "modal_heading_color": "#000000",
         "modal_text_color": "#000000",
         "heading_color": "#000000",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#000000",
         "margin_top": 0,
@@ -323,11 +323,74 @@
         "border_thickness": 0,
         "lazy": true
       }
+    },
+    "multi_column_xqFrqG": {
+      "type": "multi-column",
+      "blocks": {
+        "item_aPDLaC": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Before-after-product-FR-1_685edbd7-8b37-4389-b7db-39e5bcc3aa2b.jpg",
+            "column_size": "3",
+            "title": "Mari Anne",
+            "heading_tag": "h4",
+            "content": "<p>Mes poches ont disparu en 10 min. Mon mari m'a demandé ce que j'avais fait à mes yeux.<br/>Au mariage de ma nièce, 3 personnes m'ont demandé si j'avais fait du Botox.<br/>Je rachète immédiatement 3 boîtes. Le meilleur produit que j'ai testé cette année !</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_WUp8HB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/4_d1fc8796-6367-4ffd-86a7-4d71f6e584e4_1.jpg",
+            "column_size": "3",
+            "title": "Matine",
+            "heading_tag": "h4",
+            "content": "<p>J'ai tout essayé avant : crèmes à 80€, massages, glaçons... RIEN ne marchait.<br/>Ces patchs, résultat immédiat dès la première utilisation. Ma fille a remarqué la différence.<br/>L'effet dure environ 7-8 heures, parfait pour une journée complète.<br/>Je les utilise maintenant 3 fois par semaine. Prix ridicule comparé aux crèmes inutiles.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_fEw7FY": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/9.jpg",
+            "column_size": "3",
+            "title": "Syvia K.",
+            "heading_tag": "h4",
+            "content": "<p>Utilisé pour l'anniversaire de ma fille. J'avais mal dormi toute la semaine.<br/>10 minutes après, mes poches avaient complètement disparu. Tout le monde m'a complimentée.<br/>Une amie de ma fille m'a même demandé le nom du produit pour l'offrir à sa mère.<br/>Je ne pars plus en weekend sans mes patchs. Indispensable dans ma trousse beauté.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_aPDLaC",
+        "item_WUp8HB",
+        "item_fEw7FY"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "Elles en parlent le mieux",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
     "main",
     "rich_text_GMaELn",
-    "sectionvideo_U8WaN3"
+    "sectionvideo_U8WaN3",
+    "multi_column_xqFrqG"
   ]
 }
