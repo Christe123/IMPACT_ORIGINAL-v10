@@ -201,19 +201,27 @@
 
 <div class="ba-section">
   <div class="ba-content">
-    <div class="ba-badge">Before/after image</div>
-    <h2 class="ba-title">Before/after</h2>
-    <p class="ba-desc">Showcase your product benefit by using before/after image comparison.</p>
-    <div class="ba-wrapper" id="baSlider">
+    <div class="ba-badge">{{ section.settings.badge_text }}</div>
+    <h2 class="ba-title">{{ section.settings.title }}</h2>
+    <p class="ba-desc">{{ section.settings.description }}</p>
+    <div class="ba-wrapper" id="baSlider{{ section.id }}">
       <div class="ba-after-wrap">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1600&q=80" alt="After" class="ba-img">
-        <div class="ba-label ba-label-after">After</div>
+        {% if section.settings.after_image %}
+          <img src="{{ section.settings.after_image | img_url: '1600x' }}" alt="After" class="ba-img">
+        {% else %}
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1600&q=80" alt="After" class="ba-img">
+        {% endif %}
+        <div class="ba-label ba-label-after">{{ section.settings.after_label }}</div>
       </div>
-      <div class="ba-before-wrap" id="baBeforeWrap">
-        <img src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=1600&q=80" alt="Before" class="ba-img">
-        <div class="ba-label ba-label-before">Before</div>
+      <div class="ba-before-wrap" id="baBeforeWrap{{ section.id }}">
+        {% if section.settings.before_image %}
+          <img src="{{ section.settings.before_image | img_url: '1600x' }}" alt="Before" class="ba-img">
+        {% else %}
+          <img src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=1600&q=80" alt="Before" class="ba-img">
+        {% endif %}
+        <div class="ba-label ba-label-before">{{ section.settings.before_label }}</div>
       </div>
-      <div class="ba-line" id="baLine">
+      <div class="ba-line" id="baLine{{ section.id }}">
         <div class="ba-handle">
           <div class="ba-icon">
             <span></span>
@@ -228,9 +236,10 @@
 
 <script>
 (function() {
-  var slider = document.getElementById('baSlider');
-  var beforeWrap = document.getElementById('baBeforeWrap');
-  var line = document.getElementById('baLine');
+  var sid = '{{ section.id }}';
+  var slider = document.getElementById('baSlider' + sid);
+  var beforeWrap = document.getElementById('baBeforeWrap' + sid);
+  var line = document.getElementById('baLine' + sid);
   
   if (!slider || !beforeWrap || !line) return;
   
@@ -286,6 +295,48 @@
 {% schema %}
 {
   "name": "Before After Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Before/after image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Before/after"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Showcase your product benefit by using before/after image comparison."
+    },
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "Before Image"
+    },
+    {
+      "type": "text",
+      "id": "before_label",
+      "label": "Before Label",
+      "default": "Before"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "After Image"
+    },
+    {
+      "type": "text",
+      "id": "after_label",
+      "label": "After Label",
+      "default": "After"
+    }
+  ],
   "presets": [
     {
       "name": "Before After Slider"
