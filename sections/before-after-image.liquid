@@ -1,36 +1,61 @@
 <style>
-.before-after-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+.ba-section {
+  width: 100%;
+  padding: 40px 20px;
   background: white;
 }
 
-.before-after-title {
-  font-size: 2.5rem;
+.ba-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  border: 2px solid #4A90E2;
+  border-radius: 12px;
+  padding: 40px;
+  background: #fafafa;
+  position: relative;
+}
+
+.ba-badge {
+  display: inline-block;
+  background: #4A90E2;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+.ba-title {
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-  color: #000;
+  margin-bottom: 20px;
+  color: black;
+  line-height: 1.2;
 }
 
-.before-after-description {
-  color: #666;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+.ba-desc {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
 }
 
-.before-after-wrapper {
+.ba-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 2.5 / 1;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 12px;
   cursor: ew-resize;
   user-select: none;
-  background: #f5f5f5;
+  background: #e0e0e0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.before-after-image {
+.ba-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -40,11 +65,16 @@
   pointer-events: none;
 }
 
-.after-image {
+.ba-after-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 }
 
-.before-image-container {
+.ba-before-wrap {
   position: absolute;
   top: 0;
   left: 0;
@@ -55,28 +85,28 @@
   clip-path: inset(0 50% 0 0);
 }
 
-.slider-line {
+.ba-line {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 2px;
+  width: 3px;
   background: white;
   z-index: 3;
   pointer-events: none;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.slider-handle {
+.ba-handle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   background: white;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,101 +115,111 @@
   border: 3px solid #f0f0f0;
 }
 
-.slider-handle:active {
+.ba-handle:active {
   cursor: grabbing;
 }
 
-.slider-icon {
+.ba-icon {
   display: flex;
-  gap: 2px;
+  gap: 3px;
 }
 
-.slider-icon span {
-  width: 2px;
-  height: 24px;
+.ba-icon span {
+  width: 3px;
+  height: 32px;
   background: #333;
+  border-radius: 2px;
 }
 
-.label {
+.ba-label {
   position: absolute;
-  top: 2rem;
-  background: white;
-  color: black;
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 4rem;
   font-weight: bold;
-  font-size: 1.1rem;
   z-index: 4;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  pointer-events: none;
 }
 
-.label-before {
-  left: 2rem;
+.ba-label-before {
+  left: 15%;
 }
 
-.label-after {
-  right: 2rem;
+.ba-label-after {
+  right: 15%;
+}
+
+@media (max-width: 1024px) {
+  .ba-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+  .ba-label {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .before-after-title {
-    font-size: 1.75rem;
+  .ba-content {
+    padding: 20px;
   }
-  
-  .before-after-description {
+  .ba-badge {
+    font-size: 0.8rem;
+    padding: 6px 15px;
+    top: -24px;
+  }
+  .ba-title {
+    font-size: 2rem;
+  }
+  .ba-desc {
     font-size: 1rem;
+    margin-bottom: 30px;
   }
-  
-  .slider-handle {
-    width: 56px;
-    height: 56px;
+  .ba-wrapper {
+    aspect-ratio: 1;
   }
-  
-  .label {
-    font-size: 0.9rem;
-    padding: 0.4rem 1rem;
-    top: 1.5rem;
+  .ba-handle {
+    width: 60px;
+    height: 60px;
   }
-  
-  .label-before {
-    left: 1rem;
+  .ba-icon span {
+    width: 2px;
+    height: 24px;
   }
-  
-  .label-after {
-    right: 1rem;
+  .ba-label {
+    font-size: 2rem;
+  }
+  .ba-label-before {
+    left: 10%;
+  }
+  .ba-label-after {
+    right: 10%;
   }
 }
 </style>
 
-<div class="before-after-container">
-  <h2 class="before-after-title">Before/after</h2>
-  <p class="before-after-description">
-    Showcase your product benefit by using before/after image comparison.
-  </p>
-
-  <div class="before-after-wrapper" id="beforeAfterSlider">
-    <img 
-      src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1000&q=90"
-      alt="After" 
-      class="before-after-image after-image"
-    >
-    <div class="label label-after">After</div>
-
-    <div class="before-image-container" id="beforeContainer">
-      <img 
-        src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1000&q=90"
-        alt="Before" 
-        class="before-after-image"
-      >
-      <div class="label label-before">Before</div>
-    </div>
-
-    <div class="slider-line" id="sliderLine">
-      <div class="slider-handle" id="sliderHandle">
-        <div class="slider-icon">
-          <span></span>
-          <span></span>
-          <span></span>
+<div class="ba-section">
+  <div class="ba-content">
+    <div class="ba-badge">Before/after image</div>
+    <h2 class="ba-title">Before/after</h2>
+    <p class="ba-desc">Showcase your product benefit by using before/after image comparison.</p>
+    <div class="ba-wrapper" id="baSlider">
+      <div class="ba-after-wrap">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1600&q=80" alt="After" class="ba-img">
+        <div class="ba-label ba-label-after">After</div>
+      </div>
+      <div class="ba-before-wrap" id="baBeforeWrap">
+        <img src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=1600&q=80" alt="Before" class="ba-img">
+        <div class="ba-label ba-label-before">Before</div>
+      </div>
+      <div class="ba-line" id="baLine">
+        <div class="ba-handle">
+          <div class="ba-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </div>
@@ -188,19 +228,22 @@
 
 <script>
 (function() {
-  var slider = document.getElementById('beforeAfterSlider');
-  var beforeContainer = document.getElementById('beforeContainer');
-  var sliderLine = document.getElementById('sliderLine');
+  var slider = document.getElementById('baSlider');
+  var beforeWrap = document.getElementById('baBeforeWrap');
+  var line = document.getElementById('baLine');
+  
+  if (!slider || !beforeWrap || !line) return;
+  
   var isDragging = false;
 
-  function updateSlider(x) {
+  function updatePosition(clientX) {
     var rect = slider.getBoundingClientRect();
-    var position = x - rect.left;
-    var percentage = Math.max(0, Math.min(100, (position / rect.width) * 100));
-    
+    var x = clientX - rect.left;
+    var percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
     var clipValue = 100 - percentage;
-    beforeContainer.style.clipPath = 'inset(0 ' + clipValue + '% 0 0)';
-    sliderLine.style.left = percentage + '%';
+    
+    beforeWrap.style.clipPath = 'inset(0 ' + clipValue + '% 0 0)';
+    line.style.left = percentage + '%';
   }
 
   slider.addEventListener('mousedown', function() {
@@ -212,8 +255,9 @@
   });
 
   document.addEventListener('mousemove', function(e) {
-    if (!isDragging) return;
-    updateSlider(e.clientX);
+    if (isDragging) {
+      updatePosition(e.clientX);
+    }
   });
 
   slider.addEventListener('touchstart', function() {
@@ -225,12 +269,16 @@
   });
 
   slider.addEventListener('touchmove', function(e) {
-    if (e.touches.length > 0) {
-      updateSlider(e.touches[0].clientX);
+    if (e.touches && e.touches.length > 0) {
+      updatePosition(e.touches[0].clientX);
     }
   });
 
-  var initialRect = slider.getBoundingClientRect();
-  updateSlider(initialRect.left + (slider.offsetWidth / 2));
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var rect = slider.getBoundingClientRect();
+      updatePosition(rect.left + (rect.width / 2));
+    }, 200);
+  });
 })();
 </script>
