@@ -1,0 +1,194 @@
+<style>
+.testimonial-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.testimonial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.testimonial-image-wrapper {
+  flex-shrink: 0;
+}
+
+.testimonial-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0f0f0;
+}
+
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.star {
+  width: 32px;
+  height: 32px;
+  background: #9DC4A5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+.testimonial-quote {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.verified-badge {
+  width: 28px;
+  height: 28px;
+  background: #1E90FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 40px 15px;
+  }
+  
+  .testimonial-card {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .testimonial-stars {
+    justify-content: center;
+  }
+  
+  .star {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+  
+  .testimonial-quote {
+    font-size: 1rem;
+  }
+  
+  .testimonial-author {
+    justify-content: center;
+  }
+}
+</style>
+
+<div class="testimonial-section">
+  <div class="testimonial-container">
+    <div class="testimonial-card">
+      
+      <div class="testimonial-image-wrapper">
+        {% if section.settings.expert_image %}
+          <img 
+            src="{{ section.settings.expert_image | img_url: '300x' }}" 
+            alt="{{ section.settings.expert_name }}" 
+            class="testimonial-image"
+          >
+        {% else %}
+          <img 
+            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=300&q=80" 
+            alt="Expert" 
+            class="testimonial-image"
+          >
+        {% endif %}
+      </div>
+
+      <div class="testimonial-content">
+        <div class="testimonial-stars">
+          <div class="star">★</div>
+          <div class="star">★</div>
+          <div class="star">★</div>
+          <div class="star">★</div>
+          <div class="star">★</div>
+        </div>
+
+        <p class="testimonial-quote">
+          "{{ section.settings.testimonial_text }}"
+        </p>
+
+        <div class="testimonial-author">
+          <div class="verified-badge">✓</div>
+          <span>{{ section.settings.expert_name }}</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Testimonial Expert",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "expert_image",
+      "label": "Photo de l'expert"
+    },
+    {
+      "type": "textarea",
+      "id": "testimonial_text",
+      "label": "Témoignage",
+      "default": "Je vous recommande le masque Bio-Collagène pour le visage Leaf ! Il remplit toutes les conditions - hydratation en profondeur, réduction des pores et raffermissement de la peau. Un véritable bijou en matière de soins de la peau"
+    },
+    {
+      "type": "text",
+      "id": "expert_name",
+      "label": "Nom de l'expert",
+      "default": "Dr Hélène S. Dermatologue"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Expert"
+    }
+  ]
+}
+{% endschema %}
