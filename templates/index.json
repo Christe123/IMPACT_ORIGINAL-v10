@@ -194,6 +194,7 @@
     },
     "before_after_image_9DYkUq": {
       "type": "before-after-image",
+      "disabled": true,
       "name": "Before After Slider",
       "settings": {
         "badge_text": "Avant/Après",
