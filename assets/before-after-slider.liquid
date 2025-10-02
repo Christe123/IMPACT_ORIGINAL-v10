@@ -1,0 +1,111 @@
+ import React, { useState, useRef } from 'react';
+
+export default function BeforeAfterSlider() {
+  const [sliderPosition, setSliderPosition] = useState(50);
+  const containerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleMove = (clientX) => {
+    if (!containerRef.current) return;
+    
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+    setSliderPosition(percentage);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    handleMove(e.clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    e.preventDefault();
+    if (e.touches.length > 0) {
+      handleMove(e.touches[0].clientX);
+    }
+  };
+
+  return (
+    <div className="w-full bg-white p-4 md:p-8">
+      <div className="max-w-4xl mx-auto">
+        
+        {/* Title */}
+        <div className="mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+            Before/after
+          </h2>
+          <p className="text-gray-600 text-base md:text-lg">
+            Showcase your product benefit by using before/after image comparison.
+          </p>
+        </div>
+
+        {/* Before/After Image Container - SQUARE FORMAT */}
+        <div 
+          ref={containerRef}
+          className="relative w-full aspect-square overflow-hidden rounded-2xl cursor-ew-resize select-none bg-gray-100"
+          onMouseDown={() => setIsDragging(true)}
+          onMouseMove={handleMouseMove}
+          onMouseUp={() => setIsDragging(false)}
+          onMouseLeave={() => setIsDragging(false)}
+          onTouchStart={() => setIsDragging(true)}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={() => setIsDragging(false)}
+        >
+          {/* AFTER Image (Right side - Background) */}
+          <div className="absolute inset-0 bg-black">
+            <img 
+              src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1000&q=90" 
+              alt="After"
+              className="w-full h-full object-cover"
+              draggable="false"
+            />
+            {/* AFTER Label */}
+            <div className="absolute top-6 right-6 md:top-8 md:right-8 bg-white text-black px-5 py-2 rounded-lg font-bold text-lg md:text-xl">
+              After
+            </div>
+          </div>
+          
+          {/* BEFORE Image (Left side - Clipped) */}
+          <div 
+            className="absolute inset-0 bg-gray-300"
+            style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+          >
+            <img 
+              src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1000&q=90" 
+              alt="Before"
+              className="w-full h-full object-cover"
+              draggable="false"
+            />
+            {/* BEFORE Label */}
+            <div className="absolute top-6 left-6 md:top-8 md:left-8 bg-white text-black px-5 py-2 rounded-lg font-bold text-lg md:text-xl">
+              Before
+            </div>
+          </div>
+
+          {/* Vertical Slider Line */}
+          <div 
+            className="absolute top-0 bottom-0 w-1 bg-white pointer-events-none"
+            style={{ left: `${sliderPosition}%` }}
+          >
+            {/* Slider Handle */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-2xl flex items-center justify-center cursor-grab active:cursor-grabbing pointer-events-auto border-4 border-gray-200">
+              {/* Three vertical lines icon */}
+              <div className="flex items-center gap-1">
+                <div className="w-0.5 h-6 bg-gray-800"></div>
+                <div className="w-0.5 h-6 bg-gray-800"></div>
+                <div className="w-0.5 h-6 bg-gray-800"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Optional: Instruction text */}
+        <div className="text-center mt-4 text-sm text-gray-500">
+          ← Glissez pour comparer →
+        </div>
+
+      </div>
+    </div>
+  );
+}
