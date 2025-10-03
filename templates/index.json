@@ -194,13 +194,12 @@
     },
     "before_after_image_9DYkUq": {
       "type": "before-after-image",
-      "disabled": true,
       "name": "Before After Slider",
       "settings": {
         "badge_text": "Avant/Après",
         "title": "Nous ne promettons pas des résultats. Nous les prouvons.",
-        "description": "Des études cliniques indépendantes, ainsi que des milliers de clientes satisfaites confirment l'efficacité de notre Masque Collagène & Rétinol. Dès les premières applications, la peau paraît plus ferme, plus lisse et plus éclatante, avec une réduction visible des rides, du relâchement cutané et du teint terne.\n\nVoyez la différence dès la 1ère utilisation.",
-        "before_image": "shopify://shop_images/Untitled_design_35_430x_1.jpg",
+        "description": "",
+        "before_image": "shopify://shop_images/WhatsApp_Image_2025-10-03_at_05.05.05.jpg",
         "before_label": "Avant",
         "after_image": "shopify://shop_images/6_e6c68bde-2a27-48a5-bbf6-b8e3729c07ff_430x_1.jpg",
         "after_label": "Après"
