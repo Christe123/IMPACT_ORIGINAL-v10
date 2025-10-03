@@ -194,10 +194,8 @@
     },
     "before_after_image_9DYkUq": {
       "type": "before-after-image",
-      "disabled": true,
       "name": "Before After Slider",
       "settings": {
-        "badge_text": "Avant/Après",
         "title": "Nous ne promettons pas des résultats. Nous les prouvons.",
         "description": "",
         "before_image": "shopify://shop_images/WhatsApp_Image_2025-10-03_at_05.05.05.jpg",
