@@ -749,6 +749,19 @@
         "lazy": true
       }
     },
+    "custom_liquid_QGBNDm": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n.product-features-bar {\n  background: #f9f9f9;\n  padding: 12px 15px;\n  text-align: center;\n  border-top: 1px solid #e5e5e5;\n  border-bottom: 1px solid #e5e5e5;\n  margin: 0 auto;\n}\n\n.product-features-text {\n  font-size: 0.85rem;\n  color: #888;\n  line-height: 1.4;\n  max-width: 700px;\n  margin: 0 auto;\n}\n\n.product-features-text span {\n  color: #000;\n  font-weight: 600;\n}\n\n@media (max-width: 768px) {\n  .product-features-bar {\n    padding: 10px 12px;\n  }\n\n  .product-features-text {\n    font-size: 0.75rem;\n    max-width: 100%;\n  }\n}\n</style>\n\n<div class=\"product-features-bar\">\n  <p class=\"product-features-text\">\n    Ce produit est <span>Korean Skin Care. Vegan . Cruelty Free . Sans Parfum . Sans Allergènes</span>\n  </p>\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "numero1_europe_xVGtfn": {
       "type": "numero1-europe",
       "disabled": true,
@@ -1424,6 +1437,7 @@
     "1758886351036ea370",
     "featured_product_eWEegT",
     "sectionvideo_qtqmPa",
+    "custom_liquid_QGBNDm",
     "numero1_europe_xVGtfn",
     "tabs_n6ew66",
     "images_with_text_scrolling_j4FYmG",
