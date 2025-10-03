@@ -181,24 +181,50 @@
 <div class="ba-section">
   <div class="ba-container">
     
+    {% if section.settings.title != blank or section.settings.description != blank %}
     <div class="ba-header">
-      <h2 class="ba-title">Voyez la Difference</h2>
-      <p class="ba-description">Glissez pour comparer le avant et apres</p>
+      {% if section.settings.title != blank %}
+        <h2 class="ba-title">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <p class="ba-description">{{ section.settings.description }}</p>
+      {% endif %}
     </div>
+    {% endif %}
 
-    <div class="ba-slider-wrapper" id="baSliderWrap">
+    <div class="ba-slider-wrapper" id="baSliderWrap{{ section.id }}">
       
       <div class="ba-after-wrapper">
-        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&q=90" alt="Apres" class="ba-image">
-        <div class="ba-label ba-label-after">Apres</div>
+        {% if section.settings.after_image != blank %}
+          <img src="{{ section.settings.after_image | img_url: '1200x' }}" alt="{{ section.settings.after_label }}" class="ba-image">
+        {% else %}
+          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&q=90" alt="Apres" class="ba-image">
+        {% endif %}
+        <div class="ba-label ba-label-after">
+          {% if section.settings.after_label != blank %}
+            {{ section.settings.after_label }}
+          {% else %}
+            Apres
+          {% endif %}
+        </div>
       </div>
 
-      <div class="ba-before-wrapper" id="baBeforeWrap">
-        <img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=1200&q=90" alt="Avant" class="ba-image">
-        <div class="ba-label ba-label-before">Avant</div>
+      <div class="ba-before-wrapper" id="baBeforeWrap{{ section.id }}">
+        {% if section.settings.before_image != blank %}
+          <img src="{{ section.settings.before_image | img_url: '1200x' }}" alt="{{ section.settings.before_label }}" class="ba-image">
+        {% else %}
+          <img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=1200&q=90" alt="Avant" class="ba-image">
+        {% endif %}
+        <div class="ba-label ba-label-before">
+          {% if section.settings.before_label != blank %}
+            {{ section.settings.before_label }}
+          {% else %}
+            Avant
+          {% endif %}
+        </div>
       </div>
 
-      <div class="ba-slider-line" id="baSliderLine">
+      <div class="ba-slider-line" id="baSliderLine{{ section.id }}">
         <div class="ba-slider-handle">
           <div class="ba-handle-icon">
             <span></span>
@@ -215,9 +241,10 @@
 
 <script>
 (function() {
-  var wrap = document.getElementById('baSliderWrap');
-  var before = document.getElementById('baBeforeWrap');
-  var line = document.getElementById('baSliderLine');
+  var sectionId = '{{ section.id }}';
+  var wrap = document.getElementById('baSliderWrap' + sectionId);
+  var before = document.getElementById('baBeforeWrap' + sectionId);
+  var line = document.getElementById('baSliderLine' + sectionId);
   
   if (!wrap || !before || !line) return;
   
@@ -271,6 +298,42 @@
 {% schema %}
 {
   "name": "Avant Apres Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Voyez la Difference"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Glissez pour comparer le avant et apres"
+    },
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "Image AVANT"
+    },
+    {
+      "type": "text",
+      "id": "before_label",
+      "label": "Texte AVANT",
+      "default": "Avant"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "Image APRES"
+    },
+    {
+      "type": "text",
+      "id": "after_label",
+      "label": "Texte APRES",
+      "default": "Apres"
+    }
+  ],
   "presets": [
     {
       "name": "Avant Apres Slider"
