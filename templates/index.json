@@ -1003,6 +1003,46 @@
         "text_color": ""
       }
     },
+    "rich_text_XiJhXV": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_kJrzQb": {
+          "type": "subheading",
+          "settings": {
+            "text": ""
+          }
+        },
+        "heading_88TAxy": {
+          "type": "heading",
+          "settings": {
+            "text": "Pourquoi privilégier Retigena plutôt qu’un autre masque ?",
+            "heading_tag": "h3",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_E8qfb8": {
+          "type": "richtext",
+          "settings": {
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_kJrzQb",
+        "heading_88TAxy",
+        "richtext_E8qfb8"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "images_with_text_scrolling_XWJPjD": {
       "type": "images-with-text-scrolling",
       "blocks": {
@@ -1020,11 +1060,11 @@
         "item_FPhAfX": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/beautiful-senior-older-woman-smiling-looking-at-mi-2023-11-27-05-27-50-utc_1_86dd79fe-04bf-45b4-8d3a-37f98292e1c9.webp",
+            "image": "shopify://shop_images/poumy2.png",
             "icon": "none",
             "icon_width": 48,
-            "title": "Découvrez une nouvelle expérience beauté",
-            "content": "<p>Offrez à votre peau le soin révolutionnaire qu'elle mérite. Ce masque nouvelle génération combine collagène concentré et rétinol pour transformer votre visage en 20 minutes seulement. Grâce à la synergie de ces actifs puissants, il redéfinit les contours, améliore l'élasticité et restaure l'éclat naturel du teint. En quelques applications, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
+            "title": "",
+            "content": "<p>Pourquoi payer plus cher pour des résultats moins visibles ? Avec le Masque retigena, profitez d’un soin premium à domicile, efficace dès la première application.</p>"
           }
         },
         "item_U9PMxa": {
@@ -1042,6 +1082,60 @@
         "item_48DWiR",
         "item_FPhAfX",
         "item_U9PMxa"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": true,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "images_with_text_scrolling_fFyJpe": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_HWPLEt": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/SECTION_IMAGE23.png",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Redessinez votre visage. Révélez votre éclat.",
+            "content": "<p>Ce masque est bien plus qu’un simple soin : c’est un traitement ciblé qui agit en profondeur pour lifter, raffermir et lisser la peau. Grâce à la synergie du rétinol et du collagène, il redéfinit les contours du visage, améliore l’élasticité et restaure l’éclat naturel du teint. En quelques applications seulement, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
+          }
+        },
+        "item_ahFcBL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/beautiful-senior-older-woman-smiling-looking-at-mi-2023-11-27-05-27-50-utc_1_86dd79fe-04bf-45b4-8d3a-37f98292e1c9.webp",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Découvrez une nouvelle expérience beauté",
+            "content": "<p>Offrez à votre peau le soin révolutionnaire qu'elle mérite. Ce masque nouvelle génération combine collagène concentré et rétinol pour transformer votre visage en 20 minutes seulement. Grâce à la synergie de ces actifs puissants, il redéfinit les contours, améliore l'élasticité et restaure l'éclat naturel du teint. En quelques applications, les traits sont retendus, la peau paraît plus jeune, plus lumineuse, et intensément régénérée.</p>"
+          }
+        },
+        "item_kQUymV": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_HWPLEt",
+        "item_ahFcBL",
+        "item_kQUymV"
       ],
       "name": "Images and text scrolling",
       "settings": {
@@ -1336,7 +1430,9 @@
     "tabs_n6ew66",
     "images_with_text_scrolling_j4FYmG",
     "multi_column_XUYzUB",
+    "rich_text_XiJhXV",
     "images_with_text_scrolling_XWJPjD",
+    "images_with_text_scrolling_fFyJpe",
     "guarantee_30_days_9k48mL",
     "faq_f4WA34",
     "contact_chMxRq",
