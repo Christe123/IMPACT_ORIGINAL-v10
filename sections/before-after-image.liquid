@@ -1,61 +1,48 @@
 <style>
 .ba-section {
   width: 100%;
-  padding: 40px 20px;
+  padding: 60px 20px;
   background: white;
 }
 
-.ba-content {
-  max-width: 1400px;
+.ba-container {
+  max-width: 1200px;
   margin: 0 auto;
-  border: 2px solid #4A90E2;
-  border-radius: 12px;
-  padding: 40px;
-  background: #fafafa;
-  position: relative;
 }
 
-.ba-badge {
-  display: inline-block;
-  background: #4A90E2;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 8px 8px 0 0;
-  font-size: 0.9rem;
-  font-weight: 500;
-  position: absolute;
-  top: -30px;
-  left: 0;
+.ba-header {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .ba-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: black;
-  line-height: 1.2;
+  margin-bottom: 15px;
+  color: #000;
 }
 
-.ba-desc {
-  color: #333;
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  line-height: 1.6;
+.ba-description {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.ba-wrapper {
+.ba-slider-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 2.5 / 1;
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 1;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 16px;
   cursor: ew-resize;
   user-select: none;
-  background: #e0e0e0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
 }
 
-.ba-img {
+.ba-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -65,7 +52,7 @@
   pointer-events: none;
 }
 
-.ba-after-wrap {
+.ba-after-wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -74,7 +61,7 @@
   z-index: 1;
 }
 
-.ba-before-wrap {
+.ba-before-wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -85,7 +72,7 @@
   clip-path: inset(0 50% 0 0);
 }
 
-.ba-line {
+.ba-slider-line {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -94,16 +81,16 @@
   background: white;
   z-index: 3;
   pointer-events: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
-.ba-handle {
+.ba-slider-handle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background: white;
   border-radius: 50%;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
@@ -112,234 +99,181 @@
   justify-content: center;
   cursor: grab;
   pointer-events: auto;
-  border: 3px solid #f0f0f0;
+  border: 4px solid rgba(255,255,255,0.9);
 }
 
-.ba-handle:active {
+.ba-slider-handle:active {
   cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
-.ba-icon {
+.ba-handle-icon {
   display: flex;
   gap: 3px;
 }
 
-.ba-icon span {
-  width: 3px;
-  height: 32px;
+.ba-handle-icon span {
+  width: 2px;
+  height: 28px;
   background: #333;
   border-radius: 2px;
 }
 
 .ba-label {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  font-size: 4rem;
+  top: 2rem;
+  background: white;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 8px;
   font-weight: bold;
+  font-size: 1.1rem;
   z-index: 4;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .ba-label-before {
-  left: 15%;
+  left: 2rem;
 }
 
 .ba-label-after {
-  right: 15%;
-}
-
-@media (max-width: 1024px) {
-  .ba-wrapper {
-    aspect-ratio: 16 / 9;
-  }
-  .ba-label {
-    font-size: 3rem;
-  }
+  right: 2rem;
 }
 
 @media (max-width: 768px) {
-  .ba-content {
-    padding: 20px;
+  .ba-section {
+    padding: 40px 15px;
   }
-  .ba-badge {
-    font-size: 0.8rem;
-    padding: 6px 15px;
-    top: -24px;
-  }
+
   .ba-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-  .ba-desc {
+
+  .ba-description {
     font-size: 1rem;
-    margin-bottom: 30px;
   }
-  .ba-wrapper {
-    aspect-ratio: 1;
-  }
-  .ba-handle {
+
+  .ba-slider-handle {
     width: 60px;
     height: 60px;
   }
-  .ba-icon span {
-    width: 2px;
+
+  .ba-handle-icon span {
     height: 24px;
   }
+
   .ba-label {
-    font-size: 2rem;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    top: 1.5rem;
   }
+
   .ba-label-before {
-    left: 10%;
+    left: 1rem;
   }
+
   .ba-label-after {
-    right: 10%;
+    right: 1rem;
   }
 }
 </style>
 
 <div class="ba-section">
-  <div class="ba-content">
-    <div class="ba-badge">{{ section.settings.badge_text }}</div>
-    <h2 class="ba-title">{{ section.settings.title }}</h2>
-    <p class="ba-desc">{{ section.settings.description }}</p>
-    <div class="ba-wrapper" id="baSlider{{ section.id }}">
-      <div class="ba-after-wrap">
-        {% if section.settings.after_image %}
-          <img src="{{ section.settings.after_image | img_url: '1600x' }}" alt="After" class="ba-img">
-        {% else %}
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1600&q=80" alt="After" class="ba-img">
-        {% endif %}
-        <div class="ba-label ba-label-after">{{ section.settings.after_label }}</div>
+  <div class="ba-container">
+    
+    <div class="ba-header">
+      <h2 class="ba-title">Voyez la Difference</h2>
+      <p class="ba-description">Glissez pour comparer le avant et apres</p>
+    </div>
+
+    <div class="ba-slider-wrapper" id="baSliderWrap">
+      
+      <div class="ba-after-wrapper">
+        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&q=90" alt="Apres" class="ba-image">
+        <div class="ba-label ba-label-after">Apres</div>
       </div>
-      <div class="ba-before-wrap" id="baBeforeWrap{{ section.id }}">
-        {% if section.settings.before_image %}
-          <img src="{{ section.settings.before_image | img_url: '1600x' }}" alt="Before" class="ba-img">
-        {% else %}
-          <img src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=1600&q=80" alt="Before" class="ba-img">
-        {% endif %}
-        <div class="ba-label ba-label-before">{{ section.settings.before_label }}</div>
+
+      <div class="ba-before-wrapper" id="baBeforeWrap">
+        <img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?w=1200&q=90" alt="Avant" class="ba-image">
+        <div class="ba-label ba-label-before">Avant</div>
       </div>
-      <div class="ba-line" id="baLine{{ section.id }}">
-        <div class="ba-handle">
-          <div class="ba-icon">
+
+      <div class="ba-slider-line" id="baSliderLine">
+        <div class="ba-slider-handle">
+          <div class="ba-handle-icon">
             <span></span>
             <span></span>
             <span></span>
           </div>
         </div>
       </div>
+
     </div>
+
   </div>
 </div>
 
 <script>
 (function() {
-  var sid = '{{ section.id }}';
-  var slider = document.getElementById('baSlider' + sid);
-  var beforeWrap = document.getElementById('baBeforeWrap' + sid);
-  var line = document.getElementById('baLine' + sid);
+  var wrap = document.getElementById('baSliderWrap');
+  var before = document.getElementById('baBeforeWrap');
+  var line = document.getElementById('baSliderLine');
   
-  if (!slider || !beforeWrap || !line) return;
+  if (!wrap || !before || !line) return;
   
-  var isDragging = false;
+  var dragging = false;
 
-  function updatePosition(clientX) {
-    var rect = slider.getBoundingClientRect();
-    var x = clientX - rect.left;
-    var percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
-    var clipValue = 100 - percentage;
+  function updateSlider(x) {
+    var rect = wrap.getBoundingClientRect();
+    var pos = x - rect.left;
+    var percent = Math.max(0, Math.min(100, (pos / rect.width) * 100));
+    var clip = 100 - percent;
     
-    beforeWrap.style.clipPath = 'inset(0 ' + clipValue + '% 0 0)';
-    line.style.left = percentage + '%';
+    before.style.clipPath = 'inset(0 ' + clip + '% 0 0)';
+    line.style.left = percent + '%';
   }
 
-  slider.addEventListener('mousedown', function() {
-    isDragging = true;
+  wrap.addEventListener('mousedown', function() {
+    dragging = true;
   });
 
   document.addEventListener('mouseup', function() {
-    isDragging = false;
+    dragging = false;
   });
 
   document.addEventListener('mousemove', function(e) {
-    if (isDragging) {
-      updatePosition(e.clientX);
+    if (dragging) {
+      updateSlider(e.clientX);
     }
   });
 
-  slider.addEventListener('touchstart', function() {
-    isDragging = true;
+  wrap.addEventListener('touchstart', function() {
+    dragging = true;
   });
 
-  slider.addEventListener('touchend', function() {
-    isDragging = false;
+  wrap.addEventListener('touchend', function() {
+    dragging = false;
   });
 
-  slider.addEventListener('touchmove', function(e) {
+  wrap.addEventListener('touchmove', function(e) {
     if (e.touches && e.touches.length > 0) {
-      updatePosition(e.touches[0].clientX);
+      updateSlider(e.touches[0].clientX);
     }
   });
 
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var rect = slider.getBoundingClientRect();
-      updatePosition(rect.left + (rect.width / 2));
-    }, 200);
-  });
+  setTimeout(function() {
+    var rect = wrap.getBoundingClientRect();
+    updateSlider(rect.left + rect.width / 2);
+  }, 100);
 })();
 </script>
 
 {% schema %}
 {
-  "name": "Before After Slider",
-  "settings": [
-    {
-      "type": "text",
-      "id": "badge_text",
-      "label": "Badge Text",
-      "default": "Before/after image"
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Title",
-      "default": "Before/after"
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "label": "Description",
-      "default": "Showcase your product benefit by using before/after image comparison."
-    },
-    {
-      "type": "image_picker",
-      "id": "before_image",
-      "label": "Before Image"
-    },
-    {
-      "type": "text",
-      "id": "before_label",
-      "label": "Before Label",
-      "default": "Before"
-    },
-    {
-      "type": "image_picker",
-      "id": "after_image",
-      "label": "After Image"
-    },
-    {
-      "type": "text",
-      "id": "after_label",
-      "label": "After Label",
-      "default": "After"
-    }
-  ],
+  "name": "Avant Apres Slider",
   "presets": [
     {
-      "name": "Before After Slider"
+      "name": "Avant Apres Slider"
     }
   ]
 }
