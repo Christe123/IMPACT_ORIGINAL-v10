@@ -274,6 +274,19 @@
             "link_style": "link"
           }
         },
+        "item_xCExHT": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2025-10-03_at_04.56.52.jpg",
+            "column_size": "3",
+            "title": "Alice G.",
+            "heading_tag": "h4",
+            "content": "<p>À 63 ans, mes rides profondes autour de la bouche me complexaient énormément. Après 3 semaines avec ce masque : transformation visible ! Mes rides se sont nettement atténuées, ma peau est plus lisse et ferme. Le contour de ma bouche s'est lissé. À mon âge, je n'espérais plus ce résultat. Si ça marche sur ma peau mature, ça marchera sur vous !</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
         "item_XXTYp8": {
           "type": "item",
           "settings": {
@@ -352,19 +365,6 @@
             "link_style": "link"
           }
         },
-        "item_xCExHT": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/AVISMASQUE9.png",
-            "column_size": "3",
-            "title": "Alice G.",
-            "heading_tag": "h4",
-            "content": "<p>Résultat spectaculaire dès la première utilisation ! Ma peau terne et fatiguée s'est transformée : teint éclatant, texture lissée, fermeté retrouvée. En une semaine d'utilisation, c'est une vraie cure de jouvence. Je ne peux plus m'en passer </p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
         "item_xCRgik": {
           "type": "item",
           "settings": {
@@ -382,13 +382,13 @@
       "block_order": [
         "item_4TAKa6",
         "item_UKxdpg",
+        "item_xCExHT",
         "item_XXTYp8",
         "item_d3wbMG",
         "item_pRBaTW",
         "item_NUKJNt",
         "item_DATGFL",
         "item_BARfAd",
-        "item_xCExHT",
         "item_xCRgik"
       ],
       "name": "Multi-column",
