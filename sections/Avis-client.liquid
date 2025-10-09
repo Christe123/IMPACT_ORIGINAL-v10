@@ -54,9 +54,10 @@
 
 .testimonial-image {
   width: 100% !important;
-  aspect-ratio: 1 / 1 !important;
+  height: 300px !important;
   overflow: hidden !important;
   background: #f0f0f0 !important;
+  display: none !important;
 }
 
 .testimonial-image img {
@@ -113,17 +114,6 @@
   line-height: 1.7 !important;
   font-size: 15px !important;
   flex: 1 !important;
-}
-
-@media (max-width: 1024px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 25px !important;
-  }
-  
-  .testimonials-title {
-    font-size: 32px !important;
-  }
 }
 
 @media (max-width: 768px) {
@@ -198,7 +188,7 @@
       {% for block in section.blocks %}
         <div class="testimonial-card" {{ block.shopify_attributes }}>
           {% if block.settings.image != blank %}
-          <div class="testimonial-image">
+          <div class="testimonial-image" style="display: block !important;">
             <img src="{{ block.settings.image | img_url: '600x600', crop: 'center' }}" alt="{{ block.settings.name }}" loading="lazy">
           </div>
           {% endif %}
@@ -262,7 +252,7 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Photo"
+          "label": "Photo (optionnelle)"
         },
         {
           "type": "text",
