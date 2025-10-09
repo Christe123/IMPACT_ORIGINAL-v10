@@ -4,7 +4,6 @@
   background-color: #ffffff !important;
   padding: 60px 20px !important;
   width: 100% !important;
-  overflow-x: hidden !important;
 }
 
 .testimonials-container {
@@ -30,11 +29,17 @@
   font-weight: 400 !important;
 }
 
+.testimonials-wrapper {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  padding-bottom: 10px !important;
+}
+
 .testimonials-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
+  display: flex !important;
   gap: 30px !important;
-  width: 100% !important;
+  width: max-content !important;
+  min-width: 100% !important;
 }
 
 .testimonial-card {
@@ -45,7 +50,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   display: flex !important;
   flex-direction: column !important;
-  width: 100% !important;
+  flex: 0 0 350px !important;
+  width: 350px !important;
 }
 
 .testimonial-card:hover {
@@ -129,7 +135,12 @@
   flex: 1 !important;
   word-wrap: break-word !important;
   overflow-wrap: break-word !important;
-  hyphens: auto !important;
+}
+
+@media (min-width: 1200px) {
+  .testimonials-grid {
+    justify-content: center !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -149,12 +160,17 @@
     gap: 15px !important;
   }
   
+  .testimonial-card {
+    flex: 0 0 280px !important;
+    width: 280px !important;
+  }
+  
   .testimonial-content {
-    padding: 15px !important;
+    padding: 18px !important;
   }
   
   .client-name {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
   
   .client-verified {
@@ -166,8 +182,8 @@
   }
   
   .testimonial-text {
-    font-size: 12px !important;
-    line-height: 1.5 !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
   }
 }
 
@@ -185,15 +201,20 @@
   }
   
   .testimonials-grid {
-    gap: 10px !important;
+    gap: 12px !important;
+  }
+  
+  .testimonial-card {
+    flex: 0 0 260px !important;
+    width: 260px !important;
   }
   
   .testimonial-content {
-    padding: 12px !important;
+    padding: 15px !important;
   }
   
   .client-name {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
   
   .client-verified {
@@ -210,8 +231,8 @@
   }
   
   .testimonial-text {
-    font-size: 11px !important;
-    line-height: 1.4 !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
   }
 }
 </style>
@@ -229,46 +250,48 @@
     </div>
     {% endif %}
 
-    <div class="testimonials-grid">
-      {% for block in section.blocks %}
-        <div class="testimonial-card" {{ block.shopify_attributes }}>
-          {% if block.settings.image != blank %}
-          <div class="testimonial-image" style="display: block !important;">
-            <img src="{{ block.settings.image | img_url: '600x600', crop: 'center' }}" alt="{{ block.settings.name }}" loading="lazy">
-          </div>
-          {% endif %}
-          
-          <div class="testimonial-content">
-            <div class="testimonial-header">
-              <div class="testimonial-name-row">
-                {% if block.settings.name != blank %}
-                  <div class="client-name">{{ block.settings.name }}</div>
-                {% endif %}
-                {% if block.settings.verified %}
-                  <div class="client-verified">
-                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                    </svg>
-                    Cliente verifiee
-                  </div>
-                {% endif %}
-              </div>
+    <div class="testimonials-wrapper">
+      <div class="testimonials-grid">
+        {% for block in section.blocks %}
+          <div class="testimonial-card" {{ block.shopify_attributes }}>
+            {% if block.settings.image != blank %}
+            <div class="testimonial-image" style="display: block !important;">
+              <img src="{{ block.settings.image | img_url: '600x600', crop: 'center' }}" alt="{{ block.settings.name }}" loading="lazy">
             </div>
-            
-            <div class="testimonial-stars">
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-              <span class="star">★</span>
-            </div>
-            
-            {% if block.settings.text != blank %}
-              <p class="testimonial-text">{{ block.settings.text }}</p>
             {% endif %}
+            
+            <div class="testimonial-content">
+              <div class="testimonial-header">
+                <div class="testimonial-name-row">
+                  {% if block.settings.name != blank %}
+                    <div class="client-name">{{ block.settings.name }}</div>
+                  {% endif %}
+                  {% if block.settings.verified %}
+                    <div class="client-verified">
+                      <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                      </svg>
+                      Cliente verifiee
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+              
+              <div class="testimonial-stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+              
+              {% if block.settings.text != blank %}
+                <p class="testimonial-text">{{ block.settings.text }}</p>
+              {% endif %}
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
