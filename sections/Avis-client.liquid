@@ -29,29 +29,24 @@
   font-weight: 400 !important;
 }
 
-.testimonials-wrapper {
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch !important;
-  padding-bottom: 10px !important;
-}
-
 .testimonials-grid {
   display: flex !important;
-  gap: 30px !important;
-  width: max-content !important;
-  min-width: 100% !important;
+  gap: 20px !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
 }
 
 .testimonial-card {
   background: #fff !important;
   border-radius: 12px !important;
-  overflow: hidden !important;
+  overflow: visible !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   display: flex !important;
   flex-direction: column !important;
-  flex: 0 0 350px !important;
-  width: 350px !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+  max-width: 400px !important;
 }
 
 .testimonial-card:hover {
@@ -75,28 +70,25 @@
 }
 
 .testimonial-content {
-  padding: 25px !important;
+  padding: 20px !important;
   flex: 1 !important;
   display: flex !important;
   flex-direction: column !important;
 }
 
 .testimonial-header {
-  margin-bottom: 15px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 8px !important;
+  margin-bottom: 12px !important;
 }
 
 .testimonial-name-row {
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 8px !important;
   flex-wrap: wrap !important;
 }
 
 .client-name {
-  font-size: 18px !important;
+  font-size: 16px !important;
   color: #333 !important;
   font-weight: 600 !important;
   margin: 0 !important;
@@ -105,108 +97,41 @@
 .client-verified {
   display: flex !important;
   align-items: center !important;
-  gap: 5px !important;
+  gap: 4px !important;
   color: #00b67a !important;
-  font-size: 13px !important;
+  font-size: 11px !important;
   white-space: nowrap !important;
 }
 
 .verified-icon {
-  width: 16px !important;
-  height: 16px !important;
+  width: 14px !important;
+  height: 14px !important;
   flex-shrink: 0 !important;
 }
 
 .testimonial-stars {
   display: flex !important;
-  gap: 3px !important;
-  margin-bottom: 15px !important;
+  gap: 2px !important;
+  margin-bottom: 12px !important;
 }
 
 .star {
   color: #00b67a !important;
-  font-size: 20px !important;
+  font-size: 18px !important;
 }
 
 .testimonial-text {
   color: #555 !important;
-  line-height: 1.7 !important;
-  font-size: 15px !important;
+  line-height: 1.6 !important;
+  font-size: 13px !important;
   flex: 1 !important;
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
-@media (min-width: 1200px) {
-  .testimonials-grid {
-    justify-content: center !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .testimonials-section {
-    padding: 40px 15px !important;
-  }
-  
-  .testimonials-title {
-    font-size: 24px !important;
-  }
-  
-  .testimonials-subtitle {
-    font-size: 14px !important;
-  }
-  
+@media (max-width: 1024px) {
   .testimonials-grid {
     gap: 15px !important;
-  }
-  
-  .testimonial-card {
-    flex: 0 0 280px !important;
-    width: 280px !important;
-  }
-  
-  .testimonial-content {
-    padding: 18px !important;
-  }
-  
-  .client-name {
-    font-size: 16px !important;
-  }
-  
-  .client-verified {
-    font-size: 11px !important;
-  }
-  
-  .star {
-    font-size: 16px !important;
-  }
-  
-  .testimonial-text {
-    font-size: 13px !important;
-    line-height: 1.6 !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .testimonials-section {
-    padding: 30px 10px !important;
-  }
-  
-  .testimonials-title {
-    font-size: 20px !important;
-  }
-  
-  .testimonials-subtitle {
-    font-size: 12px !important;
-  }
-  
-  .testimonials-grid {
-    gap: 12px !important;
-  }
-  
-  .testimonial-card {
-    flex: 0 0 260px !important;
-    width: 260px !important;
   }
   
   .testimonial-content {
@@ -215,6 +140,36 @@
   
   .client-name {
     font-size: 14px !important;
+  }
+  
+  .testimonial-text {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 40px 10px !important;
+  }
+  
+  .testimonials-title {
+    font-size: 22px !important;
+  }
+  
+  .testimonials-subtitle {
+    font-size: 13px !important;
+  }
+  
+  .testimonials-grid {
+    gap: 10px !important;
+  }
+  
+  .testimonial-content {
+    padding: 12px !important;
+  }
+  
+  .client-name {
+    font-size: 13px !important;
   }
   
   .client-verified {
@@ -227,12 +182,57 @@
   }
   
   .star {
-    font-size: 14px !important;
+    font-size: 15px !important;
   }
   
   .testimonial-text {
-    font-size: 12px !important;
+    font-size: 11px !important;
     line-height: 1.5 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 30px 5px !important;
+  }
+  
+  .testimonials-title {
+    font-size: 18px !important;
+  }
+  
+  .testimonials-subtitle {
+    font-size: 11px !important;
+  }
+  
+  .testimonials-grid {
+    gap: 8px !important;
+  }
+  
+  .testimonial-content {
+    padding: 10px !important;
+  }
+  
+  .client-name {
+    font-size: 12px !important;
+  }
+  
+  .client-verified {
+    font-size: 9px !important;
+  }
+  
+  .verified-icon {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  .star {
+    font-size: 13px !important;
+    gap: 1px !important;
+  }
+  
+  .testimonial-text {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
   }
 }
 </style>
@@ -250,48 +250,46 @@
     </div>
     {% endif %}
 
-    <div class="testimonials-wrapper">
-      <div class="testimonials-grid">
-        {% for block in section.blocks %}
-          <div class="testimonial-card" {{ block.shopify_attributes }}>
-            {% if block.settings.image != blank %}
-            <div class="testimonial-image" style="display: block !important;">
-              <img src="{{ block.settings.image | img_url: '600x600', crop: 'center' }}" alt="{{ block.settings.name }}" loading="lazy">
-            </div>
-            {% endif %}
-            
-            <div class="testimonial-content">
-              <div class="testimonial-header">
-                <div class="testimonial-name-row">
-                  {% if block.settings.name != blank %}
-                    <div class="client-name">{{ block.settings.name }}</div>
-                  {% endif %}
-                  {% if block.settings.verified %}
-                    <div class="client-verified">
-                      <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                      </svg>
-                      Cliente verifiee
-                    </div>
-                  {% endif %}
-                </div>
-              </div>
-              
-              <div class="testimonial-stars">
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-                <span class="star">★</span>
-              </div>
-              
-              {% if block.settings.text != blank %}
-                <p class="testimonial-text">{{ block.settings.text }}</p>
-              {% endif %}
-            </div>
+    <div class="testimonials-grid">
+      {% for block in section.blocks %}
+        <div class="testimonial-card" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+          <div class="testimonial-image" style="display: block !important;">
+            <img src="{{ block.settings.image | img_url: '600x600', crop: 'center' }}" alt="{{ block.settings.name }}" loading="lazy">
           </div>
-        {% endfor %}
-      </div>
+          {% endif %}
+          
+          <div class="testimonial-content">
+            <div class="testimonial-header">
+              <div class="testimonial-name-row">
+                {% if block.settings.name != blank %}
+                  <div class="client-name">{{ block.settings.name }}</div>
+                {% endif %}
+                {% if block.settings.verified %}
+                  <div class="client-verified">
+                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                    </svg>
+                    Cliente verifiee
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+            
+            <div class="testimonial-stars">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            
+            {% if block.settings.text != blank %}
+              <p class="testimonial-text">{{ block.settings.text }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
