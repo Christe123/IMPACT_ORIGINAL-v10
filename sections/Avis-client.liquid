@@ -31,8 +31,9 @@
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  align-items: start;
 }
 
 .testimonial-card {
@@ -41,6 +42,9 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-card:hover {
@@ -64,6 +68,9 @@
 
 .testimonial-content {
   padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-header {
@@ -109,6 +116,7 @@
   color: #555;
   line-height: 1.7;
   font-size: 15px;
+  flex: 1;
 }
 
 @media (max-width: 1024px) {
@@ -168,100 +176,55 @@
 
 <section class="testimonials-section">
   <div class="testimonials-container">
+    {% if section.settings.title != blank or section.settings.subtitle != blank %}
     <div class="testimonials-header">
-      <h2 class="testimonials-title">Ce que disent nos clientes</h2>
-      <p class="testimonials-subtitle">Des resultats visibles et une confiance retrouvee</p>
+      {% if section.settings.title != blank %}
+        <h2 class="testimonials-title">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="testimonials-subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
     </div>
+    {% endif %}
 
     <div class="testimonials-grid">
-      
-      <div class="testimonial-card">
-        <div class="testimonial-image">
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop" alt="Linda T., 49 ans">
-        </div>
-        <div class="testimonial-content">
-          <div class="testimonial-header">
-            <div>
-              <div class="client-name">Linda T., 49</div>
-              <div class="client-verified">
-                <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                </svg>
-                Cliente verifiee
+      {% for block in section.blocks %}
+        <div class="testimonial-card" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+          <div class="testimonial-image">
+            <img src="{{ block.settings.image | img_url: '600x600', crop: 'center' }}" alt="{{ block.settings.name }}">
+          </div>
+          {% endif %}
+          
+          <div class="testimonial-content">
+            <div class="testimonial-header">
+              <div>
+                {% if block.settings.name != blank %}
+                  <div class="client-name">{{ block.settings.name }}</div>
+                {% endif %}
+                {% if block.settings.verified %}
+                  <div class="client-verified">
+                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                    </svg>
+                    Cliente verifiee
+                  </div>
+                {% endif %}
               </div>
             </div>
-          </div>
-          <div class="testimonial-stars">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <p class="testimonial-text">
-            Je suis maman active et j'ai toujours l'air epuisee. Instant Lift+ me sauve la vie – que ce soit pour aller chercher les enfants a l'ecole, nos soirees en amoureux, ou quand j'ai besoin d'etre presentable. J'ai instantanement l'air reposee et les gens n'arretent pas de me dire que je rajeunie !
-          </p>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-image">
-          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop" alt="Jennifer K., 42 ans">
-        </div>
-        <div class="testimonial-content">
-          <div class="testimonial-header">
-            <div>
-              <div class="client-name">Jennifer K., 42</div>
-              <div class="client-verified">
-                <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                </svg>
-                Cliente verifiee
-              </div>
+            
+            <div class="testimonial-stars">
+              {% for i in (1..5) %}
+                <span class="star">★</span>
+              {% endfor %}
             </div>
+            
+            {% if block.settings.text != blank %}
+              <p class="testimonial-text">{{ block.settings.text }}</p>
+            {% endif %}
           </div>
-          <div class="testimonial-stars">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <p class="testimonial-text">
-            J'avais des poches sous les yeux tenaces depuis des annees. Rien n'avait marche jusqu'a Instant Lift+. Les poches disparaissent litteralement en quelques minutes et je parais 10 ans de moins. J'ai retrouve ma confiance en moi !
-          </p>
         </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-image">
-          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&h=600&fit=crop" alt="Patricia R., 58 ans">
-        </div>
-        <div class="testimonial-content">
-          <div class="testimonial-header">
-            <div>
-              <div class="client-name">Patricia R., 58</div>
-              <div class="client-verified">
-                <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                </svg>
-                Cliente verifiee
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-stars">
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-            <span class="star">★</span>
-          </div>
-          <p class="testimonial-text">
-            Peau sensible, c'est l'enfer – tout m'irrite. Mais pas Instant Lift+ ! Doux et pourtant efficace. Mes petites rides ont disparu et je n'ai plus l'air fatiguee, meme pendant les longues journees. Un vrai miracle !
-          </p>
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -269,9 +232,77 @@
 {% schema %}
 {
   "name": "Temoignages Clients",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Ce que disent nos clientes"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Des resultats visibles et une confiance retrouvee"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Temoignage",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo du client"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nom et age",
+          "default": "Client, 00"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Cliente verifiee",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Temoignage",
+          "default": "Ecrivez le temoignage ici..."
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Temoignages Clients"
+      "name": "Temoignages Clients",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "name": "Linda T., 49",
+            "text": "Je suis maman active et j'ai toujours l'air epuisee. Instant Lift+ me sauve la vie – que ce soit pour aller chercher les enfants a l'ecole, nos soirees en amoureux, ou quand j'ai besoin d'etre presentable."
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "name": "Jennifer K., 42",
+            "text": "J'avais des poches sous les yeux tenaces depuis des annees. Rien n'avait marche jusqu'a Instant Lift+. Les poches disparaissent litteralement en quelques minutes."
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "name": "Patricia R., 58",
+            "text": "Peau sensible, c'est l'enfer – tout m'irrite. Mais pas Instant Lift+ ! Doux et pourtant efficace. Mes petites rides ont disparu."
+          }
+        }
+      ]
     }
   ]
 }
