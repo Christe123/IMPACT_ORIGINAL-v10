@@ -1,8 +1,8 @@
 {%- if section.blocks.size > 0 -%}
   <style>
     #shopify-section-{{ section.id }} {
-      --testimonials-grid: {% if section.settings.stack_on_mobile %}none{% else %}auto / auto-flow 73vw{% endif %};
-      --testimonials-gap: {% if section.settings.gap == 'small' %}var(--grid-gutter){% elsif section.settings.gap == 'medium' %}var(--spacing-12){% elsif section.settings.gap == 'large' %}var(--spacing-20){% else %}var(--spacing-28){% endif %};
+      --testimonials-grid: {% if section.settings.stack_on_mobile %}none{% else %}auto / auto-flow 85vw{% endif %};
+      --testimonials-gap: 20px;
     }
 
     .testimonials-grid {
@@ -14,6 +14,7 @@
     @media (min-width: 700px) {
       .testimonials-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
       }
     }
 
@@ -33,6 +34,20 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
+    .testimonial-image-wrapper {
+      width: 100%;
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #f0f0f0;
+    }
+
+    .testimonial-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .testimonial-name-row {
       display: flex;
       align-items: center;
@@ -44,6 +59,7 @@
       font-size: 18px;
       font-weight: 600;
       color: #333;
+      margin: 0;
     }
 
     .client-verified {
@@ -57,6 +73,7 @@
     .verified-icon {
       width: 16px;
       height: 16px;
+      flex-shrink: 0;
     }
 
     .testimonial-stars {
@@ -73,9 +90,14 @@
       color: #555;
       line-height: 1.7;
       font-size: 15px;
+      margin: 0;
     }
 
     @media (max-width: 699px) {
+      .testimonials-grid {
+        gap: 15px;
+      }
+
       .testimonial-card {
         padding: 20px;
       }
@@ -98,8 +120,8 @@
         {%- for block in section.blocks -%}
           <div class="testimonial-card snap-start" {{ block.shopify_attributes }}>
             {%- if block.settings.image != blank -%}
-              <div style="width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: #f0f0f0;">
-                {%- capture sizes -%}(max-width: 699px) 73vw, 33vw{%- endcapture -%}
+              <div class="testimonial-image-wrapper">
+                {%- capture sizes -%}(max-width: 699px) 85vw, 33vw{%- endcapture -%}
                 {{- block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', sizes: sizes, widths: '300,400,500,600', class: 'rounded' -}}
               </div>
             {%- endif -%}
@@ -114,7 +136,7 @@
                   <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                   </svg>
-                  Cliente vérifiée
+                  Cliente verifiee
                 </div>
               {%- endif -%}
             </div>
@@ -139,7 +161,7 @@
 
 {% schema %}
 {
-  "name": "Témoignages",
+  "name": "Temoignages",
   "class": "shopify-section--testimonials",
   "tag": "section",
   "disabled_on": {
@@ -158,30 +180,6 @@
       "id": "stack_on_mobile",
       "label": "Stack on mobile",
       "default": false
-    },
-    {
-      "type": "select",
-      "id": "gap",
-      "label": "Gap spacing",
-      "options": [
-        {
-          "value": "small",
-          "label": "Small"
-        },
-        {
-          "value": "medium",
-          "label": "Medium"
-        },
-        {
-          "value": "large",
-          "label": "Large"
-        },
-        {
-          "value": "x-large",
-          "label": "X-Large"
-        }
-      ],
-      "default": "medium"
     },
     {
       "type": "select",
@@ -221,8 +219,7 @@
     },
     {
       "type": "header",
-      "content": "Colors",
-      "info": "Gradient replaces solid colors when set."
+      "content": "Colors"
     },
     {
       "type": "color",
@@ -243,7 +240,7 @@
   "blocks": [
     {
       "type": "testimonial",
-      "name": "Témoignage",
+      "name": "Temoignage",
       "settings": [
         {
           "type": "image_picker",
@@ -253,34 +250,34 @@
         {
           "type": "text",
           "id": "name",
-          "label": "Nom et âge",
+          "label": "Nom et age",
           "default": "Cliente, 00"
         },
         {
           "type": "checkbox",
           "id": "verified",
-          "label": "Badge vérifiée",
+          "label": "Badge verifiee",
           "default": true
         },
         {
           "type": "textarea",
           "id": "text",
-          "label": "Témoignage",
-          "default": "Écrivez le témoignage ici..."
+          "label": "Temoignage",
+          "default": "Ecrivez le temoignage ici..."
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Témoignages",
+      "name": "Temoignages",
       "blocks": [
         {
           "type": "testimonial",
           "settings": {
             "name": "Linda T., 49",
             "verified": true,
-            "text": "Je suis maman active et j'ai toujours l'air épuisée. Instant Lift+ me sauve la vie !"
+            "text": "Je suis maman active et j'ai toujours l'air epuisee. Instant Lift+ me sauve la vie !"
           }
         },
         {
@@ -288,7 +285,7 @@
           "settings": {
             "name": "Jennifer K., 42",
             "verified": true,
-            "text": "J'avais des poches sous les yeux tenaces depuis des années. Les poches disparaissent littéralement !"
+            "text": "J'avais des poches sous les yeux tenaces depuis des annees. Les poches disparaissent litteralement !"
           }
         },
         {
