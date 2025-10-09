@@ -1,281 +1,124 @@
-<style>
-.testimonials-section {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-  background-color: #ffffff !important;
-  padding: 60px 20px !important;
-  width: 100% !important;
-}
+{%- if section.blocks.size > 0 -%}
+  <style>
+    #shopify-section-{{ section.id }} {
+      --testimonials-grid: {% if section.settings.stack_on_mobile %}none{% else %}auto / auto-flow 73vw{% endif %};
+      --testimonials-gap: {% if section.settings.gap == 'small' %}var(--grid-gutter){% elsif section.settings.gap == 'medium' %}var(--spacing-12){% elsif section.settings.gap == 'large' %}var(--spacing-20){% else %}var(--spacing-28){% endif %};
+    }
 
-.testimonials-container {
-  max-width: 1400px !important;
-  margin: 0 auto !important;
-}
+    .testimonials-grid {
+      display: grid;
+      grid: var(--testimonials-grid);
+      gap: var(--testimonials-gap);
+    }
 
-.testimonials-header {
-  text-align: center !important;
-  margin-bottom: 50px !important;
-}
+    @media (min-width: 700px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
-.testimonials-title {
-  font-size: 36px !important;
-  color: #333 !important;
-  margin-bottom: 10px !important;
-  font-weight: 700 !important;
-}
+    .testimonial-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.testimonials-subtitle {
-  color: #666 !important;
-  font-size: 18px !important;
-  font-weight: 400 !important;
-}
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
 
-.testimonials-grid {
-  display: flex !important;
-  gap: 20px !important;
-  justify-content: center !important;
-  flex-wrap: nowrap !important;
-}
+    .testimonial-name-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-.testimonial-card {
-  background: #fff !important;
-  border-radius: 12px !important;
-  overflow: visible !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-  display: flex !important;
-  flex-direction: column !important;
-  flex: 1 !important;
-  min-width: 0 !important;
-  max-width: 400px !important;
-}
+    .client-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
 
-.testimonial-card:hover {
-  transform: translateY(-8px) !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
-}
+    .client-verified {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #00b67a;
+      font-size: 13px;
+    }
 
-.testimonial-image {
-  width: 100% !important;
-  height: 300px !important;
-  overflow: hidden !important;
-  background: #f0f0f0 !important;
-  display: none !important;
-}
+    .verified-icon {
+      width: 16px;
+      height: 16px;
+    }
 
-.testimonial-image img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
-}
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+    }
 
-.testimonial-content {
-  padding: 20px !important;
-  flex: 1 !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
+    .star {
+      color: #00b67a;
+      font-size: 20px;
+    }
 
-.testimonial-header {
-  margin-bottom: 12px !important;
-}
+    .testimonial-text {
+      color: #555;
+      line-height: 1.7;
+      font-size: 15px;
+    }
 
-.testimonial-name-row {
-  display: flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  flex-wrap: wrap !important;
-}
+    @media (max-width: 699px) {
+      .testimonial-card {
+        padding: 20px;
+      }
 
-.client-name {
-  font-size: 16px !important;
-  color: #333 !important;
-  font-weight: 600 !important;
-  margin: 0 !important;
-}
+      .client-name {
+        font-size: 16px;
+      }
 
-.client-verified {
-  display: flex !important;
-  align-items: center !important;
-  gap: 4px !important;
-  color: #00b67a !important;
-  font-size: 11px !important;
-  white-space: nowrap !important;
-}
+      .testimonial-text {
+        font-size: 14px;
+      }
+    }
+  </style>
 
-.verified-icon {
-  width: 14px !important;
-  height: 14px !important;
-  flex-shrink: 0 !important;
-}
+  <div {% render 'section-properties' %}>
+    <div class="section-stack">
+      {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, content: section.settings.content, text_alignment: section.settings.text_alignment -%}
 
-.testimonial-stars {
-  display: flex !important;
-  gap: 2px !important;
-  margin-bottom: 12px !important;
-}
-
-.star {
-  color: #00b67a !important;
-  font-size: 18px !important;
-}
-
-.testimonial-text {
-  color: #555 !important;
-  line-height: 1.6 !important;
-  font-size: 13px !important;
-  flex: 1 !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-@media (max-width: 1024px) {
-  .testimonials-grid {
-    gap: 15px !important;
-  }
-  
-  .testimonial-content {
-    padding: 15px !important;
-  }
-  
-  .client-name {
-    font-size: 14px !important;
-  }
-  
-  .testimonial-text {
-    font-size: 12px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .testimonials-section {
-    padding: 40px 10px !important;
-  }
-  
-  .testimonials-title {
-    font-size: 22px !important;
-  }
-  
-  .testimonials-subtitle {
-    font-size: 13px !important;
-  }
-  
-  .testimonials-grid {
-    gap: 10px !important;
-  }
-  
-  .testimonial-content {
-    padding: 12px !important;
-  }
-  
-  .client-name {
-    font-size: 13px !important;
-  }
-  
-  .client-verified {
-    font-size: 10px !important;
-  }
-  
-  .verified-icon {
-    width: 12px !important;
-    height: 12px !important;
-  }
-  
-  .star {
-    font-size: 15px !important;
-  }
-  
-  .testimonial-text {
-    font-size: 11px !important;
-    line-height: 1.5 !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .testimonials-section {
-    padding: 30px 5px !important;
-  }
-  
-  .testimonials-title {
-    font-size: 18px !important;
-  }
-  
-  .testimonials-subtitle {
-    font-size: 11px !important;
-  }
-  
-  .testimonials-grid {
-    gap: 8px !important;
-  }
-  
-  .testimonial-content {
-    padding: 10px !important;
-  }
-  
-  .client-name {
-    font-size: 12px !important;
-  }
-  
-  .client-verified {
-    font-size: 9px !important;
-  }
-  
-  .verified-icon {
-    width: 10px !important;
-    height: 10px !important;
-  }
-  
-  .star {
-    font-size: 13px !important;
-    gap: 1px !important;
-  }
-  
-  .testimonial-text {
-    font-size: 10px !important;
-    line-height: 1.4 !important;
-  }
-}
-</style>
-
-<section class="testimonials-section">
-  <div class="testimonials-container">
-    {% if section.settings.title != blank or section.settings.subtitle != blank %}
-    <div class="testimonials-header">
-      {% if section.settings.title != blank %}
-        <h2 class="testimonials-title">{{ section.settings.title }}</h2>
-      {% endif %}
-      {% if section.settings.subtitle != blank %}
-        <p class="testimonials-subtitle">{{ section.settings.subtitle }}</p>
-      {% endif %}
-    </div>
-    {% endif %}
-
-    <div class="testimonials-grid">
-      {% for block in section.blocks %}
-        <div class="testimonial-card" {{ block.shopify_attributes }}>
-          {% if block.settings.image != blank %}
-          <div class="testimonial-image" style="display: block !important;">
-            <img src="{{ block.settings.image | img_url: '600x600', crop: 'center' }}" alt="{{ block.settings.name }}" loading="lazy">
-          </div>
-          {% endif %}
-          
-          <div class="testimonial-content">
-            <div class="testimonial-header">
-              <div class="testimonial-name-row">
-                {% if block.settings.name != blank %}
-                  <div class="client-name">{{ block.settings.name }}</div>
-                {% endif %}
-                {% if block.settings.verified %}
-                  <div class="client-verified">
-                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                    </svg>
-                    Cliente verifiee
-                  </div>
-                {% endif %}
+      <div class="testimonials-grid scroll-area bleed md:unbleed">
+        {%- for block in section.blocks -%}
+          <div class="testimonial-card snap-start" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              <div style="width: 100%; aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: #f0f0f0;">
+                {%- capture sizes -%}(max-width: 699px) 73vw, 33vw{%- endcapture -%}
+                {{- block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', sizes: sizes, widths: '300,400,500,600', class: 'rounded' -}}
               </div>
+            {%- endif -%}
+
+            <div class="testimonial-name-row">
+              {%- if block.settings.name != blank -%}
+                <div class="client-name">{{ block.settings.name }}</div>
+              {%- endif -%}
+
+              {%- if block.settings.verified -%}
+                <div class="client-verified">
+                  <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  Cliente vérifiée
+                </div>
+              {%- endif -%}
             </div>
-            
+
             <div class="testimonial-stars">
               <span class="star">★</span>
               <span class="star">★</span>
@@ -283,39 +126,124 @@
               <span class="star">★</span>
               <span class="star">★</span>
             </div>
-            
-            {% if block.settings.text != blank %}
-              <p class="testimonial-text">{{ block.settings.text }}</p>
-            {% endif %}
+
+            {%- if block.settings.text != blank -%}
+              <div class="testimonial-text">{{ block.settings.text }}</div>
+            {%- endif -%}
           </div>
-        </div>
-      {% endfor %}
+        {%- endfor -%}
+      </div>
     </div>
   </div>
-</section>
+{%- endif -%}
 
 {% schema %}
 {
-  "name": "Temoignages",
-  "class": "testimonials-section-wrapper",
+  "name": "Témoignages",
+  "class": "shopify-section--testimonials",
+  "tag": "section",
+  "disabled_on": {
+    "templates": ["password"],
+    "groups": ["header", "custom.overlay"]
+  },
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "Titre",
-      "default": "Ce que disent nos clientes"
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_on_mobile",
+      "label": "Stack on mobile",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "gap",
+      "label": "Gap spacing",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "x-large",
+          "label": "X-Large"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "start"
     },
     {
       "type": "text",
-      "id": "subtitle",
-      "label": "Sous-titre",
-      "default": "Des resultats visibles et une confiance retrouvee"
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Ce que disent nos clientes"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "header",
+      "content": "Colors",
+      "info": "Gradient replaces solid colors when set."
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "Background gradient"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text"
     }
   ],
   "blocks": [
     {
       "type": "testimonial",
-      "name": "Temoignage",
+      "name": "Témoignage",
       "settings": [
         {
           "type": "image_picker",
@@ -325,33 +253,34 @@
         {
           "type": "text",
           "id": "name",
-          "label": "Nom et age",
+          "label": "Nom et âge",
           "default": "Cliente, 00"
         },
         {
           "type": "checkbox",
           "id": "verified",
-          "label": "Badge verifiee",
+          "label": "Badge vérifiée",
           "default": true
         },
         {
           "type": "textarea",
           "id": "text",
-          "label": "Temoignage"
+          "label": "Témoignage",
+          "default": "Écrivez le témoignage ici..."
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Temoignages",
+      "name": "Témoignages",
       "blocks": [
         {
           "type": "testimonial",
           "settings": {
             "name": "Linda T., 49",
             "verified": true,
-            "text": "Je suis maman active et j'ai toujours l'air epuisee. Instant Lift+ me sauve la vie – que ce soit pour aller chercher les enfants a l'ecole, nos soirees en amoureux, ou quand j'ai besoin d'etre presentable. J'ai instantanement l'air reposee et les gens n'arretent pas de me dire que je rajeunie !"
+            "text": "Je suis maman active et j'ai toujours l'air épuisée. Instant Lift+ me sauve la vie !"
           }
         },
         {
@@ -359,7 +288,7 @@
           "settings": {
             "name": "Jennifer K., 42",
             "verified": true,
-            "text": "J'avais des poches sous les yeux tenaces depuis des annees. Rien n'avait marche jusqu'a Instant Lift+. Les poches disparaissent litteralement en quelques minutes et je parais 10 ans de moins. J'ai retrouve ma confiance en moi !"
+            "text": "J'avais des poches sous les yeux tenaces depuis des années. Les poches disparaissent littéralement !"
           }
         },
         {
@@ -367,7 +296,7 @@
           "settings": {
             "name": "Patricia R., 58",
             "verified": true,
-            "text": "Peau sensible, c'est l'enfer – tout m'irrite. Mais pas Instant Lift+ ! Doux et pourtant efficace. Mes petites rides ont disparu et je n'ai plus l'air fatiguee, meme pendant les longues journees. Un vrai miracle !"
+            "text": "Peau sensible, c'est l'enfer. Mais pas Instant Lift+ ! Doux et pourtant efficace."
           }
         }
       ]
