@@ -76,13 +76,23 @@
 
 .testimonial-header {
   margin-bottom: 15px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+.testimonial-name-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
 }
 
 .client-name {
   font-size: 18px !important;
   color: #333 !important;
-  margin-bottom: 8px !important;
   font-weight: 600 !important;
+  margin: 0 !important;
 }
 
 .client-verified {
@@ -91,11 +101,13 @@
   gap: 5px !important;
   color: #00b67a !important;
   font-size: 13px !important;
+  white-space: nowrap !important;
 }
 
 .verified-icon {
   width: 16px !important;
   height: 16px !important;
+  flex-shrink: 0 !important;
 }
 
 .testimonial-stars {
@@ -114,6 +126,9 @@
   line-height: 1.7 !important;
   font-size: 15px !important;
   flex: 1 !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
 }
 
 @media (max-width: 768px) {
@@ -195,17 +210,19 @@
           
           <div class="testimonial-content">
             <div class="testimonial-header">
-              {% if block.settings.name != blank %}
-                <div class="client-name">{{ block.settings.name }}</div>
-              {% endif %}
-              {% if block.settings.verified %}
-                <div class="client-verified">
-                  <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                  </svg>
-                  Cliente verifiee
-                </div>
-              {% endif %}
+              <div class="testimonial-name-row">
+                {% if block.settings.name != blank %}
+                  <div class="client-name">{{ block.settings.name }}</div>
+                {% endif %}
+                {% if block.settings.verified %}
+                  <div class="client-verified">
+                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                    </svg>
+                    Cliente verifiee
+                  </div>
+                {% endif %}
+              </div>
             </div>
             
             <div class="testimonial-stars">
