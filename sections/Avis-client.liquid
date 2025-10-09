@@ -30,10 +30,9 @@
 }
 
 .testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
   gap: 30px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .testimonial-card {
@@ -42,7 +41,8 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
 }
@@ -74,16 +74,13 @@
 }
 
 .testimonial-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   margin-bottom: 15px;
 }
 
 .client-name {
   font-size: 18px;
   color: #333;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
@@ -93,7 +90,6 @@
   gap: 5px;
   color: #00b67a;
   font-size: 13px;
-  margin-top: 3px;
 }
 
 .verified-icon {
@@ -121,9 +117,14 @@
 
 @media (max-width: 1024px) {
   .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    flex-wrap: wrap;
   }
+  
+  .testimonial-card {
+    flex: 1 1 calc(50% - 15px);
+    min-width: 280px;
+  }
+  
   .testimonials-title {
     font-size: 32px;
   }
@@ -133,19 +134,27 @@
   .testimonials-section {
     padding: 40px 20px;
   }
+  
   .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
+    flex-direction: column;
   }
+  
+  .testimonial-card {
+    flex: 1 1 auto;
+  }
+  
   .testimonials-title {
     font-size: 28px;
   }
+  
   .testimonials-subtitle {
     font-size: 16px;
   }
+  
   .testimonial-content {
     padding: 20px;
   }
+  
   .testimonial-text {
     font-size: 14px;
   }
@@ -155,18 +164,23 @@
   .testimonials-section {
     padding: 30px 15px;
   }
+  
   .testimonials-title {
     font-size: 24px;
   }
+  
   .testimonials-subtitle {
     font-size: 14px;
   }
+  
   .testimonial-content {
     padding: 18px;
   }
+  
   .client-name {
     font-size: 16px;
   }
+  
   .testimonial-text {
     font-size: 13px;
     line-height: 1.6;
@@ -192,31 +206,31 @@
         <div class="testimonial-card" {{ block.shopify_attributes }}>
           {% if block.settings.image != blank %}
           <div class="testimonial-image">
-            <img src="{{ block.settings.image | img_url: '600x600', crop: 'center' }}" alt="{{ block.settings.name }}">
+            <img src="{{ block.settings.image | img_url: '600x600', crop: 'center' }}" alt="{{ block.settings.name }}" loading="lazy">
           </div>
           {% endif %}
           
           <div class="testimonial-content">
             <div class="testimonial-header">
-              <div>
-                {% if block.settings.name != blank %}
-                  <div class="client-name">{{ block.settings.name }}</div>
-                {% endif %}
-                {% if block.settings.verified %}
-                  <div class="client-verified">
-                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                    </svg>
-                    Cliente verifiee
-                  </div>
-                {% endif %}
-              </div>
+              {% if block.settings.name != blank %}
+                <div class="client-name">{{ block.settings.name }}</div>
+              {% endif %}
+              {% if block.settings.verified %}
+                <div class="client-verified">
+                  <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                  </svg>
+                  Cliente verifiee
+                </div>
+              {% endif %}
             </div>
             
             <div class="testimonial-stars">
-              {% for i in (1..5) %}
-                <span class="star">★</span>
-              {% endfor %}
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
             </div>
             
             {% if block.settings.text != blank %}
@@ -231,7 +245,8 @@
 
 {% schema %}
 {
-  "name": "Temoignages Clients",
+  "name": "Temoignages",
+  "class": "testimonials-section-wrapper",
   "settings": [
     {
       "type": "text",
@@ -254,52 +269,54 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Photo du client"
+          "label": "Photo"
         },
         {
           "type": "text",
           "id": "name",
           "label": "Nom et age",
-          "default": "Client, 00"
+          "default": "Cliente, 00"
         },
         {
           "type": "checkbox",
           "id": "verified",
-          "label": "Cliente verifiee",
+          "label": "Badge verifiee",
           "default": true
         },
         {
           "type": "textarea",
           "id": "text",
-          "label": "Temoignage",
-          "default": "Ecrivez le temoignage ici..."
+          "label": "Temoignage"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Temoignages Clients",
+      "name": "Temoignages",
       "blocks": [
         {
           "type": "testimonial",
           "settings": {
             "name": "Linda T., 49",
-            "text": "Je suis maman active et j'ai toujours l'air epuisee. Instant Lift+ me sauve la vie – que ce soit pour aller chercher les enfants a l'ecole, nos soirees en amoureux, ou quand j'ai besoin d'etre presentable."
+            "verified": true,
+            "text": "Je suis maman active et j'ai toujours l'air epuisee. Instant Lift+ me sauve la vie – que ce soit pour aller chercher les enfants a l'ecole, nos soirees en amoureux, ou quand j'ai besoin d'etre presentable. J'ai instantanement l'air reposee et les gens n'arretent pas de me dire que je rajeunie !"
           }
         },
         {
           "type": "testimonial",
           "settings": {
             "name": "Jennifer K., 42",
-            "text": "J'avais des poches sous les yeux tenaces depuis des annees. Rien n'avait marche jusqu'a Instant Lift+. Les poches disparaissent litteralement en quelques minutes."
+            "verified": true,
+            "text": "J'avais des poches sous les yeux tenaces depuis des annees. Rien n'avait marche jusqu'a Instant Lift+. Les poches disparaissent litteralement en quelques minutes et je parais 10 ans de moins. J'ai retrouve ma confiance en moi !"
           }
         },
         {
           "type": "testimonial",
           "settings": {
             "name": "Patricia R., 58",
-            "text": "Peau sensible, c'est l'enfer – tout m'irrite. Mais pas Instant Lift+ ! Doux et pourtant efficace. Mes petites rides ont disparu."
+            "verified": true,
+            "text": "Peau sensible, c'est l'enfer – tout m'irrite. Mais pas Instant Lift+ ! Doux et pourtant efficace. Mes petites rides ont disparu et je n'ai plus l'air fatiguee, meme pendant les longues journees. Un vrai miracle !"
           }
         }
       ]
