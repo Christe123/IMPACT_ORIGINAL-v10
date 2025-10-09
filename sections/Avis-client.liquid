@@ -1,291 +1,278 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Témoignages Clients</title>
-    <style>
-        .testimonials-section {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
-            padding: 60px 20px;
-            width: 100%;
-        }
+<style>
+.testimonials-section {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+  padding: 60px 20px;
+  width: 100%;
+}
 
-        .testimonials-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
+.testimonials-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-        .testimonials-title {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+.testimonials-title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
 
-        .testimonials-subtitle {
-            color: #666;
-            font-size: 18px;
-            font-weight: 400;
-        }
+.testimonials-subtitle {
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+}
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
 
-        .testimonial-card {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .testimonial-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-        .testimonial-image {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            overflow: hidden;
-            background: #f0f0f0;
-        }
+.testimonial-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f0f0f0;
+}
 
-        .testimonial-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-        .testimonial-content {
-            padding: 25px;
-        }
+.testimonial-content {
+  padding: 25px;
+}
 
-        .testimonial-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
 
-        .client-name {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
+.client-name {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
 
-        .client-verified {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            color: #00b67a;
-            font-size: 13px;
-            margin-top: 3px;
-        }
+.client-verified {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #00b67a;
+  font-size: 13px;
+  margin-top: 3px;
+}
 
-        .verified-icon {
-            width: 16px;
-            height: 16px;
-        }
+.verified-icon {
+  width: 16px;
+  height: 16px;
+}
 
-        .testimonial-stars {
-            display: flex;
-            gap: 3px;
-            margin-bottom: 15px;
-        }
+.testimonial-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 15px;
+}
 
-        .star {
-            color: #00b67a;
-            font-size: 20px;
-        }
+.star {
+  color: #00b67a;
+  font-size: 20px;
+}
 
-        .testimonial-text {
-            color: #555;
-            line-height: 1.7;
-            font-size: 15px;
-        }
+.testimonial-text {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+}
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
-            
-            .testimonials-title {
-                font-size: 32px;
-            }
-        }
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .testimonials-title {
+    font-size: 32px;
+  }
+}
 
-        @media (max-width: 768px) {
-            .testimonials-section {
-                padding: 40px 20px;
-            }
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 40px 20px;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .testimonials-title {
+    font-size: 28px;
+  }
+  .testimonials-subtitle {
+    font-size: 16px;
+  }
+  .testimonial-content {
+    padding: 20px;
+  }
+  .testimonial-text {
+    font-size: 14px;
+  }
+}
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 30px 15px;
+  }
+  .testimonials-title {
+    font-size: 24px;
+  }
+  .testimonials-subtitle {
+    font-size: 14px;
+  }
+  .testimonial-content {
+    padding: 18px;
+  }
+  .client-name {
+    font-size: 16px;
+  }
+  .testimonial-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+</style>
 
-            .testimonials-title {
-                font-size: 28px;
-            }
+<section class="testimonials-section">
+  <div class="testimonials-container">
+    <div class="testimonials-header">
+      <h2 class="testimonials-title">Ce que disent nos clientes</h2>
+      <p class="testimonials-subtitle">Des resultats visibles et une confiance retrouvee</p>
+    </div>
 
-            .testimonials-subtitle {
-                font-size: 16px;
-            }
-
-            .testimonial-content {
-                padding: 20px;
-            }
-
-            .testimonial-text {
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .testimonials-section {
-                padding: 30px 15px;
-            }
-
-            .testimonials-title {
-                font-size: 24px;
-            }
-
-            .testimonials-subtitle {
-                font-size: 14px;
-            }
-
-            .testimonial-content {
-                padding: 18px;
-            }
-
-            .client-name {
-                font-size: 16px;
-            }
-
-            .testimonial-text {
-                font-size: 13px;
-                line-height: 1.6;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- SECTION TÉMOIGNAGES - COPIEZ TOUT CE QUI EST EN DESSOUS -->
-    <section class="testimonials-section">
-        <div class="testimonials-container">
-            <div class="testimonials-header">
-                <h2 class="testimonials-title">Ce que disent nos clientes</h2>
-                <p class="testimonials-subtitle">Des résultats visibles et une confiance retrouvée</p>
-            </div>
-
-            <div class="testimonials-grid">
-                <!-- Témoignage 1 - Linda T. -->
-                <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop" alt="Linda T., 49 ans">
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="client-name">Linda T., 49</div>
-                                <div class="client-verified">
-                                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                                    </svg>
-                                    Cliente vérifiée
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-stars">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            Je suis maman active et j'ai toujours l'air épuisée. Instant Lift+ me sauve la vie – que ce soit pour aller chercher les enfants à l'école, nos soirées en amoureux, ou quand j'ai besoin d'être présentable. J'ai instantanément l'air reposée et les gens n'arrêtent pas de me dire que je rajeunie !
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Témoignage 2 - Jennifer K. -->
-                <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop" alt="Jennifer K., 42 ans">
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="client-name">Jennifer K., 42</div>
-                                <div class="client-verified">
-                                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                                    </svg>
-                                    Cliente vérifiée
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-stars">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            J'avais des poches sous les yeux tenaces depuis des années. Rien n'avait marché jusqu'à Instant Lift+. Les poches disparaissent littéralement en quelques minutes et je parais 10 ans de moins. J'ai retrouvé ma confiance en moi !
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Témoignage 3 - Patricia R. -->
-                <div class="testimonial-card">
-                    <div class="testimonial-image">
-                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&h=600&fit=crop" alt="Patricia R., 58 ans">
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="testimonial-header">
-                            <div>
-                                <div class="client-name">Patricia R., 58</div>
-                                <div class="client-verified">
-                                    <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                                    </svg>
-                                    Cliente vérifiée
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-stars">
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                            <span class="star">★</span>
-                        </div>
-                        <p class="testimonial-text">
-                            Peau sensible, c'est l'enfer – tout m'irrite. Mais pas Instant Lift+ ! Doux et pourtant efficace. Mes petites rides ont disparu et je n'ai plus l'air fatiguée, même pendant les longues journées. Un vrai miracle !
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <div class="testimonials-grid">
+      
+      <div class="testimonial-card">
+        <div class="testimonial-image">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=600&fit=crop" alt="Linda T., 49 ans">
         </div>
-    </section>
-    <!-- FIN DE LA SECTION TÉMOIGNAGES -->
-</body>
-</html>
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <div>
+              <div class="client-name">Linda T., 49</div>
+              <div class="client-verified">
+                <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                Cliente verifiee
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            Je suis maman active et j'ai toujours l'air epuisee. Instant Lift+ me sauve la vie – que ce soit pour aller chercher les enfants a l'ecole, nos soirees en amoureux, ou quand j'ai besoin d'etre presentable. J'ai instantanement l'air reposee et les gens n'arretent pas de me dire que je rajeunie !
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-image">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=600&fit=crop" alt="Jennifer K., 42 ans">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <div>
+              <div class="client-name">Jennifer K., 42</div>
+              <div class="client-verified">
+                <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                Cliente verifiee
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            J'avais des poches sous les yeux tenaces depuis des annees. Rien n'avait marche jusqu'a Instant Lift+. Les poches disparaissent litteralement en quelques minutes et je parais 10 ans de moins. J'ai retrouve ma confiance en moi !
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-image">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&h=600&fit=crop" alt="Patricia R., 58 ans">
+        </div>
+        <div class="testimonial-content">
+          <div class="testimonial-header">
+            <div>
+              <div class="client-name">Patricia R., 58</div>
+              <div class="client-verified">
+                <svg class="verified-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+                Cliente verifiee
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            Peau sensible, c'est l'enfer – tout m'irrite. Mais pas Instant Lift+ ! Doux et pourtant efficace. Mes petites rides ont disparu et je n'ai plus l'air fatiguee, meme pendant les longues journees. Un vrai miracle !
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Temoignages Clients",
+  "presets": [
+    {
+      "name": "Temoignages Clients"
+    }
+  ]
+}
+{% endschema %}
