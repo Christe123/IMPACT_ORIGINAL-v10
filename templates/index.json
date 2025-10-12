@@ -42,7 +42,7 @@
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "",
-            "title": "Chaque seconde vieillit votre peau. Double menton, rides profondes : EFFACEZ 10 ANS EN UNE UTILISATION ou regardez-vous vieillir.",
+            "title": "Chaque seconde vieillit votre peau. Double menton, rides profondes : EFFACEZ 10 ANS EN UNE UTILISATION.",
             "heading_tag": "h4",
             "button_text": "",
             "button_link": "",
@@ -272,19 +272,6 @@
             "link_style": "link"
           }
         },
-        "item_UKxdpg": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/AVISMASQUE2.png",
-            "column_size": "3",
-            "title": "Monique T.",
-            "heading_tag": "h4",
-            "content": "<p><em>Quand j'ai vu la pub, je me suis dit 'c'est pour les jeunes'. J'ai failli ne pas commander, quelle erreur ! À 68 ans, mes rides se sont atténuées et ma peau s'est retendus exactement comme pour les jeunes femmes. Ça vaut vraiment son prix. Je viens de commander ma deuxième cure, je le recommande à toutes les femmes de mon âge !</em></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
         "item_pRBaTW": {
           "type": "item",
           "settings": {
@@ -293,6 +280,19 @@
             "title": "Amina K.",
             "heading_tag": "h4",
             "content": "<p><em>Mes poches et rides autour des yeux me vieillissaient de 10 ans (photo de gauche). Après 2 semaines avec ce masque coréen : regardez la photo de droite, mes rides ont fondu ! J'ai hésité pendant 3 semaines en me disant 'à mon âge ça marchera pas'. Quelle erreur, ne perdez pas de temps comme moi, commandez maintenant</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_4LtRKC": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/avis_prudo.jpg",
+            "column_size": "3",
+            "title": "Alice G.",
+            "heading_tag": "h4",
+            "content": "<p><em>À 72 ans, j'avais tout essayé sans résultat. Ce masque coréen a transformé ma peau en un mois : rides du front lissées, bajoues fondues, cou retendu ! Mon astuce : je récupère le liquide restant du sachet pour le cou et la poitrine, résultat visible partout. Si ça fonctionne sur ma peau mature, imaginez sur la vôtre ! Je viens de commander ma troisième boîte.</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -326,12 +326,26 @@
         },
         "item_xCExHT": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/WhatsApp_Image_2025-10-03_at_04.56.52.jpg",
             "column_size": "3",
             "title": "Alice G.",
             "heading_tag": "h4",
             "content": "<p><em>À 63 ans, mes rides profondes autour de la bouche me complexaient énormément. Après 3 semaines avec ce masque : transformation visible ! Mes rides se sont nettement atténuées, ma peau est plus lisse et ferme. Le contour de ma bouche s'est lissé. À mon âge, je n'espérais plus ce résultat. Si ça marche sur ma peau mature, ça marchera sur vous !</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_UKxdpg": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/AVISMASQUE2.png",
+            "column_size": "3",
+            "title": "Monique T.",
+            "heading_tag": "h4",
+            "content": "<p><em>Quand j'ai vu la pub, je me suis dit 'c'est pour les jeunes'. J'ai failli ne pas commander, quelle erreur ! À 68 ans, mes rides se sont atténuées et ma peau s'est retendus exactement comme pour les jeunes femmes. Ça vaut vraiment son prix. Je viens de commander ma deuxième cure, je le recommande à toutes les femmes de mon âge !</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -380,11 +394,12 @@
       "block_order": [
         "item_4TAKa6",
         "item_XXTYp8",
-        "item_UKxdpg",
         "item_pRBaTW",
+        "item_4LtRKC",
         "item_DATGFL",
         "item_NUKJNt",
         "item_xCExHT",
+        "item_UKxdpg",
         "item_d3wbMG",
         "item_BARfAd",
         "item_xCRgik"
