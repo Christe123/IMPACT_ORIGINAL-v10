@@ -259,6 +259,19 @@
             "link_style": "link"
           }
         },
+        "item_XXTYp8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/NEW_AVANT_APRES_23.png",
+            "column_size": "3",
+            "title": "Julie G.",
+            "heading_tag": "h4",
+            "content": "<p><em>À 58 ans, je voyais mon visage s'affaisser de jour en jour : bajoues tombantes, rides du cou, peau relâchée partout. Mon mari m'a encouragée à tester ce masque coréen. En un mois d'utilisation régulière, ma mâchoire s'est redessinée, ma peau s'est raffermie et j'ai retrouvé confiance en moi. À mon âge, ne vous dites pas 'c'est trop tard' comme je pensais, commandez maintenant !</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
         "item_UKxdpg": {
           "type": "item",
           "settings": {
@@ -266,7 +279,46 @@
             "column_size": "3",
             "title": "Monique T.",
             "heading_tag": "h4",
-            "content": "<p>Quand j'ai vu la pub, je me suis dit 'c'est pour les jeunes'. J'ai failli ne pas commander, quelle erreur ! À 68 ans, mes rides se sont atténuées et ma peau s'est retendus exactement comme pour les jeunes femmes. Ça vaut vraiment son prix. Je viens de commander ma deuxième cure, je le recommande à toutes les femmes de mon âge !</p>",
+            "content": "<p><em>Quand j'ai vu la pub, je me suis dit 'c'est pour les jeunes'. J'ai failli ne pas commander, quelle erreur ! À 68 ans, mes rides se sont atténuées et ma peau s'est retendus exactement comme pour les jeunes femmes. Ça vaut vraiment son prix. Je viens de commander ma deuxième cure, je le recommande à toutes les femmes de mon âge !</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_pRBaTW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/54.png",
+            "column_size": "3",
+            "title": "Amina K.",
+            "heading_tag": "h4",
+            "content": "<p><em>Mes poches et rides autour des yeux me vieillissaient de 10 ans (photo de gauche). Après 2 semaines avec ce masque coréen : regardez la photo de droite, mes rides ont fondu ! J'ai hésité pendant 3 semaines en me disant 'à mon âge ça marchera pas'. Quelle erreur, ne perdez pas de temps comme moi, commandez maintenant</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_DATGFL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/56.png",
+            "column_size": "3",
+            "title": "Élodie P.",
+            "heading_tag": "h4",
+            "content": "<p><em>Je fronçais les sourcils depuis des années à cause du stress au travail. Résultat : des rides du front ultra marquées qui me donnaient l'air sévère. Ce masque coréen les a lissées dès les premières utilisations ! Maintenant mes élèves me disent que j'ai l'air plus jeune et plus souriante. Si vous stressez comme moi et que ça se voit sur votre front, foncez avant rupture de stock !</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_NUKJNt": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/55.png",
+            "column_size": "3",
+            "title": "Claire R.",
+            "heading_tag": "h4",
+            "content": "<p><em>Mes taches brunes et de vieillesse me complexaient tellement que je ne sortais plus sans fond de teint. Aprè quelques jours  avec ce masque coréen : transformation incroyable ! Mes taches se sont estompées et mon teint s'est unifié. </em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -279,20 +331,7 @@
             "column_size": "3",
             "title": "Alice G.",
             "heading_tag": "h4",
-            "content": "<p>À 63 ans, mes rides profondes autour de la bouche me complexaient énormément. Après 3 semaines avec ce masque : transformation visible ! Mes rides se sont nettement atténuées, ma peau est plus lisse et ferme. Le contour de ma bouche s'est lissé. À mon âge, je n'espérais plus ce résultat. Si ça marche sur ma peau mature, ça marchera sur vous !</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_XXTYp8": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/AVISMASQUE4.png",
-            "column_size": "3",
-            "title": "Julie G.",
-            "heading_tag": "h4",
-            "content": "<p>Je pensais que c'était du marketing, j'ai failli abandonner mon panier... Mais j'ai validé et MIRACLE ! En 20 minutes, transformation totale : peau retendus, lumineuse, rides effacées. Si j'avais abandonné mon panier, je serais passée à côté du meilleur produit que j'ai testé. Ne faites pas cette erreur, commandez maintenant avant de changer d'avis !</p>",
+            "content": "<p><em>À 63 ans, mes rides profondes autour de la bouche me complexaient énormément. Après 3 semaines avec ce masque : transformation visible ! Mes rides se sont nettement atténuées, ma peau est plus lisse et ferme. Le contour de ma bouche s'est lissé. À mon âge, je n'espérais plus ce résultat. Si ça marche sur ma peau mature, ça marchera sur vous !</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -305,46 +344,7 @@
             "column_size": "3",
             "title": "Jacqueline D.",
             "heading_tag": "h4",
-            "content": "<p>J'AVAIS PERDU ESPOIR... Mes rides du sourire étaient très marquées et ma peau fatiguée. Après une semaine avec ce masque : transformation spectaculaire ! Mes rides se sont lissées, mon teint rayonne de jeunesse. Mon seul regret ? Avoir attendu 3 semaines avant de commander - pendant ce temps ma peau continuait à vieillir. Ne faites pas la même erreur, commandez maintenant avant rupture de stock !</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_pRBaTW": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/1_5c17dcba-17ab-4bba-b12e-0dafae132ed9.png",
-            "column_size": "3",
-            "title": "Amina K.",
-            "heading_tag": "h4",
-            "content": "<p>Problème de pores dilatés depuis des années, j'avais tout essayé. Ce masque fait vraiment la différence ! Les pores se resserrent et la peau devient plus uniforme. Même ma fille a remarqué l'amélioration. Très contente de cet achat.</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_NUKJNt": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/AVISMASQUE8.png",
-            "column_size": "3",
-            "title": "Claire R.",
-            "heading_tag": "h4",
-            "content": "<p><em>\"Ce masque est devenu mon indispensable avant les événements importants. Je le fais la veille au soir, et le lendemain, ma peau est plus nette, plus lumineuse, et surtout plus ferme. Pas besoin de filtre \"</em></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_DATGFL": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/AVISMASQUE3.png",
-            "column_size": "3",
-            "title": "Élodie P.",
-            "heading_tag": "h4",
-            "content": "<p>J'AVAIS DES IMPERFECTIONS QUI ME COMPLEXAIENT depuis des années... En une semaine avec ce masque, ma peau s'est complètement transformée ! Teint unifié, imperfections estompées, éclat naturel retrouvé. Je n'ose même plus sortir sans ! Mes amies n'en reviennent pas de la transformation. Ce masque a changé ma vie !</p>",
+            "content": "<p><em>J'AVAIS PERDU ESPOIR... Mes rides du sourire étaient très marquées et ma peau fatiguée. Après une semaine avec ce masque : transformation spectaculaire ! Mes rides se sont lissées, mon teint rayonne de jeunesse. Mon seul regret ? Avoir attendu 3 semaines avant de commander - pendant ce temps ma peau continuait à vieillir. Ne faites pas la même erreur, commandez maintenant avant rupture de stock !</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -357,7 +357,7 @@
             "column_size": "3",
             "title": "Mélanie D.",
             "heading_tag": "h4",
-            "content": "<p>Je suis très sceptique en général avec les produits cosmétiques, mais là... WOW ! Effet lifting visible immédiatement, peau lissée et éclatante. Mes amies me demandent si j'ai fait de la médecine esthétique. Mon nouveau secret beauté !\"</p>",
+            "content": "<p><em>Je suis très sceptique en général avec les produits cosmétiques, mais là... WOW ! Effet lifting visible immédiatement, peau lissée et éclatante. Mes amies me demandent si j'ai fait de la médecine esthétique. Mon nouveau secret beauté !\"</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -370,7 +370,7 @@
             "column_size": "3",
             "title": "Lucie F.",
             "heading_tag": "h4",
-            "content": "<p>J'étais  complexée  par mes petits imperfections et mon double menton naissant... Ce masque a tout changé ! Mon ovale du visage s'est redessiné, ma peau est ferme et éclatante. En une utilisation, j'ai retrouvé confiance en moi ! Produit révolutionnaire.</p>",
+            "content": "<p><em>J'étais  complexée  par mes petits imperfections et mon double menton naissant... Ce masque a tout changé ! Mon ovale du visage s'est redessiné, ma peau est ferme et éclatante. En une utilisation, j'ai retrouvé confiance en moi ! Produit révolutionnaire.</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -379,13 +379,13 @@
       },
       "block_order": [
         "item_4TAKa6",
-        "item_UKxdpg",
-        "item_xCExHT",
         "item_XXTYp8",
-        "item_d3wbMG",
+        "item_UKxdpg",
         "item_pRBaTW",
-        "item_NUKJNt",
         "item_DATGFL",
+        "item_NUKJNt",
+        "item_xCExHT",
+        "item_d3wbMG",
         "item_BARfAd",
         "item_xCRgik"
       ],
