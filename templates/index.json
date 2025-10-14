@@ -259,6 +259,19 @@
             "link_style": "link"
           }
         },
+        "item_4LtRKC": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/avis_prudo.jpg",
+            "column_size": "3",
+            "title": "Alice G.",
+            "heading_tag": "h4",
+            "content": "<p><em>À 72 ans, j'avais tout essayé sans résultat. Ce masque coréen a transformé ma peau en un mois : rides du front lissées, bajoues fondues, cou retendu ! Mon astuce : je récupère le liquide restant du sachet pour le cou et la poitrine, résultat visible partout. Si ça fonctionne sur ma peau mature, imaginez sur la vôtre ! Je viens de commander ma troisième boîte.</em></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
         "item_XXTYp8": {
           "type": "item",
           "settings": {
@@ -280,19 +293,6 @@
             "title": "Amina K.",
             "heading_tag": "h4",
             "content": "<p><em>Mes poches et rides autour des yeux me vieillissaient de 10 ans (photo de gauche). Après 2 semaines avec ce masque coréen : regardez la photo de droite, mes rides ont fondu ! J'ai hésité pendant 3 semaines en me disant 'à mon âge ça marchera pas'. Quelle erreur, ne perdez pas de temps comme moi, commandez maintenant</em></p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_4LtRKC": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/avis_prudo.jpg",
-            "column_size": "3",
-            "title": "Alice G.",
-            "heading_tag": "h4",
-            "content": "<p><em>À 72 ans, j'avais tout essayé sans résultat. Ce masque coréen a transformé ma peau en un mois : rides du front lissées, bajoues fondues, cou retendu ! Mon astuce : je récupère le liquide restant du sachet pour le cou et la poitrine, résultat visible partout. Si ça fonctionne sur ma peau mature, imaginez sur la vôtre ! Je viens de commander ma troisième boîte.</em></p>",
             "link_url": "",
             "link_text": "",
             "link_style": "link"
@@ -393,9 +393,9 @@
       },
       "block_order": [
         "item_4TAKa6",
+        "item_4LtRKC",
         "item_XXTYp8",
         "item_pRBaTW",
-        "item_4LtRKC",
         "item_DATGFL",
         "item_NUKJNt",
         "item_xCExHT",
