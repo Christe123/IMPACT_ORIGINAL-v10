@@ -36,8 +36,8 @@
         "slide-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BAN_PC.png",
-            "mobile_image": "shopify://shop_images/BANIERE_ONE.png",
+            "image": "shopify://shop_images/dodod2.png",
+            "mobile_image": "shopify://shop_images/dodod.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -1233,8 +1233,8 @@
         "item_dQeMxc": {
           "type": "item",
           "settings": {
-            "title": "Est-ce que ça marche vraiment ou c'est encore du marketing ?",
-            "content": "<p><em>Les résultats parlent d'eux-mêmes ! Plus de 15 000 femmes ont déjà testé avec 98% de satisfaction. L'effet lifting est visible dès le retrait du masque - c'est pour ça qu'on offre une garantie 30 jours satisfait ou remboursé.</em></p>"
+            "title": "Ce masque convient-il à tous les types de peau ?",
+            "content": "<p><em>Oui, absolument ! Notre masque coréen convient à TOUS les types de peau : sèche, grasse, mixte, sensible, mature ou jeune. Sa formule a été spécialement développée pour s'adapter aux besoins de chaque peau. Que vous ayez 25 ou 70 ans, une peau délicate ou résistante, le masque agit efficacement sans irritation.</em></p>"
           }
         },
         "item_mkBJXJ": {
@@ -1244,15 +1244,9 @@
             "content": "<p><em>Les premiers effets sont souvent visibles dès la première application : peau plus lisse, plus souple, plus éclatante. Les résultats en profondeur (fermeté, tonicité) apparaissent en général après 1 à 2 semaines d’utilisation régulière.</em></p>"
           }
         },
-        "item_L4XHcT": {
-          "type": "item",
-          "settings": {
-            "title": "Pourquoi ce masque vient des États-Unis ?",
-            "content": "<p><em>Les Américains sont en avance de 5 ans sur l'anti-âge ! Cette technologie exclusive a conquis Hollywood avant d'arriver en france. Vous avez accès à l'innovation beauté du futur.</em></p>"
-          }
-        },
         "item_akLnte": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "title": "Quelle est la différence avec les autres masques ?",
             "content": "<p><em>Les masques classiques hydratent en surface. Le nôtre PÉNÈTRE en profondeur grâce à sa texture révolutionnaire et STIMULE votre collagène naturel. Résultat : lifting réel, pas juste hydratation temporaire.</em></p>"
@@ -1260,6 +1254,7 @@
         },
         "item_93ycU7": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "title": "C'est cher pour un masque, non ?",
             "content": "<p><em>Réfléchissez : une séance chez l'esthéticienne = 80€. Un lifting = 8000€. Notre masque vous donne le même résultat pour quelques euros ! C'est l'investissement beauté le plus rentable de votre vie.</em></p>"
@@ -1288,6 +1283,7 @@
         },
         "item_Vmm3zC": {
           "type": "item",
+          "disabled": true,
           "settings": {
             "title": "À quel moment de la journée l'utiliser ?",
             "content": "<p><em>Idéalement le soir sur peau propre. Le masque agit pendant votre sommeil quand la peau se régénère naturellement. Évitez le matin avant exposition au soleil à cause du rétinol.</em></p>"
@@ -1347,7 +1343,6 @@
       "block_order": [
         "item_dQeMxc",
         "item_mkBJXJ",
-        "item_L4XHcT",
         "item_akLnte",
         "item_93ycU7",
         "item_RME8Fh",
