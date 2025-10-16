@@ -623,6 +623,7 @@
         },
         "video_VmPtFF": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/snaptik_7496846877921479979_hd.mov",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
