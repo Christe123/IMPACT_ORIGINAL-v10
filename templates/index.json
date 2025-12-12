@@ -526,7 +526,7 @@
         "image_c9Phai": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Offre_masque_2.jpg",
+            "image": "shopify://shop_images/7.jpg",
             "alignment": "start",
             "max_width": 500
           }
