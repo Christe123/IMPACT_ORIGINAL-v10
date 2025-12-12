@@ -1388,6 +1388,32 @@
         "accordion_text_color": ""
       }
     },
+    "rich_text_Y6VdEL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DkwLAm": {
+          "type": "heading",
+          "settings": {
+            "text": "Nos clients  vous montrent leur résultat",
+            "heading_tag": "h2",
+            "text_color": "",
+            "gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_DkwLAm"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "17566032008b10683c": {
       "type": "apps",
       "blocks": {
@@ -1465,6 +1491,7 @@
     "images_with_text_scrolling_fFyJpe",
     "guarantee_30_days_9k48mL",
     "faq_f4WA34",
+    "rich_text_Y6VdEL",
     "17566032008b10683c",
     "contact_chMxRq"
   ]
