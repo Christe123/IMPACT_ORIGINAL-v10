@@ -431,6 +431,11 @@
     "checkout": {
       "general": {
         "continue_to_review": "Payer maintenant"
+      },
+      "order_summary": {
+        "vat_label_html": " ",
+        "estimated_taxes_label": " ",
+        "information_estimated_taxes_label": " "
       }
     }
   }
