@@ -1388,27 +1388,6 @@
         "accordion_text_color": ""
       }
     },
-    "contact_chMxRq": {
-      "type": "contact",
-      "name": "Contact form",
-      "settings": {
-        "full_width": true,
-        "subheading": "Notre service clientèle est disponible 7 jours sur 7.Temps de réponse moyen : 4h",
-        "title": "Avez-vous des questions ?",
-        "content": "",
-        "text_position": "center",
-        "contact_form_size": "large",
-        "background": "#ffffff",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "contact_background": "",
-        "contact_text_color": "",
-        "button_background": "#d95075",
-        "button_text_color": ""
-      }
-    },
     "17566032008b10683c": {
       "type": "apps",
       "blocks": {
@@ -1441,6 +1420,27 @@
         "review_button_background": "#000000",
         "review_button_text_color": "#ffffff"
       }
+    },
+    "contact_chMxRq": {
+      "type": "contact",
+      "name": "Contact form",
+      "settings": {
+        "full_width": true,
+        "subheading": "Notre service clientèle est disponible 7 jours sur 7.Temps de réponse moyen : 4h",
+        "title": "Avez-vous des questions ?",
+        "content": "",
+        "text_position": "center",
+        "contact_form_size": "large",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "contact_background": "",
+        "contact_text_color": "",
+        "button_background": "#d95075",
+        "button_text_color": ""
+      }
     }
   },
   "order": [
@@ -1465,7 +1465,7 @@
     "images_with_text_scrolling_fFyJpe",
     "guarantee_30_days_9k48mL",
     "faq_f4WA34",
-    "contact_chMxRq",
-    "17566032008b10683c"
+    "17566032008b10683c",
+    "contact_chMxRq"
   ]
 }
