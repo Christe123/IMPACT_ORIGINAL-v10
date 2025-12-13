@@ -11,6 +11,19 @@
   "type": "header",
   "name": "Header group",
   "sections": {
+    "custom_liquid_HBgt7E": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div class=\"countdown-timer-block\" countdown-timer-id=\"cmj438sgx004bcmbvtyaxnihl\"></div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -91,24 +104,11 @@
         "background_opacity": 100,
         "background_blur_radius": 0
       }
-    },
-    "custom_liquid_EP4QHd": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div class=\"countdown-timer-block\" countdown-timer-id=\"cmj438sgx004bcmbvtyaxnihl\"></div>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
     }
   },
   "order": [
+    "custom_liquid_HBgt7E",
     "announcement-bar",
-    "header",
-    "custom_liquid_EP4QHd"
+    "header"
   ]
 }
