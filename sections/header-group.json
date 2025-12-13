@@ -11,19 +11,6 @@
   "type": "header",
   "name": "Header group",
   "sections": {
-    "custom_liquid_HBgt7E": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div class=\"countdown-timer-block\" countdown-timer-id=\"cmj438sgx004bcmbvtyaxnihl\"></div>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -107,7 +94,6 @@
     }
   },
   "order": [
-    "custom_liquid_HBgt7E",
     "announcement-bar",
     "header"
   ]
