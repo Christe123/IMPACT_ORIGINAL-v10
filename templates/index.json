@@ -37,9 +37,9 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/IMG-20251214-WA0069.jpg",
-            "mobile_image": "shopify://shop_images/IMG-20251214-WA0069.jpg",
+            "mobile_image": "shopify://shop_images/IMG-20251214-WA0068.jpg",
             "content_max_width": 780,
-            "mobile_text_position": "place-self-end-center text-center",
+            "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "",
             "title": "Peu importe votre âge : Rides et double menton ? Liftez-les en une seule utilisation.",
